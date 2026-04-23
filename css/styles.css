@@ -1,0 +1,582 @@
+/* Sutera Sites - custom overrides on top of Tailwind CDN */
+
+:root {
+  --bg: #0a0a0a;
+  --bg-elev: #111111;
+  --bg-card: #161616;
+  --border: #1f1f1f;
+  --text: #f5f5f5;
+  --text-muted: #a3a3a3;
+  --text-dim: #737373;
+  --accent: #3b82f6;
+  --accent-hover: #60a5fa;
+  --accent-dim: rgba(59, 130, 246, 0.12);
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--bg);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Reveal animations - initial state for GSAP */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+/* Grid background pattern (hairline cross only, not a gradient fill) */
+.grid-bg {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* Noise texture overlay */
+.noise {
+  position: absolute;
+  inset: 0;
+  opacity: 0.035;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Button primary */
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+  padding: 0.875rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+  border: 1px solid var(--accent);
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.25);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--text);
+  padding: 0.875rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+  border: 1px solid var(--border);
+}
+
+.btn-secondary:hover {
+  border-color: var(--text-muted);
+  background: var(--bg-elev);
+}
+
+/* Nav CTA: transparent with white outline by default, blue-filled on hover */
+.btn-nav {
+  background: transparent;
+  color: #fff;
+  padding: 0.875rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+  border: 1px solid #fff;
+}
+
+.btn-nav:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.25);
+}
+
+/* Service card hover */
+.service-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.4), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.service-card:hover {
+  border-color: rgba(59, 130, 246, 0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+/* Case study card */
+.case-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.case-card:hover {
+  border-color: rgba(59, 130, 246, 0.3);
+  transform: translateY(-4px);
+}
+
+/* Stat pill */
+.stat-pill {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+}
+
+/* Nav blur */
+.nav-blur {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  background: rgba(10, 10, 10, 0.75);
+  border-bottom: 1px solid var(--border);
+}
+
+/* Nav hide on scroll-down */
+.nav-wrap {
+  transition: transform 0.3s ease;
+  will-change: transform;
+}
+
+.nav-wrap.nav-hidden {
+  transform: translateY(-100%);
+}
+
+/* Section divider - solid hairline */
+.section-divider {
+  height: 1px;
+  background-color: var(--border);
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+/* Accent pill (tags/labels) */
+.accent-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.375rem 0.875rem;
+  border-radius: 999px;
+  background: var(--accent-dim);
+  color: var(--accent-hover);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.accent-pill::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 8px var(--accent);
+}
+
+/* Mobile nav */
+.mobile-nav {
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  z-index: 100;
+  display: none;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.mobile-nav.open {
+  display: flex;
+}
+
+/* Muted text accent (replaces gradient text per brand rule: no gradients) */
+.muted-text {
+  color: var(--text-muted);
+}
+
+/* Large headlines */
+.headline {
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+
+/* Link underline */
+.link-underline {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  color: var(--accent-hover);
+  font-weight: 500;
+  transition: gap 0.2s ease;
+}
+
+.link-underline:hover {
+  gap: 0.625rem;
+}
+
+/* Scroll hint */
+@keyframes scrollHint {
+  0%, 100% { transform: translateY(0); opacity: 0.4; }
+  50% { transform: translateY(6px); opacity: 1; }
+}
+
+.scroll-hint {
+  animation: scrollHint 2s ease-in-out infinite;
+}
+
+/* ========= LOGO MARQUEE ========= */
+.logo-marquee {
+  overflow: hidden;
+  position: relative;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+}
+
+.logo-track {
+  display: flex;
+  gap: 4rem;
+  width: max-content;
+  animation: scroll-logos 40s linear infinite;
+}
+
+.logo-track:hover {
+  animation-play-state: paused;
+}
+
+.logo-item {
+  flex-shrink: 0;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+}
+
+.logo-item img {
+  height: 100%;
+  width: auto;
+  max-width: 180px;
+  object-fit: contain;
+  filter: grayscale(1) brightness(1.6);
+  opacity: 0.65;
+  transition: all 0.3s ease;
+}
+
+.logo-item:hover img {
+  filter: grayscale(0) brightness(1);
+  opacity: 1;
+}
+
+/* Drop solid black backgrounds on specific logos via SVG luma-to-alpha filter */
+.logo-item.bg-drop img {
+  filter: url(#drop-black) grayscale(1) brightness(1.6);
+}
+
+.logo-item.bg-drop:hover img {
+  filter: url(#drop-black);
+}
+
+/* Brand logo (navbar + footer). Strips solid black background via SVG filter. */
+.brand-logo {
+  height: 80px;
+  width: auto;
+  display: block;
+  filter: url(#drop-black);
+}
+
+@media (min-width: 768px) {
+  .brand-logo {
+    height: 96px;
+  }
+}
+
+@keyframes scroll-logos {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* ========= CONTACT FORM ========= */
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-field label {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: 0.01em;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  background-color: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 0.875rem 1rem;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: var(--text-dim);
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  background-color: var(--bg-card);
+}
+
+.form-field textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-field select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23a3a3a3' stroke-width='2.5'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 12px;
+  padding-right: 2.5rem;
+}
+
+.form-field-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .form-field-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.contact-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.contact-card .icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 0.5rem;
+  background-color: var(--accent-dim);
+  color: var(--accent-hover);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-card .label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-dim);
+  margin-bottom: 0.25rem;
+}
+
+.contact-card .value {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.contact-card .value a:hover {
+  color: var(--accent-hover);
+}
+
+/* ========= MEGA MENU ========= */
+.mega-menu-trigger {
+  position: relative;
+  cursor: pointer;
+}
+
+.mega-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: rgba(17, 17, 17, 0.95);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s linear 0.2s;
+  z-index: 40;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.mega-menu.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s;
+}
+
+.mega-menu-inner {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+}
+
+.mega-menu-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.mega-menu-card {
+  display: block;
+  padding: 1.25rem;
+  border-radius: 0.75rem;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.mega-menu-card:hover {
+  background: var(--bg-card);
+  border-color: var(--border);
+}
+
+.mega-menu-card .icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 0.5rem;
+  background: var(--accent-dim);
+  color: var(--accent-hover);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.875rem;
+}
+
+/* Logo variant of the mega-menu icon: full-bleed client logo, no tinted box. */
+.mega-menu-card .logo-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 0.5rem;
+  background-color: transparent;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.875rem;
+  overflow: hidden;
+  padding: 4px;
+}
+
+.mega-menu-card .logo-icon img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.mega-menu-card .logo-icon.bg-drop img {
+  filter: url(#drop-black);
+}
+
+.mega-menu-card .logo-icon.monogram {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--accent-hover);
+  background-color: var(--accent-dim);
+  border-color: transparent;
+  padding: 0;
+}
+
+.mega-menu-card h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 0.375rem;
+}
+
+.mega-menu-card p {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.mega-menu-footer {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+/* Prevent mega menu flicker between trigger and panel */
+.nav-wrap {
+  position: relative;
+}
