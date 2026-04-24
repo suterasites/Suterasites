@@ -234,6 +234,74 @@ body {
   display: flex;
 }
 
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.mobile-nav-link {
+  display: block;
+  padding: 0.75rem 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+  border-bottom: 1px solid var(--border);
+}
+
+.mobile-nav-group {
+  border-bottom: 1px solid var(--border);
+}
+
+.mobile-nav-group summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 0.75rem 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobile-nav-group summary::-webkit-details-marker {
+  display: none;
+}
+
+.mobile-nav-group summary svg {
+  transition: transform 0.2s ease;
+  color: var(--text-muted);
+}
+
+.mobile-nav-group[open] summary svg {
+  transform: rotate(180deg);
+  color: var(--accent-hover);
+}
+
+.mobile-nav-submenu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.5rem 0 1rem 0.25rem;
+}
+
+.mobile-nav-submenu a {
+  padding: 0.5rem 0;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  transition: color 0.15s ease;
+}
+
+.mobile-nav-submenu a:hover {
+  color: #fff;
+}
+
+.mobile-nav-submenu a:first-child {
+  color: var(--accent-hover);
+}
+
 /* Muted text accent (replaces gradient text per brand rule: no gradients) */
 .muted-text {
   color: var(--text-muted);
