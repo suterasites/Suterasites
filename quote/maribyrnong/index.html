@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex,nofollow" />
+<title>Your Quote | Sutera Sites</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<script>
+/* =============================================================
+   QUOTE CONFIG - Edit this block to spin up a new client quote.
+   Everything above and below this block is the reusable template.
+   ============================================================= */
+window.QUOTE_CONFIG = {
+  meta: {
+    business: "Maribyrnong & Hobsons Bay Reblocking",
+    slug: "maribyrnong",
+    preparedFor: "Sokolov Family",
+    referrer: "Johnny Sokolov",
+    date: "2026-04-29",
+    validDays: 14,
+    formspreeEndpoint: "https://formspree.io/f/REPLACE_WITH_FORM_ID"
+  },
+  brand: {
+    accent: "#E66A2C",
+    accentDark: "#8B2A1A",
+    surface: "#F5EFE6",
+    text: "#1A1614"
+  },
+  intro: {
+    eyebrow: "Custom Quote",
+    headline: "Your *new website*, ready to launch",
+    subhead: "Pick the option that suits, add any extras you'd like included, and lock it in. Your total updates live as you click."
+  },
+  options: [
+    {
+      id: "subscription",
+      label: "Monthly Subscription",
+      price: 100,
+      unit: "/mo",
+      tagline: "Full build included, no upfront cost",
+      lockIn: "6-month minimum, cancel anytime after",
+      recommended: true,
+      defaultSelected: true,
+      includes: [
+        "Full custom website build (matching the mockup shown)",
+        "Mobile-optimised design",
+        "Hosting on Cloudflare Pages (fast, secure, free SSL)",
+        "Free monthly updates: swap photos, change copy, add jobs to the gallery",
+        "Connected to mhbreblocking.com",
+        "Contact form, enquiries straight to your inbox",
+        "Click-to-call buttons on mobile",
+        "SEO fundamentals (meta tags, page speed, structured headings)"
+      ]
+    },
+    {
+      id: "oneoff",
+      label: "One-Off Build",
+      price: 1100,
+      unit: "one-off",
+      tagline: "Pay once, you own it outright",
+      lockIn: "Paid 50/50: $550 upfront, $550 on launch",
+      defaultSelected: false,
+      includes: [
+        "Full custom website build (matching the mockup shown)",
+        "Mobile-optimised design",
+        "Hosting setup on Cloudflare Pages",
+        "Connected to mhbreblocking.com",
+        "Contact form, enquiries straight to your inbox",
+        "SEO fundamentals",
+        "Post-launch changes billed at $25/hr"
+      ]
+    }
+  ],
+  extras: [
+    {
+      id: "google-ads",
+      label: "Google Ads management",
+      price: 300,
+      unit: "/mo",
+      tagline: "+ ad spend (recommended $20-$30/day)",
+      details: "We run your Google Ads end-to-end: campaign setup, keyword research, monthly optimisation, full reporting. Drives reblocking and underpinning enquiries directly to your phone. Same setup we run for Apollo Earthworks. Ad spend goes direct to Google, not us."
+    },
+    {
+      id: "service-pages",
+      label: "Additional service pages",
+      price: 80,
+      unit: "per page",
+      tagline: "Rank separately on Google for each service",
+      details: "A dedicated page per service (Reblocking, Restumping, Underpinning, Stump Conversion, Levelling and Lifting). Each ranks on its own for that exact search term and converts visitors who searched for that specific job.",
+      multi: true,
+      defaultQty: 0
+    },
+    {
+      id: "cap-statement",
+      label: "Capability statement (PDF)",
+      price: 150,
+      unit: "one-off",
+      tagline: "Branded 2-page PDF",
+      details: "Clean 2-page branded PDF for sending with quotes, to builders, or to councils. Lists experience, services, credentials (BPC, MBA, 15-year guarantee), and contact info. Editable text fields so you can update content later."
+    },
+    {
+      id: "business-cards",
+      label: "Business cards (design)",
+      price: 80,
+      unit: "one-off",
+      tagline: "Print-ready design files",
+      details: "Print-ready business card design files matching your branding. You print through Vistaprint, Officeworks, or any local printer at your own cost."
+    },
+    {
+      id: "corflute",
+      label: "Corflute / job signs (design)",
+      price: 100,
+      unit: "per design",
+      tagline: "Branded on-site signage",
+      details: "Branded corflute signs for on-site jobs. Designed to your specs (size, layout, message). Print through any local sign company at your own cost.",
+      multi: true,
+      defaultQty: 0
+    },
+    {
+      id: "logo-refresh",
+      label: "Logo refresh",
+      price: 200,
+      unit: "one-off",
+      tagline: "Cleaner vector version of your M-mark",
+      details: "Tidy up the existing M-mark into a sharp vector version that prints crisp at any size: signage, stickers, embroidered shirts, large-format banners. Original logo style preserved, just cleaner."
+    }
+  ],
+  contact: {
+    name: "James Sutera",
+    business: "Sutera Sites",
+    phone: "0434 542 005",
+    email: "suterasites@gmail.com",
+    abn: "74 177 391 469"
+  }
+};
+</script>
+
+<style>
+:root {
+  --bg: #ffffff;
+  --surface: #f7f3ee;
+  --border: #e6e2dc;
+  --accent: #ff6b00;
+  --accent-dark: #cc5600;
+  --accent-soft: rgba(255, 107, 0, 0.08);
+  --text: #111111;
+  --muted: #6b6863;
+  --sub: #a8a59f;
+  --radius: 14px;
+  --radius-sm: 8px;
+  --transition: 0.25s ease;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04), 0 4px 12px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.04), 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: 120px;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+.container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+.eyebrow {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: inline-block;
+}
+
+/* HEADER */
+.q-header {
+  border-bottom: 1px solid var(--border);
+  padding: 18px 0;
+  background: #fff;
+  position: sticky; top: 0; z-index: 50;
+}
+.q-header .row {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 16px; flex-wrap: wrap;
+}
+.q-brand { display: flex; align-items: center; gap: 12px; }
+.q-brand-mark {
+  width: 36px; height: 36px; border-radius: 8px;
+  background: var(--text); color: #fff;
+  display: grid; place-items: center;
+  font-family: 'Space Mono', monospace; font-weight: 700; font-size: 16px;
+  letter-spacing: -0.5px;
+}
+.q-brand-name { font-weight: 600; font-size: 15px; letter-spacing: -0.01em; }
+.q-brand-sub { font-size: 12px; color: var(--muted); margin-top: 2px; }
+.q-meta-pill {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--muted);
+  padding: 6px 12px; border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+/* HERO */
+.q-hero { padding: 64px 0 32px; }
+.q-hero h1 {
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-weight: 600; line-height: 1.05; letter-spacing: -0.025em;
+  margin: 14px 0 18px;
+}
+.q-hero h1 em { font-style: normal; color: var(--accent); }
+.q-hero p { font-size: clamp(1rem, 1.6vw, 1.15rem); color: var(--muted); max-width: 640px; }
+.q-total-chip {
+  display: inline-flex; align-items: baseline; gap: 8px;
+  margin-top: 24px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent-dark);
+  font-weight: 500;
+}
+.q-total-chip .label {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+}
+.q-total-chip .amount { font-weight: 700; font-size: 18px; letter-spacing: -0.01em; }
+
+/* SECTION */
+.q-section { padding: 32px 0; }
+.q-section-head {
+  display: flex; align-items: baseline; gap: 14px;
+  margin-bottom: 24px; flex-wrap: wrap;
+}
+.q-step {
+  font-family: 'Space Mono', monospace;
+  font-size: 12px; font-weight: 700;
+  width: 28px; height: 28px; border-radius: 50%;
+  background: var(--text); color: #fff;
+  display: grid; place-items: center;
+}
+.q-section-head h2 {
+  font-size: clamp(1.4rem, 2.8vw, 1.8rem);
+  font-weight: 600; letter-spacing: -0.02em;
+}
+.q-section-head .hint { color: var(--muted); font-size: 14px; margin-left: auto; }
+
+/* OPTION CARDS */
+.q-options { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.q-option {
+  position: relative;
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  padding: 26px;
+  background: #fff;
+  cursor: pointer;
+  transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+  display: flex; flex-direction: column;
+}
+.q-option:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.q-option.is-selected {
+  border-color: var(--accent);
+  background: linear-gradient(180deg, var(--accent-soft) 0%, #fff 60%);
+  box-shadow: var(--shadow-md);
+}
+.q-option-radio {
+  position: absolute; top: 22px; right: 22px;
+  width: 22px; height: 22px; border-radius: 50%;
+  border: 2px solid var(--border);
+  display: grid; place-items: center;
+  transition: all var(--transition);
+}
+.q-option.is-selected .q-option-radio { border-color: var(--accent); background: var(--accent); }
+.q-option.is-selected .q-option-radio::after {
+  content: ''; width: 8px; height: 8px; border-radius: 50%; background: #fff;
+}
+.q-option-badge {
+  display: inline-block;
+  font-family: 'Space Mono', monospace;
+  font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--accent);
+  background: var(--accent-soft);
+  padding: 4px 8px; border-radius: 4px;
+  margin-bottom: 12px;
+}
+.q-option-label { font-size: 18px; font-weight: 600; letter-spacing: -0.01em; }
+.q-option-tagline { color: var(--muted); font-size: 14px; margin-top: 4px; }
+.q-option-price {
+  margin: 18px 0 6px;
+  display: flex; align-items: baseline; gap: 4px;
+}
+.q-option-price .amount {
+  font-size: 38px; font-weight: 700; letter-spacing: -0.03em;
+}
+.q-option-price .unit { color: var(--muted); font-size: 15px; }
+.q-option-unit-tag {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 2px; margin-bottom: 4px;
+}
+.q-option-lockin { font-size: 13px; color: var(--muted); margin-bottom: 18px; }
+.q-includes-title {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 10px;
+}
+.q-includes { display: flex; flex-direction: column; gap: 8px; }
+.q-include-item {
+  display: flex; gap: 10px; align-items: flex-start;
+  font-size: 14px; line-height: 1.5;
+}
+.q-include-item::before {
+  content: ''; flex-shrink: 0;
+  width: 16px; height: 16px; border-radius: 50%;
+  background: var(--accent-soft);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8.5l2.5 2.5L12 5.5' fill='none' stroke='%23ff6b00' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-size: 16px;
+  margin-top: 2px;
+}
+
+/* EXTRAS */
+.q-extras { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+.q-extra {
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  background: #fff;
+  transition: all var(--transition);
+  position: relative;
+}
+.q-extra:hover { border-color: var(--text); }
+.q-extra.is-selected {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+.q-extra-row {
+  display: flex; align-items: flex-start; gap: 12px;
+  cursor: pointer;
+}
+.q-extra-check {
+  flex-shrink: 0;
+  width: 22px; height: 22px; border-radius: 6px;
+  border: 2px solid var(--border);
+  display: grid; place-items: center;
+  margin-top: 2px;
+  transition: all var(--transition);
+}
+.q-extra.is-selected .q-extra-check {
+  border-color: var(--accent); background: var(--accent);
+}
+.q-extra.is-selected .q-extra-check::after {
+  content: ''; width: 12px; height: 12px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3.5 8.5l3 3 6-6.5' fill='none' stroke='%23ffffff' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-size: 12px; background-repeat: no-repeat; background-position: center;
+}
+.q-extra-body { flex: 1; min-width: 0; }
+.q-extra-label { font-weight: 600; font-size: 15px; letter-spacing: -0.005em; }
+.q-extra-tagline { color: var(--muted); font-size: 13px; margin-top: 2px; }
+.q-extra-price {
+  font-family: 'Space Mono', monospace;
+  font-size: 13px; font-weight: 700; color: var(--accent-dark);
+  white-space: nowrap;
+}
+.q-extra-toggle-details {
+  font-size: 12px;
+  color: var(--muted);
+  font-family: 'Space Mono', monospace;
+  letter-spacing: 1px; text-transform: uppercase;
+  padding: 6px 0 0 34px;
+  display: inline-block;
+}
+.q-extra-toggle-details:hover { color: var(--accent); }
+.q-extra-details {
+  display: none;
+  font-size: 13px; color: var(--muted); line-height: 1.6;
+  padding: 10px 0 0 34px;
+  border-top: 1px dashed var(--border);
+  margin-top: 12px;
+}
+.q-extra.is-open .q-extra-details { display: block; }
+.q-extra-qty {
+  display: none;
+  align-items: center; gap: 8px;
+  margin-top: 12px; padding-left: 34px;
+}
+.q-extra.is-multi.is-selected .q-extra-qty { display: flex; }
+.q-extra-qty button {
+  width: 28px; height: 28px; border-radius: 6px;
+  border: 1px solid var(--border); background: #fff;
+  font-size: 16px; font-weight: 600;
+  display: grid; place-items: center;
+  transition: all var(--transition);
+}
+.q-extra-qty button:hover { border-color: var(--accent); color: var(--accent); }
+.q-extra-qty .qty-label { font-size: 13px; color: var(--muted); }
+.q-extra-qty .qty-num { font-weight: 600; min-width: 18px; text-align: center; }
+
+/* SUMMARY / CTA BAR */
+.q-cta-bar {
+  position: fixed; bottom: 0; left: 0; right: 0;
+  background: #fff;
+  border-top: 1px solid var(--border);
+  padding: 14px 24px;
+  z-index: 100;
+  box-shadow: 0 -8px 32px rgba(0,0,0,0.06);
+}
+.q-cta-row {
+  max-width: 1100px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+}
+.q-cta-totals { display: flex; flex-direction: column; line-height: 1.2; }
+.q-cta-totals .label {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--muted);
+}
+.q-cta-totals .amount {
+  font-size: 22px; font-weight: 700; letter-spacing: -0.02em;
+}
+.q-cta-totals .amount .unit {
+  font-size: 13px; color: var(--muted); font-weight: 400; margin-left: 2px;
+}
+.q-cta-totals .secondary {
+  font-size: 12px; color: var(--muted); margin-top: 2px;
+}
+.q-cta-button {
+  background: var(--text); color: #fff;
+  font-weight: 600; font-size: 15px;
+  padding: 14px 24px; border-radius: 999px;
+  letter-spacing: -0.005em;
+  display: inline-flex; align-items: center; gap: 8px;
+  transition: all var(--transition);
+}
+.q-cta-button:hover { background: var(--accent); transform: translateY(-1px); }
+.q-cta-button::after { content: '→'; font-size: 18px; }
+
+/* CONFIRM MODAL */
+.q-modal-backdrop {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.5);
+  z-index: 200; opacity: 0; pointer-events: none;
+  transition: opacity 0.3s;
+  display: grid; place-items: center;
+  padding: 24px;
+}
+.q-modal-backdrop.is-open { opacity: 1; pointer-events: auto; }
+.q-modal {
+  background: #fff; border-radius: var(--radius);
+  max-width: 540px; width: 100%;
+  max-height: 90vh; overflow-y: auto;
+  padding: 32px;
+  transform: translateY(20px); transition: transform 0.3s;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.2);
+}
+.q-modal-backdrop.is-open .q-modal { transform: translateY(0); }
+.q-modal h3 {
+  font-size: 24px; font-weight: 600; letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+.q-modal .sub { color: var(--muted); font-size: 14px; margin-bottom: 20px; }
+.q-summary {
+  background: var(--surface); border-radius: var(--radius-sm);
+  padding: 16px; margin-bottom: 20px;
+}
+.q-summary-line {
+  display: flex; justify-content: space-between; align-items: baseline;
+  padding: 6px 0; font-size: 14px;
+}
+.q-summary-line + .q-summary-line { border-top: 1px solid var(--border); }
+.q-summary-line.total {
+  font-weight: 700; font-size: 16px; padding-top: 12px; margin-top: 6px;
+  border-top: 2px solid var(--text);
+}
+.q-summary-line .name { color: var(--text); }
+.q-summary-line .price { font-family: 'Space Mono', monospace; font-weight: 700; }
+.q-summary-line .price.total-price { color: var(--accent-dark); }
+.q-form-field { margin-bottom: 14px; }
+.q-form-field label {
+  display: block; font-size: 13px; font-weight: 600;
+  margin-bottom: 6px; color: var(--text);
+}
+.q-form-field input, .q-form-field textarea {
+  width: 100%; padding: 12px 14px;
+  border: 1.5px solid var(--border); border-radius: var(--radius-sm);
+  font-family: inherit; font-size: 15px;
+  transition: border-color var(--transition);
+}
+.q-form-field input:focus, .q-form-field textarea:focus {
+  outline: none; border-color: var(--accent);
+}
+.q-form-field textarea { min-height: 80px; resize: vertical; }
+.q-form-actions { display: flex; gap: 10px; margin-top: 20px; }
+.q-form-cancel {
+  flex: 0 0 auto;
+  padding: 14px 20px; border-radius: 999px;
+  border: 1.5px solid var(--border);
+  font-weight: 500; font-size: 15px;
+  background: #fff;
+  transition: all var(--transition);
+}
+.q-form-cancel:hover { border-color: var(--text); }
+.q-form-submit {
+  flex: 1; padding: 14px 20px; border-radius: 999px;
+  background: var(--accent); color: #fff;
+  font-weight: 600; font-size: 15px;
+  transition: all var(--transition);
+}
+.q-form-submit:hover { background: var(--accent-dark); }
+.q-form-submit:disabled { opacity: 0.6; cursor: not-allowed; }
+.q-success { text-align: center; padding: 24px 0; }
+.q-success-icon {
+  width: 56px; height: 56px; border-radius: 50%;
+  background: var(--accent-soft); color: var(--accent);
+  display: grid; place-items: center;
+  margin: 0 auto 16px;
+  font-size: 28px;
+}
+
+/* FOOTER */
+.q-footer {
+  margin-top: 60px; padding: 40px 0 60px;
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+}
+.q-footer-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 32px;
+}
+.q-footer-block h4 {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 12px;
+}
+.q-footer-block p, .q-footer-block a { font-size: 14px; line-height: 1.7; }
+.q-footer-block a { color: var(--text); }
+.q-footer-block a:hover { color: var(--accent); }
+.q-footer-fineprint {
+  margin-top: 32px; padding-top: 20px;
+  border-top: 1px solid var(--border);
+  font-size: 12px; color: var(--muted);
+  display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+}
+
+/* MOBILE */
+@media (max-width: 720px) {
+  .q-options { grid-template-columns: 1fr; }
+  .q-extras { grid-template-columns: 1fr; }
+  .q-footer-grid { grid-template-columns: 1fr; }
+  .q-cta-row { gap: 10px; }
+  .q-cta-button { padding: 12px 18px; font-size: 14px; }
+  .q-cta-totals .amount { font-size: 18px; }
+  .q-section-head .hint { display: none; }
+  body { padding-bottom: 100px; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="q-header">
+  <div class="container row">
+    <div class="q-brand">
+      <div class="q-brand-mark">S</div>
+      <div>
+        <div class="q-brand-name">Sutera Sites</div>
+        <div class="q-brand-sub" id="hdr-prepared-for"></div>
+      </div>
+    </div>
+    <div class="q-meta-pill" id="hdr-pill"></div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="q-hero">
+  <div class="container">
+    <span class="eyebrow" id="hero-eyebrow"></span>
+    <h1 id="hero-headline"></h1>
+    <p id="hero-subhead"></p>
+    <div class="q-total-chip">
+      <span class="label">Live Total</span>
+      <span class="amount" id="chip-amount"></span>
+    </div>
+  </div>
+</section>
+
+<!-- OPTIONS -->
+<section class="q-section">
+  <div class="container">
+    <div class="q-section-head">
+      <span class="q-step">1</span>
+      <h2>Choose your option</h2>
+      <span class="hint">Pick one</span>
+    </div>
+    <div class="q-options" id="options-grid"></div>
+  </div>
+</section>
+
+<!-- EXTRAS -->
+<section class="q-section">
+  <div class="container">
+    <div class="q-section-head">
+      <span class="q-step">2</span>
+      <h2>Add extras</h2>
+      <span class="hint">All optional</span>
+    </div>
+    <div class="q-extras" id="extras-grid"></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="q-footer">
+  <div class="container">
+    <div class="q-footer-grid">
+      <div class="q-footer-block">
+        <h4>Contact</h4>
+        <p id="ftr-name"></p>
+        <p><a id="ftr-phone-link" href="#"></a></p>
+        <p><a id="ftr-email-link" href="#"></a></p>
+      </div>
+      <div class="q-footer-block">
+        <h4>Sutera Sites</h4>
+        <p id="ftr-business"></p>
+        <p id="ftr-abn"></p>
+        <p>Melbourne, Victoria</p>
+      </div>
+    </div>
+    <div class="q-footer-fineprint">
+      <span id="ftr-valid"></span>
+      <span>This quote is private. Please don't share publicly.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- STICKY CTA BAR -->
+<div class="q-cta-bar">
+  <div class="q-cta-row">
+    <div class="q-cta-totals">
+      <span class="label">Your Package</span>
+      <span class="amount" id="cta-amount"></span>
+      <span class="secondary" id="cta-secondary"></span>
+    </div>
+    <button class="q-cta-button" id="cta-button">Lock it in</button>
+  </div>
+</div>
+
+<!-- CONFIRM MODAL -->
+<div class="q-modal-backdrop" id="modal-backdrop">
+  <div class="q-modal">
+    <div id="modal-form-view">
+      <h3>Lock in your selection</h3>
+      <p class="sub">Send through your details and James will follow up within 24 hours with a Stripe link or invoice.</p>
+      <div class="q-summary" id="modal-summary"></div>
+      <form id="confirm-form">
+        <div class="q-form-field">
+          <label for="f-name">Your name</label>
+          <input type="text" id="f-name" name="name" required />
+        </div>
+        <div class="q-form-field">
+          <label for="f-phone">Phone (optional)</label>
+          <input type="tel" id="f-phone" name="phone" />
+        </div>
+        <div class="q-form-field">
+          <label for="f-notes">Anything to add? (optional)</label>
+          <textarea id="f-notes" name="notes" placeholder="e.g. specific photos to use, name to feature, deadline"></textarea>
+        </div>
+        <input type="hidden" id="f-selection" name="selection" />
+        <input type="hidden" id="f-business" name="business" />
+        <div class="q-form-actions">
+          <button type="button" class="q-form-cancel" id="modal-cancel">Cancel</button>
+          <button type="submit" class="q-form-submit" id="modal-submit">Send to James</button>
+        </div>
+      </form>
+    </div>
+    <div id="modal-success-view" style="display:none;">
+      <div class="q-success">
+        <div class="q-success-icon">✓</div>
+        <h3>Locked in</h3>
+        <p class="sub">James got your selection. He'll be in touch within 24 hours. If it's urgent, call or text 0434 542 005.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  const C = window.QUOTE_CONFIG;
+  const fmt = (n) => '$' + n.toLocaleString('en-AU');
+  const state = {
+    selectedOption: null,
+    extras: {} // id -> { selected: bool, qty: int }
+  };
+
+  // Apply brand tokens
+  const root = document.documentElement;
+  root.style.setProperty('--accent', C.brand.accent);
+  root.style.setProperty('--accent-dark', C.brand.accentDark);
+  root.style.setProperty('--accent-soft', C.brand.accent + '14');
+  root.style.setProperty('--surface', C.brand.surface);
+  root.style.setProperty('--text', C.brand.text);
+  // Update SVG checkmarks to use brand accent
+  const enc = encodeURIComponent(C.brand.accent);
+  document.querySelectorAll('style').forEach(s => {
+    s.textContent = s.textContent.replaceAll('%23ff6b00', '%23' + C.brand.accent.replace('#',''));
+  });
+
+  // Header / hero / footer copy
+  document.title = 'Quote for ' + C.meta.business + ' | Sutera Sites';
+  document.getElementById('hdr-prepared-for').textContent = 'Prepared for ' + C.meta.business;
+  document.getElementById('hdr-pill').textContent = 'Quote ' + C.meta.date;
+  document.getElementById('hero-eyebrow').textContent = C.intro.eyebrow || 'Custom Quote';
+  document.getElementById('hero-headline').innerHTML = C.intro.headline.replace(/\*(.+?)\*/g, '<em>$1</em>');
+  document.getElementById('hero-subhead').textContent = C.intro.subhead;
+  document.getElementById('ftr-name').textContent = C.contact.name;
+  const phoneLink = document.getElementById('ftr-phone-link');
+  phoneLink.href = 'tel:' + C.contact.phone.replace(/\s/g, '');
+  phoneLink.textContent = C.contact.phone;
+  const emailLink = document.getElementById('ftr-email-link');
+  emailLink.href = 'mailto:' + C.contact.email;
+  emailLink.textContent = C.contact.email;
+  document.getElementById('ftr-business').textContent = C.contact.business;
+  document.getElementById('ftr-abn').textContent = 'ABN ' + C.contact.abn;
+  document.getElementById('f-business').value = C.meta.business;
+
+  const validUntil = new Date(C.meta.date);
+  validUntil.setDate(validUntil.getDate() + (C.meta.validDays || 14));
+  document.getElementById('ftr-valid').textContent = 'Valid until ' + validUntil.toISOString().slice(0,10);
+
+  // Render options
+  const optionsGrid = document.getElementById('options-grid');
+  C.options.forEach((opt) => {
+    const card = document.createElement('div');
+    card.className = 'q-option' + (opt.defaultSelected ? ' is-selected' : '');
+    card.dataset.id = opt.id;
+    if (opt.defaultSelected) state.selectedOption = opt.id;
+    const includesHtml = opt.includes.map(i => `<div class="q-include-item">${i}</div>`).join('');
+    card.innerHTML = `
+      <div class="q-option-radio"></div>
+      ${opt.recommended ? '<span class="q-option-badge">Recommended</span>' : ''}
+      <div class="q-option-label">${opt.label}</div>
+      <div class="q-option-tagline">${opt.tagline}</div>
+      <div class="q-option-price">
+        <span class="amount">${fmt(opt.price)}</span>
+        <span class="unit">${opt.unit && opt.unit.startsWith('/') ? opt.unit : ''}</span>
+      </div>
+      ${opt.unit && !opt.unit.startsWith('/') ? `<div class="q-option-unit-tag">${opt.unit}</div>` : ''}
+      <div class="q-option-lockin">${opt.lockIn}</div>
+      <div class="q-includes-title">What's included</div>
+      <div class="q-includes">${includesHtml}</div>
+    `;
+    card.addEventListener('click', () => {
+      state.selectedOption = opt.id;
+      document.querySelectorAll('.q-option').forEach(c => c.classList.toggle('is-selected', c.dataset.id === opt.id));
+      updateTotals();
+    });
+    optionsGrid.appendChild(card);
+  });
+
+  // Render extras
+  const extrasGrid = document.getElementById('extras-grid');
+  C.extras.forEach((ex) => {
+    state.extras[ex.id] = { selected: false, qty: ex.multi ? (ex.defaultQty || 1) : 1 };
+    const card = document.createElement('div');
+    card.className = 'q-extra' + (ex.multi ? ' is-multi' : '');
+    card.dataset.id = ex.id;
+    card.innerHTML = `
+      <div class="q-extra-row" data-action="toggle">
+        <div class="q-extra-check"></div>
+        <div class="q-extra-body">
+          <div style="display:flex;justify-content:space-between;gap:10px;align-items:flex-start;">
+            <div style="min-width:0;">
+              <div class="q-extra-label">${ex.label}</div>
+              <div class="q-extra-tagline">${ex.tagline}</div>
+            </div>
+            <div class="q-extra-price">${fmt(ex.price)}${ex.unit && ex.unit !== 'one-off' ? ' ' + ex.unit : ''}</div>
+          </div>
+        </div>
+      </div>
+      ${ex.multi ? `
+        <div class="q-extra-qty">
+          <span class="qty-label">Quantity:</span>
+          <button data-action="dec" type="button">-</button>
+          <span class="qty-num">1</span>
+          <button data-action="inc" type="button">+</button>
+        </div>
+      ` : ''}
+      <button class="q-extra-toggle-details" data-action="details" type="button">More info ↓</button>
+      <div class="q-extra-details">${ex.details}</div>
+    `;
+    card.addEventListener('click', (e) => {
+      const action = e.target.closest('[data-action]')?.dataset.action;
+      if (action === 'toggle') {
+        state.extras[ex.id].selected = !state.extras[ex.id].selected;
+        card.classList.toggle('is-selected', state.extras[ex.id].selected);
+        updateTotals();
+      } else if (action === 'details') {
+        card.classList.toggle('is-open');
+        const btn = card.querySelector('[data-action="details"]');
+        btn.textContent = card.classList.contains('is-open') ? 'Less info ↑' : 'More info ↓';
+      } else if (action === 'inc') {
+        state.extras[ex.id].qty++;
+        card.querySelector('.qty-num').textContent = state.extras[ex.id].qty;
+        updateTotals();
+      } else if (action === 'dec') {
+        if (state.extras[ex.id].qty > 1) state.extras[ex.id].qty--;
+        card.querySelector('.qty-num').textContent = state.extras[ex.id].qty;
+        updateTotals();
+      }
+    });
+    extrasGrid.appendChild(card);
+  });
+
+  function computeBuckets() {
+    const opt = C.options.find(o => o.id === state.selectedOption);
+    const monthly = [];
+    const oneOff = [];
+    if (opt) {
+      const bucket = (opt.unit && opt.unit.includes('/mo')) ? monthly : oneOff;
+      bucket.push({ name: opt.label, price: opt.price, unit: opt.unit });
+    }
+    C.extras.forEach(ex => {
+      const s = state.extras[ex.id];
+      if (s && s.selected) {
+        const qty = ex.multi ? s.qty : 1;
+        const total = ex.price * qty;
+        const bucket = (ex.unit && ex.unit.includes('/mo')) ? monthly : oneOff;
+        bucket.push({
+          name: ex.label + (ex.multi && qty > 1 ? ` × ${qty}` : ''),
+          price: total,
+          unit: ex.unit
+        });
+      }
+    });
+    return { monthly, oneOff };
+  }
+
+  function updateTotals() {
+    const { monthly, oneOff } = computeBuckets();
+    const monthlyTotal = monthly.reduce((s, l) => s + l.price, 0);
+    const oneOffTotal = oneOff.reduce((s, l) => s + l.price, 0);
+    const parts = [];
+    if (oneOffTotal > 0) parts.push(fmt(oneOffTotal));
+    if (monthlyTotal > 0) parts.push(fmt(monthlyTotal) + '/mo');
+    const display = parts.length ? parts.join(' + ') : fmt(0);
+    document.getElementById('chip-amount').textContent = display;
+    document.getElementById('cta-amount').textContent = display;
+    const secondary = [];
+    if (oneOffTotal > 0 && monthlyTotal > 0) secondary.push('upfront + monthly');
+    else if (oneOffTotal > 0) secondary.push('one-off, paid 50/50');
+    else if (monthlyTotal > 0) secondary.push('6-month minimum');
+    document.getElementById('cta-secondary').textContent = secondary.join('');
+  }
+
+  function renderModalSummary() {
+    const { monthly, oneOff } = computeBuckets();
+    const monthlyTotal = monthly.reduce((s, l) => s + l.price, 0);
+    const oneOffTotal = oneOff.reduce((s, l) => s + l.price, 0);
+    let html = '';
+    [...oneOff, ...monthly].forEach(l => {
+      html += `<div class="q-summary-line"><span class="name">${l.name}</span><span class="price">${fmt(l.price)}${l.unit && l.unit.startsWith('/') ? l.unit : ''}</span></div>`;
+    });
+    if (oneOffTotal > 0) html += `<div class="q-summary-line total"><span class="name">One-off total</span><span class="price total-price">${fmt(oneOffTotal)}</span></div>`;
+    if (monthlyTotal > 0) html += `<div class="q-summary-line total"><span class="name">Monthly total</span><span class="price total-price">${fmt(monthlyTotal)}/mo</span></div>`;
+    document.getElementById('modal-summary').innerHTML = html;
+
+    // Build hidden field with selection JSON for Formspree
+    const selection = {
+      option: state.selectedOption,
+      extras: Object.entries(state.extras).filter(([_, v]) => v.selected).map(([id, v]) => {
+        const ex = C.extras.find(e => e.id === id);
+        return { id, label: ex.label, qty: ex.multi ? v.qty : 1, price: ex.price * (ex.multi ? v.qty : 1) };
+      }),
+      totals: { oneOff: oneOffTotal, monthly: monthlyTotal }
+    };
+    document.getElementById('f-selection').value = JSON.stringify(selection, null, 2);
+  }
+
+  // Modal
+  const backdrop = document.getElementById('modal-backdrop');
+  document.getElementById('cta-button').addEventListener('click', () => {
+    renderModalSummary();
+    backdrop.classList.add('is-open');
+  });
+  document.getElementById('modal-cancel').addEventListener('click', () => backdrop.classList.remove('is-open'));
+  backdrop.addEventListener('click', (e) => { if (e.target === backdrop) backdrop.classList.remove('is-open'); });
+
+  // Form submit
+  document.getElementById('confirm-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const submitBtn = document.getElementById('modal-submit');
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+    const formData = new FormData(e.target);
+    try {
+      const res = await fetch(C.meta.formspreeEndpoint, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        document.getElementById('modal-form-view').style.display = 'none';
+        document.getElementById('modal-success-view').style.display = 'block';
+      } else {
+        throw new Error('Submission failed');
+      }
+    } catch (err) {
+      alert('Sorry, something went wrong. Please call or text James on ' + C.contact.phone + '.');
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Send to James';
+    }
+  });
+
+  updateTotals();
+})();
+</script>
+</body>
+</html>
