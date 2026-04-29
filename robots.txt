@@ -1,6 +1,5 @@
 User-agent: *
 Allow: /
 Disallow: /thank-you.html
-Disallow: /quote/
 
 Sitemap: https://suterasites.com/sitemap.xml
