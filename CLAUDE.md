@@ -7,7 +7,7 @@ The public-facing website for **Sutera Sites** - a Melbourne-based web design an
 **Primary goal:** Generate inbound leads and booked calls.
 **Secondary goal:** Rank organically for local Melbourne web design + Google Ads keywords.
 
-**Migration context:** Replaces the existing Framer-hosted suterasites.com before 2026-04-29 (Framer $28/mo renewal date). Target completion Tue 2026-04-28 for buffer day.
+**Migration context:** Replaces the existing Framer-hosted suterasites.com.au before 2026-04-29 (Framer $28/mo renewal date). Target completion Tue 2026-04-28 for buffer day.
 
 ---
 
@@ -219,7 +219,7 @@ Additional rules:
 - **Animations:** GSAP via CDN + ScrollTrigger plugin
 - **Forms:** Formspree
 - **Hosting:** Cloudflare Pages (free tier)
-- **Domain:** suterasites.com (GoDaddy, repointing from Framer)
+- **Domain:** suterasites.com.au (GoDaddy, repointing from Framer)
 - **Analytics:** Google Analytics 4 + Google Tag Manager
 - **Conversion tracking:** Google Ads conversion tag on `/thank-you`
 
@@ -281,7 +281,7 @@ Sutera Sites/
 2. Push to GitHub (new repo under `suterasites` org).
 3. Connect to Cloudflare Pages (auto-deploy on push).
 4. Test on `.pages.dev` subdomain.
-5. Repoint suterasites.com DNS from Framer to Cloudflare.
+5. Repoint suterasites.com.au DNS from Framer to Cloudflare.
 6. Verify live, test all forms.
 7. **Cancel Framer subscription before 2026-04-29.**
 
