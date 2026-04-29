@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 56" role="img" aria-label="Roofing123">
+  <style>
+    .wm { font-family: 'Inter', system-ui, -apple-system, Segoe UI, sans-serif; font-weight: 800; font-size: 36px; letter-spacing: -0.02em; }
+  </style>
+  <g transform="translate(8 38)">
+    <polygon points="0,-22 11,0 -11,0" fill="#C2571A"/>
+    <path d="M-2.5,-9 L0,-12 L2.5,-9 L2.5,-3 L1,-3 L1,-6 L-1,-6 L-1,-3 L-2.5,-3 Z" fill="#fff"/>
+  </g>
+  <text x="36" y="40" class="wm" fill="#ffffff">Roofing<tspan fill="#C2571A">123</tspan></text>
+</svg>
