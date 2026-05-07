@@ -15,6 +15,20 @@
   <meta property="og:description" content="Logo, business cards and custom website launched in under 2 weeks. Geelong regrouting specialist." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://suterasites.com.au/work/grout-academy.html" />
+  <meta property="og:site_name" content="Sutera Sites" />
+  <meta property="og:locale" content="en_AU" />
+  <meta property="og:image" content="https://suterasites.com.au/images/logos/sutera-sites.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Sutera Sites - Web Design Melbourne" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://suterasites.com.au/images/logos/sutera-sites.png" />
+
+  <meta name="geo.region" content="AU-VIC" />
+  <meta name="geo.placename" content="Melbourne" />
+  <meta name="ICBM" content="-37.8136, 144.9631" />
+
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,8 +36,36 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="../css/styles.css" />
+
+  <!-- Structured Data: Article (Case Study) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Grout Academy Case Study",
+    "url": "https://suterasites.com.au/work/grout-academy.html",
+    "mainEntityOfPage": "https://suterasites.com.au/work/grout-academy.html",
+    "publisher": { "@id": "https://suterasites.com.au/#organization" },
+    "author": { "@id": "https://suterasites.com.au/#organization" },
+    "image": "https://suterasites.com.au/images/logos/sutera-sites.png",
+    "inLanguage": "en-AU"
+  }
+  </script>
+  <!-- Structured Data: Breadcrumb -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://suterasites.com.au/" },
+      { "@type": "ListItem", "position": 2, "name": "Work", "item": "https://suterasites.com.au/work.html" },
+      { "@type": "ListItem", "position": 3, "name": "Grout Academy", "item": "https://suterasites.com.au/work/grout-academy.html" }
+    ]
+  }
+  </script>
 </head>
 <body>
+  <a href="#main" class="skip-link">Skip to content</a>
 
   <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
     <filter id="drop-black" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  1 1 1 0 0" /></filter>
@@ -84,6 +126,19 @@
     </nav>
     <div class="mt-auto flex flex-col gap-3"><a href="../contact.html" class="btn-primary justify-center">Book a Free Call</a></div>
   </div>
+
+  <main id="main">
+  <!-- BREADCRUMBS -->
+  <nav aria-label="Breadcrumb" class="breadcrumbs">
+    <div class="max-w-7xl mx-auto px-6">
+      <ol class="flex flex-wrap gap-2 items-center text-xs text-neutral-500 pt-24 md:pt-28">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../work.html">Work</a></li>
+        <li aria-current="page">Grout Academy</li>
+      </ol>
+    </div>
+  </nav>
+
 
   <section class="relative pt-32 pb-16 md:pt-40 md:pb-20 overflow-hidden">
     <div class="noise"></div><div class="absolute inset-0 grid-bg opacity-40"></div>
@@ -175,6 +230,8 @@
       </div>
     </div>
   </section>
+
+  </main>
 
   <footer class="border-t border-neutral-900 py-16">
     <div class="max-w-6xl mx-auto px-6">

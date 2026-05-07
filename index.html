@@ -15,6 +15,20 @@
   <meta property="og:description" content="We build websites, run Google Ads and design brand collateral for Melbourne trades and local service businesses." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://suterasites.com.au/" />
+  <meta property="og:site_name" content="Sutera Sites" />
+  <meta property="og:locale" content="en_AU" />
+  <meta property="og:image" content="https://suterasites.com.au/images/logos/sutera-sites.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Sutera Sites - Web Design Melbourne" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://suterasites.com.au/images/logos/sutera-sites.png" />
+
+  <meta name="geo.region" content="AU-VIC" />
+  <meta name="geo.placename" content="Melbourne" />
+  <meta name="ICBM" content="-37.8136, 144.9631" />
+
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,23 +40,52 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Sutera Sites",
-    "description": "Web design, Google Ads management and branding for Melbourne local service businesses.",
-    "url": "https://suterasites.com.au",
-    "telephone": "+61434542005",
-    "email": "suterasites@gmail.com",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Melbourne",
-      "addressRegion": "VIC",
-      "addressCountry": "AU"
-    },
-    "areaServed": "Melbourne"
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://suterasites.com.au/#organization",
+        "name": "Sutera Sites",
+        "description": "Melbourne-based web design and digital marketing agency for local service businesses.",
+        "url": "https://suterasites.com.au",
+        "telephone": "+61434542005",
+        "email": "suterasites@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Melbourne",
+          "addressRegion": "VIC",
+          "addressCountry": "AU"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -37.8136,
+          "longitude": 144.9631
+        },
+        "areaServed": { "@type": "City", "name": "Melbourne" },
+        "image": "https://suterasites.com.au/images/logos/sutera-sites.png",
+        "logo": "https://suterasites.com.au/images/logos/sutera-sites.png",
+        "priceRange": "$$",
+        "sameAs": []
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://suterasites.com.au/#website",
+        "url": "https://suterasites.com.au/",
+        "name": "Sutera Sites",
+        "publisher": { "@id": "https://suterasites.com.au/#organization" },
+        "inLanguage": "en-AU"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://suterasites.com.au/" }
+        ]
+      }
+    ]
   }
   </script>
 </head>
 <body>
+  <a href="#main" class="skip-link">Skip to content</a>
 
   <!-- Inline SVG filters (used by CSS filter: url(...)) -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -218,6 +261,8 @@
       <a href="contact.html" class="btn-primary justify-center">Book a Free Call</a>
     </div>
   </div>
+
+  <main id="main">
 
   <!-- ============ HERO ============ -->
   <section class="relative pt-32 pb-24 md:pt-40 md:pb-32 overflow-hidden">
@@ -668,6 +713,8 @@
   </section>
 
   <!-- ============ FOOTER ============ -->
+  </main>
+
   <footer class="border-t border-neutral-900 py-16">
     <div class="max-w-6xl mx-auto px-6">
       <div class="grid md:grid-cols-4 gap-10 mb-12">
