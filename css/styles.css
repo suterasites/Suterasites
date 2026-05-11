@@ -412,6 +412,16 @@ body {
   filter: url(#drop-black);
 }
 
+/* Invert black-on-transparent logos to white silhouettes for the dark strip */
+.logo-item.bg-invert img {
+  filter: brightness(0) invert(1);
+}
+
+.logo-item.bg-invert:hover img {
+  filter: brightness(0) invert(1);
+  opacity: 1;
+}
+
 /* Brand logo (navbar + footer). Strips solid black background via SVG filter. */
 .brand-logo {
   height: 80px;
