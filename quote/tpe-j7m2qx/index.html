@@ -130,7 +130,7 @@ window.QUOTE_CONFIG = {
       label: "Google Ads management",
       price: 300,
       unit: "/mo",
-      tagline: "+ ad spend (recommended $20-$30/day). $25/mo bundle discount auto-applied on website fee.",
+      tagline: "Save $25/mo when bundled with a monthly website plan (auto-applied). + ad spend, recommended $20-$30/day.",
       details: "We run your Google Ads end-to-end: campaign setup, keyword research, monthly optimisation, full reporting. Drives both install enquiries and screw-pile-sales orders. Same setup we run for Apollo Earthworks (Melbourne earthworks - 2 leads in 8 days, $45 CPL on launch). Ad spend goes direct to Google, not us. Month-to-month, no lock-in."
     },
     {
@@ -414,6 +414,28 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 /* EXTRAS */
+.q-bundle-callout {
+  display: flex; align-items: flex-start; gap: 14px;
+  border: 1.5px solid var(--accent);
+  background: var(--accent-soft);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  margin-bottom: 16px;
+}
+.q-bundle-callout-icon {
+  flex-shrink: 0;
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700; font-size: 16px;
+  display: grid; place-items: center;
+  margin-top: 1px;
+}
+.q-bundle-callout-body {
+  font-size: 14px; line-height: 1.55; color: var(--text);
+}
+.q-bundle-callout-body strong { color: var(--accent-dark); margin-right: 4px; }
 .q-extras { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
 .q-extra {
   border: 1.5px solid var(--border);
@@ -742,6 +764,13 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       <span class="q-step">2</span>
       <h2>Add extras</h2>
       <span class="hint">All optional</span>
+    </div>
+    <div class="q-bundle-callout">
+      <div class="q-bundle-callout-icon" aria-hidden="true">%</div>
+      <div class="q-bundle-callout-body">
+        <strong>Bundle and save $25/month.</strong>
+        Pick a monthly website plan and add Google Ads management below. We knock $25 off the website fee for as long as ads are running. Auto-applied in the total.
+      </div>
     </div>
     <div class="q-extras" id="extras-grid"></div>
   </div>
