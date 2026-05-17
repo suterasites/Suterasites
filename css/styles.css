@@ -343,43 +343,44 @@ body {
 /* Soft blue glow blobs - atmospheric depth without literal imagery */
 .hero-glow {
   position: absolute;
-  width: 55vw;
-  height: 55vw;
-  max-width: 720px;
-  max-height: 720px;
+  width: 60vw;
+  height: 60vw;
+  max-width: 820px;
+  max-height: 820px;
   border-radius: 50%;
-  filter: blur(110px);
-  opacity: 0.38;
+  filter: blur(120px);
+  opacity: 0.55;
   z-index: 0;
   pointer-events: none;
 }
 
 .hero-glow--left {
-  background: radial-gradient(circle, rgba(59, 130, 246, 0.55) 0%, rgba(59, 130, 246, 0) 70%);
-  top: -18%;
-  left: -18%;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.7) 0%, rgba(59, 130, 246, 0) 70%);
+  top: -10%;
+  left: -10%;
 }
 
 .hero-glow--right {
-  background: radial-gradient(circle, rgba(59, 130, 246, 0.38) 0%, rgba(59, 130, 246, 0) 70%);
-  bottom: -22%;
-  right: -18%;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.55) 0%, rgba(59, 130, 246, 0) 70%);
+  bottom: -15%;
+  right: -10%;
 }
 
 @media (max-width: 640px) {
   .hero-glow {
-    opacity: 0.28;
+    opacity: 0.4;
     filter: blur(90px);
   }
-  .hero-glow--left { top: -12%; left: -30%; }
-  .hero-glow--right { bottom: -8%; right: -30%; }
+  .hero-glow--left { top: -8%; left: -25%; }
+  .hero-glow--right { bottom: -5%; right: -25%; }
 }
 
-/* Serif hero headline */
+/* Serif hero headline - bumped specificity so Tailwind preflight can't beat it */
+h1.hero-headline,
 .hero-headline {
   font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif;
   font-weight: 400;
-  font-size: clamp(3.25rem, 11vw, 7.5rem);
+  font-size: clamp(3.5rem, 10vw, 7.5rem);
   line-height: 1;
   letter-spacing: -0.015em;
 }
