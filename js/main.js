@@ -229,4 +229,16 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- Current year in footer ---
   const yearEl = document.querySelector('[data-year]');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  // --- Feature deep-dive: click to switch active item ---
+  const featureList = document.querySelector('[data-feature-list]');
+  if (featureList) {
+    const items = featureList.querySelectorAll('[data-feature-item]');
+    items.forEach(item => {
+      item.addEventListener('click', () => {
+        items.forEach(i => i.classList.remove('is-active'));
+        item.classList.add('is-active');
+      });
+    });
+  }
 });
