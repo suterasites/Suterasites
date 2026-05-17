@@ -335,6 +335,76 @@ body {
   line-height: 1.05;
 }
 
+/* ========= HERO (serif, atmospheric) ========= */
+.hero-section {
+  isolation: isolate;
+}
+
+/* Soft blue glow blobs - atmospheric depth without literal imagery */
+.hero-glow {
+  position: absolute;
+  width: 55vw;
+  height: 55vw;
+  max-width: 720px;
+  max-height: 720px;
+  border-radius: 50%;
+  filter: blur(110px);
+  opacity: 0.38;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-glow--left {
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.55) 0%, rgba(59, 130, 246, 0) 70%);
+  top: -18%;
+  left: -18%;
+}
+
+.hero-glow--right {
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.38) 0%, rgba(59, 130, 246, 0) 70%);
+  bottom: -22%;
+  right: -18%;
+}
+
+@media (max-width: 640px) {
+  .hero-glow {
+    opacity: 0.28;
+    filter: blur(90px);
+  }
+  .hero-glow--left { top: -12%; left: -30%; }
+  .hero-glow--right { bottom: -8%; right: -30%; }
+}
+
+/* Serif hero headline */
+.hero-headline {
+  font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+  font-weight: 400;
+  font-size: clamp(3.25rem, 11vw, 7.5rem);
+  line-height: 1;
+  letter-spacing: -0.015em;
+}
+
+/* Three-up feature row at the bottom of hero */
+.hero-feature h3 {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.005em;
+}
+
+.hero-feature p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.hero-feature-icon {
+  color: var(--text-muted);
+  margin-bottom: 0.9rem;
+  display: inline-flex;
+}
+
 /* Link underline */
 .link-underline {
   position: relative;

@@ -33,7 +33,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="css/styles.css" />
@@ -266,31 +266,58 @@
   <main id="main">
 
   <!-- ============ HERO ============ -->
-  <section class="relative pt-32 pb-24 md:pt-40 md:pb-32 overflow-hidden">
+  <section class="hero-section relative pt-36 pb-16 md:pt-44 md:pb-24 overflow-hidden">
     <div class="noise"></div>
     <div class="absolute inset-0 grid-bg opacity-40"></div>
 
-    <div class="relative max-w-6xl mx-auto px-6 text-center">
+    <div class="hero-glow hero-glow--left" aria-hidden="true"></div>
+    <div class="hero-glow hero-glow--right" aria-hidden="true"></div>
+
+    <div class="relative max-w-5xl mx-auto px-6 text-center">
       <div data-hero-pill class="reveal inline-flex mb-8">
-        <span class="accent-pill">Melbourne Web Design &amp; Google Ads</span>
+        <span class="accent-pill">Melbourne Web Design &amp; Marketing</span>
       </div>
 
-      <h1 data-hero-title class="reveal headline text-5xl md:text-7xl lg:text-[5.5rem] text-white mb-6">
-        Websites that<br />
-        <span class="muted-text">generate leads</span> for<br />
-        local service businesses.
+      <h1 data-hero-title class="reveal hero-headline text-white mb-7">
+        Websites &amp;<br />
+        Google Ads.
       </h1>
 
-      <p data-hero-subtitle class="reveal text-lg md:text-xl text-neutral-400 max-w-2xl mx-auto mb-10">
-        We build custom websites, run Google Ads and design brand collateral for Melbourne trades, clubs and small businesses. Every project is built to convert, not just look good.
+      <p data-hero-subtitle class="reveal text-lg md:text-xl text-neutral-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+        Custom sites, ad campaigns and brand collateral for Melbourne local service businesses.<br class="hidden md:block" />
+        Built to generate leads, not just look good.
       </p>
 
-      <div data-hero-cta class="reveal flex flex-col sm:flex-row gap-3 justify-center items-center">
+      <div data-hero-cta class="reveal flex flex-col sm:flex-row gap-3 justify-center items-center mb-20 md:mb-24">
         <a href="contact.html" class="btn-primary">
           Book a Free Call
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
         </a>
         <a href="work.html" class="btn-secondary">See Our Work</a>
+      </div>
+
+      <div data-stagger-parent class="hero-features grid sm:grid-cols-3 gap-10 sm:gap-12 pt-12 border-t border-neutral-900 text-left">
+        <div data-stagger-child class="reveal hero-feature">
+          <div class="hero-feature-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h3>Built to Convert</h3>
+          <p>Custom HTML, CSS and JS. No page builders, no template lock-in, no platforms that raise prices on you.</p>
+        </div>
+        <div data-stagger-child class="reveal hero-feature">
+          <div class="hero-feature-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </div>
+          <h3>Ads Ready Day One</h3>
+          <p>Google Ads setup and ongoing management. 2-week free trial so you see results before committing.</p>
+        </div>
+        <div data-stagger-child class="reveal hero-feature">
+          <div class="hero-feature-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <h3>Melbourne Local</h3>
+          <p>Direct line to the person building your site. No account managers, no offshore handoffs.</p>
+        </div>
       </div>
 
     </div>
