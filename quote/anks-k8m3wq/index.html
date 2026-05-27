@@ -41,44 +41,49 @@ window.QUOTE_CONFIG = {
   intro: {
     eyebrow: "Custom Quote",
     headline: "ANKS Construction and Landscaping",
-    subhead: "A full website rebuild for ANKS Construction, plus a simple landing page for your second business. Pick the plan that suits, add the second site if you want it bundled, and the total updates live as you click."
+    subhead: "$1,500 upfront covers both sites for the first 6 months - the main ANKS Construction & Landscaping website plus a simple landing page for your second business. From month 7, $250/mo combined keeps everything running, cancel anytime. Monthly-from-day-one options below if you'd rather not pay upfront."
   },
   options: [
     {
-      id: "basic",
-      label: "Basic",
-      price: 100,
-      unit: "/mo",
-      tagline: "The credible front door",
-      lockIn: "6-month minimum, cancel anytime after",
-      defaultSelected: false,
+      id: "bundle",
+      label: "Both Sites - 6 Months Upfront",
+      price: 1500,
+      unit: "upfront",
+      tagline: "Recommended - one payment covers both websites for the full 6-month lock-in. Then $250/mo combined from month 7.",
+      lockIn: "$1,500 paid upfront covers months 1-6 in full. From month 7, $250/mo combined ($150 ANKS Pro + $100 second site), cancel anytime.",
+      recommended: true,
+      defaultSelected: true,
       includes: [
-        "Custom-built website (not a template), up to 5 pages",
-        "Cloudflare Pages hosting, SSL, domain stays on anks.com.au (or new domain of your choice)",
-        "Contact form, leads sent direct to your inbox",
-        "Click-to-call + click-to-SMS on mobile",
-        "On-page SEO foundations (titles, meta, schema, sitemap)",
-        "1 minor update per month (text, photo swaps, contact info)",
-        "5 business day turnaround on update requests",
-        "Email support"
+        "ANKS Construction & Landscaping main site (Pro spec - up to 10 pages: Home, Services, Construction, Landscaping, Earthworks, Projects, About, FAQ, Testimonials, Contact)",
+        "Second business simple landing page (1 page: hero, what you offer, gallery, contact form, click-to-call)",
+        "Both sites custom-built (not templates), hosted on Cloudflare Pages with SSL",
+        "Mega navbar on ANKS, project gallery with your real job photos",
+        "Live Google Reviews widget on ANKS (your 5.0 stars across 28 reviews on display)",
+        "Click-to-call + click-to-SMS on mobile, contact form on both sites",
+        "On-page SEO foundations (titles, meta, schema, sitemap) on both sites",
+        "3 updates per month on the ANKS site, 1 update per month on the second site",
+        "Monthly performance snapshot, Google Business Profile maintenance",
+        "Email + SMS support, 48 hour turnaround on updates",
+        "From month 7: $250/mo combined subscription, cancel anytime"
       ]
     },
     {
       id: "pro",
-      label: "Pro",
+      label: "Pro (ANKS site only, monthly)",
       price: 150,
       unit: "/mo",
-      tagline: "Recommended for ANKS - covers Construction, Landscaping, and Earthworks as separate service pages",
+      tagline: "ANKS Construction main site only, paid monthly. Add the second landing page separately below.",
       lockIn: "6-month minimum, cancel anytime after",
-      recommended: true,
-      defaultSelected: true,
+      defaultSelected: false,
       includes: [
-        "Everything in Basic, plus:",
         "Up to 10 pages: Home, Services overview, Construction, Landscaping, Earthworks, Projects gallery, About, FAQ, Testimonials, Contact",
+        "Custom-built (not a template), Cloudflare Pages hosting, SSL",
         "Mega navbar across every page",
         "Project gallery with real job photos from your portfolio",
         "Hero video or branded hero shot on the homepage",
         "Live Google Reviews widget embedded (your 5.0 stars across 28 reviews on display)",
+        "Contact form, click-to-call + click-to-SMS on mobile",
+        "On-page SEO foundations (titles, meta, schema, sitemap)",
         "3 updates per month",
         "Monthly performance snapshot (form submissions + traffic + top search terms)",
         "Google Business Profile maintenance (hours, posts, photo uploads)",
@@ -88,10 +93,10 @@ window.QUOTE_CONFIG = {
     },
     {
       id: "premium",
-      label: "Premium",
+      label: "Premium (ANKS site only, monthly)",
       price: 250,
       unit: "/mo",
-      tagline: "Adds service-area location pages + ongoing SEO content for suburb-by-suburb reach across Melbourne",
+      tagline: "ANKS Construction main site with suburb pages + ongoing SEO content for suburb-by-suburb reach across Melbourne. Add the second LP separately below if you want it.",
       lockIn: "6-month minimum, cancel anytime after",
       defaultSelected: false,
       includes: [
@@ -107,10 +112,10 @@ window.QUOTE_CONFIG = {
     },
     {
       id: "oneoff",
-      label: "One-Off Build",
+      label: "One-Off Build (ANKS site only)",
       price: 1500,
       unit: "one-off",
-      tagline: "Pay once, you own it outright",
+      tagline: "Pay once for the ANKS Construction site, you own it outright. Hosting on Cloudflare stays free. Add the second LP separately below if you want it.",
       lockIn: "Paid 50/50: $750 upfront, $750 on launch",
       defaultSelected: false,
       includes: [
@@ -130,8 +135,8 @@ window.QUOTE_CONFIG = {
       label: "Second business - simple landing page",
       price: 100,
       unit: "/mo",
-      tagline: "The simple one-page site for your second business (as discussed on the call)",
-      details: "A single-page landing site for your second business - the smaller, simpler one. Same build quality as the main ANKS site, just scoped to one page: hero, what you offer, gallery or photo strip, contact form, click-to-call, hosted on Cloudflare Pages. 6-month minimum same as the main site. Final scope, name, and domain confirmed before kick-off."
+      tagline: "ALREADY INCLUDED if you pick the 6-Month Upfront Bundle above. Only add here if you went with a monthly tier and want the second site too.",
+      details: "A single-page landing site for your second business - the smaller, simpler one. Same build quality as the main ANKS site, just scoped to one page: hero, what you offer, gallery or photo strip, contact form, click-to-call, hosted on Cloudflare Pages. 6-month minimum same as the main site. Final scope, name, and domain confirmed before kick-off. Already bundled into the $1,500 upfront option above - only check this box if you went monthly on the main site."
     },
     {
       id: "google-ads",
@@ -1053,7 +1058,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     document.getElementById('cta-amount').textContent = display;
     const secondary = [];
     if (oneOffTotal > 0 && monthlyTotal > 0) secondary.push('upfront + monthly');
-    else if (oneOffTotal > 0) secondary.push('one-off, paid 50/50');
+    else if (oneOffTotal > 0) secondary.push(state.selectedOption === 'bundle' ? 'paid in full upfront' : 'one-off, paid 50/50');
     else if (monthlyTotal > 0) secondary.push('6-month minimum');
     document.getElementById('cta-secondary').textContent = secondary.join('');
   }
