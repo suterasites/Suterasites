@@ -123,34 +123,31 @@ window.QUOTE_CONFIG = {
   ],
   extras: [
     {
-      id: "logo-refresh",
-      label: "Logo refresh (vectorise)",
-      price: 200,
-      unit: "one-off",
-      tagline: "Sharp vector version of the HOAD wordmark",
-      details: "Your current logo is a JPG that softens at larger sizes. We rebuild it as a clean vector that prints crisp at any scale: signage, corflutes, truck decals, embroidered shirts, large-format banners. Original style and the stylised 'O' preserved, just production-grade. Recommended before any print or signage work."
-    },
-    {
-      id: "cap-statement",
-      label: "Capability statement (PDF)",
-      price: 150,
-      unit: "one-off",
-      tagline: "Branded PDF for builders, developers, and councils",
-      details: "Clean branded PDF to send with quotes or to builders, developers, and Tier 1 contractors looking for a drainage subbie. Lists experience, services (sewer & stormwater, site cuts, civil, KDR cap & seals), plant/equipment, VBA / CCFV credentials, and contact info. Editable text fields so you can update it later. Reference: Apollo Earthworks' 6-page version was $550 - this is the standard 2-page version."
-    },
-    {
       id: "google-ads",
       label: "Google Ads management",
       price: 300,
       unit: "/mo",
+      category: "Visibility & growth",
+      featured: true,
+      badge: "Ongoing service",
       tagline: "Save $25/mo when bundled with the Pro or Premium website plan (auto-applied). + ad spend, you set the daily budget.",
       details: "You're already running ads - we take them over end-to-end: campaign restructure, keyword research, negative keyword cleanup, monthly optimisation, full reporting. Targeted at builders, developers, and KDR work across the Peninsula and SE Melbourne. Ad spend goes direct to Google, not us. Month-to-month, no lock-in. Same setup we run for Apollo Earthworks (Melbourne earthworks - 2 leads in 8 days, $45 CPL on launch)."
+    },
+    {
+      id: "gbp-setup",
+      label: "Google Business Profile setup",
+      price: 180,
+      unit: "one-off",
+      category: "Visibility & growth",
+      tagline: "Full setup + verification so you show up in Maps and Local Pack",
+      details: "Create or claim your Google Business Profile, NAP consistency with your website, opening hours, services list, service areas (Peninsula, SE Melbourne), 10+ branded photos uploaded, first 3 Google Posts written, review-request link generated and SMS-ready. Pairs cleanly with Ads (bundle above) - paid + organic local visibility together. Pro and Premium plans include ongoing GBP maintenance after setup."
     },
     {
       id: "service-pages",
       label: "Extra service pages",
       price: 80,
       unit: "per page",
+      category: "Extra pages",
       tagline: "Beyond your tier's included page count",
       details: "Each additional service or niche page ranks on its own for that search term. Useful if you want to break out work like NDD (non-destructive digging), retention systems, or a specific civil capability into its own landing page.",
       multi: true,
@@ -161,16 +158,38 @@ window.QUOTE_CONFIG = {
       label: "Location / suburb pages",
       price: 80,
       unit: "per page",
+      category: "Extra pages",
       tagline: "Rank in the suburbs you actually work in",
       details: "Dedicated pages targeting searches like 'drainage contractor Frankston' or 'site cuts Mornington'. Each one is built around a suburb in your catchment so you show up for local builder searches. Pick the suburbs where you want more work.",
       multi: true,
       defaultQty: 0
     },
     {
+      id: "logo-refresh",
+      label: "Logo refresh (vectorise)",
+      price: 200,
+      unit: "one-off",
+      category: "Brand & print",
+      tagline: "Sharp vector version of the HOAD wordmark",
+      details: "Your current logo is a JPG that softens at larger sizes. We rebuild it as a clean vector that prints crisp at any scale: signage, corflutes, truck decals, embroidered shirts, large-format banners. Original style and the stylised 'O' preserved, just production-grade. Recommended before any print or signage work."
+    },
+    {
+      id: "cap-statement",
+      label: "Capability statement (PDF)",
+      price: 150,
+      unit: "one-off",
+      category: "Brand & print",
+      popular: true,
+      tagline: "Branded PDF for builders, developers, and councils",
+      details: "Clean branded PDF to send with quotes or to builders, developers, and Tier 1 contractors looking for a drainage subbie. Lists experience, services (sewer & stormwater, site cuts, civil, KDR cap & seals), plant/equipment, VBA / CCFV credentials, and contact info. Editable text fields so you can update it later. Reference: Apollo Earthworks' 6-page version was $550 - this is the standard 2-page version."
+    },
+    {
       id: "corflute",
       label: "Corflute / job signs (design)",
       price: 100,
       unit: "per design",
+      category: "Brand & print",
+      popular: true,
       tagline: "Branded on-site signage",
       details: "Branded corflute signs for active jobsites. Strong on KDR and unit-development blocks where the next-door neighbour or a passing builder might be your next enquiry. Designed to your specs (size, layout, message). Print through any local sign company at your own cost.",
       multi: true,
@@ -181,6 +200,7 @@ window.QUOTE_CONFIG = {
       label: "Business cards (design)",
       price: 80,
       unit: "one-off",
+      category: "Brand & print",
       tagline: "Print-ready design files",
       details: "Print-ready business card design files matching your branding. You print through Vistaprint, Officeworks, or any local printer at your own cost."
     },
@@ -189,8 +209,18 @@ window.QUOTE_CONFIG = {
       label: "Quote template",
       price: 150,
       unit: "one-off",
+      category: "Brand & print",
       tagline: "Branded fillable template",
       details: "Branded fillable quote template (Word or PDF) so every quote you send to a builder or developer looks consistent and professional. Saves time when quoting recurring drainage and site-cut jobs."
+    },
+    {
+      id: "invoice-template",
+      label: "Invoice template",
+      price: 150,
+      unit: "one-off",
+      category: "Brand & print",
+      tagline: "Branded fillable template, matches the quote template",
+      details: "Branded fillable invoice template (Word or PDF) matching your quote template - one consistent brand from quote through to invoice. Editable fields for line items, GST, payment terms, and your banking details. Mention it when you lock in if you're taking both the quote and invoice templates and we'll bundle them."
     }
   ],
   customRequest: {
@@ -425,7 +455,21 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   font-size: 14px; line-height: 1.55; color: var(--text);
 }
 .q-bundle-callout-body strong { color: var(--accent-dark); margin-right: 4px; }
-.q-extras { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+.q-extras { display: flex; flex-direction: column; gap: 28px; }
+.q-extras-group { display: flex; flex-direction: column; gap: 10px; }
+.q-extras-group-heading {
+  font-family: inherit;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 600;
+}
+.q-extras-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
 .q-extra {
   border: 1.5px solid var(--border);
   border-radius: var(--radius);
@@ -433,6 +477,47 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   background: #fff;
   transition: all var(--transition);
   position: relative;
+}
+.q-extra.is-featured {
+  border-color: var(--accent);
+  background: linear-gradient(180deg, var(--accent-soft) 0%, #fff 80%);
+  box-shadow: var(--shadow-sm);
+}
+.q-extra-featured-badge {
+  display: inline-block;
+  font-family: inherit;
+  font-size: 9px; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--accent);
+  background: var(--accent-soft);
+  padding: 3px 7px; border-radius: 4px;
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+.q-extra-popular-ribbon {
+  position: absolute;
+  top: -9px; right: 14px;
+  background: var(--accent);
+  color: #fff;
+  font-family: inherit;
+  font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+  box-shadow: var(--shadow-sm);
+  z-index: 2;
+}
+.q-extra-price-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 3px;
+  white-space: nowrap;
+}
+.q-extra-unit-badge {
+  font-family: inherit;
+  font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 600;
 }
 .q-extra:hover { border-color: var(--text); }
 .q-extra.is-selected {
@@ -692,7 +777,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 /* MOBILE */
 @media (max-width: 720px) {
   .q-options { grid-template-columns: 1fr; }
-  .q-extras { grid-template-columns: 1fr; }
+  .q-extras-grid { grid-template-columns: 1fr; }
   .q-footer-grid { grid-template-columns: 1fr; }
   .q-cta-row { gap: 10px; }
   .q-cta-button { padding: 12px 18px; font-size: 14px; }
@@ -758,7 +843,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       <div class="q-bundle-callout-icon" aria-hidden="true">%</div>
       <div class="q-bundle-callout-body">
         <strong>Bundle and save $25/month.</strong>
-        Pick the Pro or Premium website plan and add Google Ads management below. We knock $25 off the website fee for as long as ads are running. Auto-applied in the total.
+        Pick the <strong>Pro or Premium</strong> website plan and add Google Ads management below. We knock $25 off the website fee for as long as ads are running. Auto-applied in the total.
       </div>
     </div>
     <div class="q-extras" id="extras-grid"></div>
@@ -933,23 +1018,45 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     optionsGrid.appendChild(card);
   });
 
-  // Render extras
+  // Render extras (grouped by category)
   const extrasGrid = document.getElementById('extras-grid');
+  const unitBadgeMap = {
+    '/mo': 'Monthly',
+    'one-off': 'One-off',
+    'per page': 'Per page',
+    'per design': 'Per design'
+  };
+  const categoryOrder = ['Visibility & growth', 'Extra pages', 'Brand & print'];
+  const grouped = {};
   C.extras.forEach((ex) => {
+    const cat = ex.category || 'Extras';
+    (grouped[cat] ||= []).push(ex);
+  });
+
+  function createExtraCard(ex) {
     state.extras[ex.id] = { selected: false, qty: ex.multi ? (ex.defaultQty || 1) : 1 };
     const card = document.createElement('div');
-    card.className = 'q-extra' + (ex.multi ? ' is-multi' : '');
+    card.className = 'q-extra'
+      + (ex.multi ? ' is-multi' : '')
+      + (ex.featured ? ' is-featured' : '');
     card.dataset.id = ex.id;
+    const unitBadge = unitBadgeMap[ex.unit] || '';
+    const priceUnitSuffix = (ex.unit && ex.unit.startsWith('/')) ? ' ' + ex.unit : '';
     card.innerHTML = `
+      ${ex.popular ? '<span class="q-extra-popular-ribbon">Most popular</span>' : ''}
       <div class="q-extra-row" data-action="toggle">
         <div class="q-extra-check"></div>
         <div class="q-extra-body">
           <div style="display:flex;justify-content:space-between;gap:10px;align-items:flex-start;">
             <div style="min-width:0;">
+              ${ex.featured && ex.badge ? `<span class="q-extra-featured-badge">${ex.badge}</span>` : ''}
               <div class="q-extra-label">${ex.label}</div>
               <div class="q-extra-tagline">${ex.tagline}</div>
             </div>
-            <div class="q-extra-price">${fmt(ex.price)}${ex.unit && ex.unit !== 'one-off' ? ' ' + ex.unit : ''}</div>
+            <div class="q-extra-price-stack">
+              <div class="q-extra-price">${fmt(ex.price)}${priceUnitSuffix}</div>
+              ${unitBadge ? `<div class="q-extra-unit-badge">${unitBadge}</div>` : ''}
+            </div>
           </div>
         </div>
       </div>
@@ -984,7 +1091,39 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
         updateTotals();
       }
     });
-    extrasGrid.appendChild(card);
+    return card;
+  }
+
+  const renderedCats = new Set();
+  categoryOrder.forEach((cat) => {
+    if (!grouped[cat]) return;
+    renderedCats.add(cat);
+    const wrap = document.createElement('div');
+    wrap.className = 'q-extras-group';
+    const heading = document.createElement('div');
+    heading.className = 'q-extras-group-heading';
+    heading.textContent = cat;
+    wrap.appendChild(heading);
+    const grid = document.createElement('div');
+    grid.className = 'q-extras-grid';
+    grouped[cat].forEach((ex) => grid.appendChild(createExtraCard(ex)));
+    wrap.appendChild(grid);
+    extrasGrid.appendChild(wrap);
+  });
+  // Catch any category not in the predefined order
+  Object.keys(grouped).forEach((cat) => {
+    if (renderedCats.has(cat)) return;
+    const wrap = document.createElement('div');
+    wrap.className = 'q-extras-group';
+    const heading = document.createElement('div');
+    heading.className = 'q-extras-group-heading';
+    heading.textContent = cat;
+    wrap.appendChild(heading);
+    const grid = document.createElement('div');
+    grid.className = 'q-extras-grid';
+    grouped[cat].forEach((ex) => grid.appendChild(createExtraCard(ex)));
+    wrap.appendChild(grid);
+    extrasGrid.appendChild(wrap);
   });
 
   // Custom request section
