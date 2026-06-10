@@ -33,15 +33,15 @@ window.QUOTE_CONFIG = {
     formspreeEndpoint: "https://formspree.io/f/xeevwdog"
   },
   brand: {
-    accent: "#ff2d96",
-    accentDark: "#a80f5c",
-    surface: "#faf3f7",
+    accent: "#0a0a0a",
+    accentDark: "#000000",
+    surface: "#f5f5f5",
     text: "#0a0a0a"
   },
   intro: {
     eyebrow: "Custom Quote",
-    headline: "Get off Design.com. Show *your work*, your way.",
-    subhead: "Pick a plan, add any extras, send back."
+    headline: "ProPeak Roofing",
+    subhead: ""
   },
   options: [
     {
@@ -872,7 +872,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   document.getElementById('hdr-pill').textContent = 'Quote ' + C.meta.date;
   document.getElementById('hero-eyebrow').textContent = C.intro.eyebrow || 'Custom Quote';
   document.getElementById('hero-headline').innerHTML = C.intro.headline.replace(/\*(.+?)\*/g, '<em>$1</em>');
-  document.getElementById('hero-subhead').textContent = C.intro.subhead;
+  const subEl = document.getElementById('hero-subhead');
+  if (C.intro.subhead) { subEl.textContent = C.intro.subhead; } else { subEl.style.display = 'none'; }
   document.getElementById('ftr-name').textContent = C.contact.name;
   const phoneLink = document.getElementById('ftr-phone-link');
   phoneLink.href = 'tel:' + C.contact.phone.replace(/\s/g, '');
