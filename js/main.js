@@ -129,14 +129,8 @@ document.addEventListener('DOMContentLoaded', () => {
   if (typeof gsap !== 'undefined') {
     gsap.registerPlugin(ScrollTrigger);
 
-    // Hero reveal
-    const heroReveal = gsap.timeline({ defaults: { ease: 'power3.out' } });
-    heroReveal
-      .to('[data-hero-pill]', { opacity: 1, y: 0, duration: 0.6 }, 0)
-      .to('[data-hero-title]', { opacity: 1, y: 0, duration: 0.8 }, 0.1)
-      .to('[data-hero-subtitle]', { opacity: 1, y: 0, duration: 0.7 }, 0.3)
-      .to('[data-hero-cta]', { opacity: 1, y: 0, duration: 0.6 }, 0.5)
-      .to('[data-hero-stats]', { opacity: 1, y: 0, duration: 0.6 }, 0.7);
+    // Hero entrance is CSS-only now (see .hero-anim in styles.css) so the LCP
+    // element paints immediately instead of waiting for the GSAP CDN to load.
 
     // Generic reveal-on-scroll
     gsap.utils.toArray('.reveal').forEach(el => {
