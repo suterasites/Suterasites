@@ -657,6 +657,16 @@ a.browser-mockup:hover {
   filter: url(#drop-black);
 }
 
+/* Drop solid white backgrounds, then flatten the mark to a white silhouette */
+.logo-item.bg-dropwhite img {
+  filter: url(#drop-white) brightness(0) invert(1);
+}
+
+.logo-item.bg-dropwhite:hover img {
+  filter: url(#drop-white) brightness(0) invert(1);
+  opacity: 1;
+}
+
 /* Invert black-on-transparent logos to white silhouettes for the dark strip */
 .logo-item.bg-invert img {
   filter: brightness(0) invert(1);
