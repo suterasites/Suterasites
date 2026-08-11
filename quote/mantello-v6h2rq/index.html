@@ -49,98 +49,69 @@ window.QUOTE_CONFIG = {
   intro: {
     eyebrow: "Website Proposal",
     headline: "A website that *earns the trust* your firm has already built.",
-    subhead: "Pick a plan, stack any extras, the total updates live as you click."
+    subhead: "Choose a build, add anything else you want, the total updates live as you click."
   },
   options: [
     {
-      id: "basic",
-      label: "Basic",
-      price: 150,
-      unit: "/mo",
-      tagline: "The current site, rebuilt properly",
-      lockIn: "6-month minimum, cancel anytime after",
+      id: "core",
+      label: "Core Rebuild",
+      price: 1400,
+      unit: "one-off",
+      tagline: "The current nine pages, rebuilt properly and owned outright",
+      lockIn: "Paid 50/50: $700 to start, $700 on launch",
       defaultSelected: false,
       includes: [
-        "Full custom rebuild of all nine pages, built from scratch rather than a template",
+        "All nine pages rebuilt from scratch as a custom site, not a template",
         "Proper URLs on every page: /criminal-law-werribee instead of /services111",
-        "Enquiry form on every page, not just the contact page, with enquiries sent straight to your inbox",
+        "Enquiry form on every page rather than only the contact page, with enquiries sent straight to your inbox",
         "Click-to-call and click-to-email on mobile",
         "Current photography of the office and team, replacing the 2014 images",
-        "Hosting, SSL and domain management included, replacing the Sensis subscription",
-        "On-page SEO foundations: page titles, meta descriptions, sitemap, LegalService and Attorney structured data",
-        "1 update per month, covering text, contact details or photo swaps",
-        "5 business day turnaround on update requests",
+        "Hosting on Cloudflare Pages, which is free and replaces the Sensis subscription entirely",
+        "SEO foundations: page titles, meta descriptions, sitemap, LegalService and Attorney structured data",
+        "Built to work properly on phones, tablets and desktop",
+        "The firm owns the build outright, source files handed over on request",
+        "6 months of aftercare included: fixes, small content edits, staff and contact changes",
         "Email + SMS support"
       ]
     },
     {
-      id: "pro",
-      label: "Pro",
-      price: 200,
-      unit: "/mo",
-      tagline: "Recommended. Adds the team pages and the review presence the firm is missing.",
-      lockIn: "6-month minimum, cancel anytime after",
+      id: "full",
+      label: "Full Rebuild",
+      price: 1900,
+      unit: "one-off",
+      tagline: "Recommended. Adds the team profiles and review presence the firm is missing.",
+      lockIn: "Paid 50/50: $950 to start, $950 on launch",
       recommended: true,
       defaultSelected: true,
       includes: [
-        "Everything in Basic, plus:",
+        "Everything in the Core Rebuild, plus:",
         "A full team section with a profile for each lawyer: photograph, practice areas, background and admission details",
         "Genuine depth on each of the six practice areas, replacing the current few hundred words per page",
         "Your Google reviews displayed live on the site, so the 23 you have already earned actually work for you",
         "FAQ sections answering the questions clients ask before they call: cost, timeframes, first appointment, what to bring",
-        "Google Business Profile upkeep: hours, photos, services and posts",
+        "Google Business Profile set up properly: hours, photos, services and practice areas",
         "Google Analytics with call and enquiry tracking, so you can see exactly how many enquiries the site produces",
-        "3 updates per month",
-        "48 hour turnaround on update requests",
+        "6 months of aftercare included: fixes, small content edits, staff and contact changes",
         "Email + SMS support"
-      ]
-    },
-    {
-      id: "premium",
-      label: "Premium",
-      price: 300,
-      unit: "/mo",
-      tagline: "For competing across Wyndham on every practice area",
-      lockIn: "6-month minimum, cancel anytime after",
-      defaultSelected: false,
-      includes: [
-        "Everything in Pro, plus:",
-        "Unlimited reasonable updates",
-        "2 new pages per month targeting a practice area in a specific suburb, for example conveyancing in Point Cook or family law in Tarneit",
-        "1 written article per month on a topic clients actually search, building the firm's authority in legal search results",
-        "Quarterly SEO review across the whole site",
-        "Monthly report covering enquiries, calls, rankings and traffic",
-        "24 hour priority turnaround",
-        "Direct line, priority SMS support"
-      ]
-    },
-    {
-      id: "oneoff",
-      label: "One-Off Build",
-      price: 1800,
-      unit: "one-off",
-      tagline: "Pay once, the firm owns it outright",
-      lockIn: "Paid 50/50: $900 to start, $900 on launch",
-      defaultSelected: false,
-      includes: [
-        "The full Pro build as a single project: nine rebuilt pages, team profiles, practice area depth, FAQs and reviews on site",
-        "Proper URLs, structured data and SEO foundations throughout",
-        "Enquiry forms across the site, analytics and conversion tracking configured",
-        "Hosting on Cloudflare Pages, which is free and replaces the Sensis subscription entirely",
-        "Source files handed over on request, the firm owns the build",
-        "Email + SMS support for any questions",
-        "Later changes billed at $25/hr, or add a maintenance plan at any time",
-        "No ongoing commitment"
       ]
     }
   ],
   extras: [
     {
+      id: "care-plan",
+      label: "Care Plan, from month 7",
+      price: 150,
+      unit: "/mo",
+      tagline: "How the site is looked after once the included 6 months of aftercare finishes",
+      defaultSelected: true,
+      details: "The build above includes its first 6 months of aftercare. From month 7 this takes over: hosting and SSL kept current, 3 content updates a month covering staff changes, fee updates or new practice areas, a monthly snapshot of enquiries and traffic, ongoing SEO upkeep, Google Business Profile maintenance, and 48 hour turnaround on requests. Month to month with no lock-in, so the firm can stop at any point. Without it, later changes are billed at $25/hr instead, which suits firms that expect to change very little."
+    },
+    {
       id: "email-migration",
       label: "Email migration to @mantellolawyers.com.au",
       price: 150,
       unit: "one-off",
-      tagline: "Worth doing regardless of which plan you choose",
+      tagline: "Worth doing regardless of which build you choose",
       details: "The firm currently publishes mm@mmmlaw.com.au as its contact address, which sits on a different domain to the website and did not respond when tested on 11 August 2026. If that domain has lapsed or is no longer managed, the advertised contact address is at risk. This moves the firm's email onto mantellolawyers.com.au, sets up addresses for each lawyer, and forwards the old address so nothing is lost in the changeover."
     },
     {
@@ -148,8 +119,8 @@ window.QUOTE_CONFIG = {
       label: "Extra practice area and suburb pages",
       price: 80,
       unit: "per page",
-      tagline: "Beyond what your plan includes, to compete in specific suburbs now",
-      details: "Each page targets one practice area in one suburb, for example conveyancing in Hoppers Crossing or wills and estates in Wyndham Vale. Six practice areas across Werribee, Hoppers Crossing, Wyndham Vale, Tarneit and Point Cook is a thirty page opportunity the firm currently has none of, while competing firms in Werribee already run this structure. Premium includes two a month, add these to move faster.",
+      tagline: "Added to the build, to compete in specific suburbs from launch",
+      details: "Each page targets one practice area in one suburb, for example conveyancing in Hoppers Crossing or wills and estates in Wyndham Vale. Six practice areas across Werribee, Hoppers Crossing, Wyndham Vale, Tarneit and Point Cook is a thirty page opportunity the firm currently has none of, while competing firms in Werribee already run this structure.",
       multi: true,
       defaultQty: 0
     },
@@ -168,8 +139,8 @@ window.QUOTE_CONFIG = {
       label: "Google Ads management",
       price: 300,
       unit: "/mo",
-      tagline: "Save $25/mo when bundled with the Pro or Premium plan (auto-applied). Management only, ad spend goes direct to Google.",
-      details: "Campaign setup, keyword research, monthly optimisation, negative keywords and full reporting, putting the firm at the top of search for terms like conveyancing Werribee or family lawyer near me. Worth being straight with you: legal is one of the most expensive categories in Google Ads, so this needs a real budget to work, and it is best added once the website itself is converting properly. Happy to model the numbers before you commit. Month to month, no lock-in."
+      tagline: "Save $25/mo when combined with the Care Plan (auto-applied). Management only, ad spend goes direct to Google.",
+      details: "Campaign setup, keyword research, monthly optimisation, negative keywords and full reporting, putting the firm at the top of search for terms like conveyancing Werribee or family lawyer near me. Worth being straight with you: legal is one of the most expensive categories in Google Ads, so this needs a real budget to work, and it is best added once the rebuilt site is converting properly. Happy to model the numbers before you commit. Month to month, no lock-in."
     },
     {
       id: "brand",
@@ -941,9 +912,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   // Render extras
   const extrasGrid = document.getElementById('extras-grid');
   C.extras.forEach((ex) => {
-    state.extras[ex.id] = { selected: false, qty: ex.multi ? (ex.defaultQty || 1) : 1 };
+    state.extras[ex.id] = { selected: !!ex.defaultSelected, qty: ex.multi ? (ex.defaultQty || 1) : 1 };
     const card = document.createElement('div');
-    card.className = 'q-extra' + (ex.multi ? ' is-multi' : '');
+    card.className = 'q-extra' + (ex.multi ? ' is-multi' : '') + (ex.defaultSelected ? ' is-selected' : '');
     card.dataset.id = ex.id;
     card.innerHTML = `
       <div class="q-extra-row" data-action="toggle">
@@ -1017,12 +988,10 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       const bucket = (opt.unit && opt.unit.includes('/mo')) ? monthly : oneOff;
       bucket.push({ name: opt.label, price: opt.price, unit: opt.unit });
     }
-    // Apply $25/mo website bundle discount if Google Ads selected AND Pro/Premium monthly tier (excludes Basic)
+    // Apply $25/mo bundle discount when Google Ads and the ongoing Care Plan are both taken
     let bundleDiscountApplied = false;
     const adsSelected = state.extras['google-ads'] && state.extras['google-ads'].selected;
-    const selectedOpt = opt;
-    const bundleEligibleIds = ['pro', 'premium'];
-    const isMonthlyWebsiteTier = selectedOpt && selectedOpt.unit && selectedOpt.unit.includes('/mo') && bundleEligibleIds.includes(selectedOpt.id);
+    const carePlanSelected = state.extras['care-plan'] && state.extras['care-plan'].selected;
     C.extras.forEach(ex => {
       const s = state.extras[ex.id];
       if (s && s.selected) {
@@ -1036,8 +1005,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
         });
       }
     });
-    if (adsSelected && isMonthlyWebsiteTier) {
-      monthly.push({ name: 'Bundle discount (Website + Ads)', price: -25, unit: '/mo' });
+    if (adsSelected && carePlanSelected) {
+      monthly.push({ name: 'Bundle discount (Care Plan + Ads)', price: -25, unit: '/mo' });
       bundleDiscountApplied = true;
     }
     return { monthly, oneOff, bundleDiscountApplied };
