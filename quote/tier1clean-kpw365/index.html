@@ -53,14 +53,34 @@ window.QUOTE_CONFIG = {
   },
   options: [
     {
+      id: "managed",
+      label: "Managed Website",
+      price: 150,
+      unit: "/mo",
+      tagline: "Recommended for Tier1Clean. Nothing upfront, and the site is looked after for as long as the plan runs.",
+      lockIn: "6-month minimum, cancel anytime after",
+      recommended: true,
+      defaultSelected: true,
+      includes: [
+        "The complete build, with nothing to pay before the site is live",
+        "3 updates per month (text, photos, contact details, new service lines)",
+        "A page per service so you turn up for each type of clean",
+        "Ongoing on-page SEO maintenance",
+        "<strong>Monthly snapshot</strong>: enquiries received, traffic, and what people searched to find you",
+        "Google Business Profile maintenance once it is set up",
+        "48 hour turnaround on update requests",
+        "Email + SMS support",
+        "Six months at $150 is $900, which is the entire commitment. After that it is month to month and you stop it whenever you like"
+      ]
+    },
+    {
       id: "oneoff",
       label: "One-Off Build",
       price: 900,
       unit: "one-off",
-      tagline: "Pay once and the site is yours. First six months of management included.",
+      tagline: "Prefer to own it outright? Same build, paid once. Works out the same as six months of the plan.",
       lockIn: "Paid 50/50: $450 to start, $450 on launch",
-      recommended: true,
-      defaultSelected: true,
+      defaultSelected: false,
       includes: [
         "The full site build you have already seen, finished and launched on tier1clean.com.au",
         "<strong>The first 6 months of management included</strong>, the same service as the monthly plan",
@@ -72,28 +92,8 @@ window.QUOTE_CONFIG = {
         "On-page SEO foundations (titles, meta, schema, sitemap) and Google Analytics",
         "A page per service so you turn up for each type of clean",
         "3 updates per month through the 6 months",
-        "<strong>After month 6, nothing is owed.</strong> Keep it managed at $150/mo if it is worth it to you, or stop",
+        "<strong>After month 6, nothing is owed.</strong> Keep it managed at $150/mo if it is worth it, or stop",
         "Email + SMS support"
-      ]
-    },
-    {
-      id: "managed",
-      label: "Managed Website",
-      price: 150,
-      unit: "/mo",
-      tagline: "The same build with nothing upfront, paid monthly instead.",
-      lockIn: "6-month minimum, cancel anytime after",
-      defaultSelected: false,
-      includes: [
-        "Everything in the one-off build, with nothing to pay upfront",
-        "3 updates per month (text, photos, contact details, new service lines)",
-        "A page per service so you turn up for each type of clean",
-        "Ongoing on-page SEO maintenance",
-        "<strong>Monthly snapshot</strong>: enquiries received, traffic, and what people searched to find you",
-        "Google Business Profile maintenance once it is set up",
-        "48 hour turnaround on update requests",
-        "Email + SMS support",
-        "The difference against the one-off: the site stays managed by us rather than handed over, and it keeps billing past month 6 until you stop it"
       ]
     }
   ],
