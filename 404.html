@@ -20,10 +20,10 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500&display=swap" rel="stylesheet" />
 
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="/css/styles.css?v=20260807" />
+  <link rel="stylesheet" href="/css/styles.css?v=20261105l" />
   <!-- Sutera lead events (GA4) -->
   <script>/* SUTERA_LEAD_EVENTS */
   (function(){
@@ -44,44 +44,67 @@
 </head>
 <body>
 
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
-    <filter id="drop-black" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  1 1 1 0 0" /></filter>
-  </defs></svg>
-
-  <header class="fixed top-0 left-0 right-0 z-50">
-    <div class="max-w-7xl mx-auto px-6 py-4">
-      <a href="/index.html" class="inline-flex items-center" aria-label="Sutera Sites home"><img src="/images/logos/sutera-sites.avif" alt="Sutera Sites" class="brand-logo" /></a>
+  <header class="site-nav">
+    <div class="site-nav-bar">
+      <a href="/index.html" class="site-nav-logo" aria-label="Sutera Sites home"><img src="/images/logos/sutera-sites.png" alt="Sutera Sites" width="368" height="125"></a>
     </div>
   </header>
 
-  <section class="relative min-h-screen flex items-center py-32 overflow-hidden">
-    <div class="noise"></div>
-    <div class="absolute inset-0 grid-bg opacity-40"></div>
-    <div class="relative max-w-3xl mx-auto px-6 text-center">
-      <div class="text-[8rem] md:text-[12rem] font-bold leading-none mb-4" style="color: var(--text-dim);">404</div>
-      <h1 class="headline text-4xl md:text-6xl text-white mb-6">We couldn't find that page.</h1>
-      <p class="text-lg md:text-xl text-neutral-400 max-w-xl mx-auto mb-10">The link might be broken, or the page may have moved. Let's get you back on track.</p>
-
-      <div class="flex flex-col sm:flex-row gap-3 justify-center mb-16">
-        <a href="/index.html" class="btn-primary">Back to Home<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
-        <a href="/contact.html" class="btn-secondary">Contact Us</a>
-      </div>
-
-      <div class="max-w-xl mx-auto">
-        <p class="text-xs text-neutral-500 uppercase tracking-wider mb-5">Or try one of these</p>
-        <div class="grid grid-cols-2 gap-3 text-sm">
-          <a href="/services.html" class="py-3 px-4 rounded-lg border border-neutral-900 hover:border-neutral-700 transition text-neutral-300">Services</a>
-          <a href="/work.html" class="py-3 px-4 rounded-lg border border-neutral-900 hover:border-neutral-700 transition text-neutral-300">Our Work</a>
-          <a href="/about.html" class="py-3 px-4 rounded-lg border border-neutral-900 hover:border-neutral-700 transition text-neutral-300">About</a>
-          <a href="/services/websites.html" class="py-3 px-4 rounded-lg border border-neutral-900 hover:border-neutral-700 transition text-neutral-300">Websites</a>
-        </div>
-      </div>
+  <main id="main" class="page">
+  <section class="hero-ribbon page-solo">
+    <img class="hero-ribbon-art" src="/images/hero/ribbons-1600.webp" srcset="/images/hero/ribbons-1200.webp 1200w, /images/hero/ribbons-1600.webp 1600w, /images/hero/ribbons-2400.webp 2400w" sizes="(max-width: 1023px) 100vh, max(100vw, 160vh)" alt="" width="2400" height="1500" fetchpriority="high">
+    <div class="hero-ribbon-copy">
+      <p class="hero-anim page-tag" style="margin-bottom:1.5rem">404</p><h1 data-hero-title class="hero-anim hero-ribbon-title">We couldn't find that page.</h1>
+      <svg class="hero-anim hero-ribbon-rule" data-hero-subtitle width="12" height="80" viewBox="0 0 12 80" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><path d="M6 0v79M1 74l5 5 5-5"/></svg>
+      <p data-hero-subtitle class="hero-anim hero-ribbon-sub">The link might be broken, or the page may have moved. Let's get you back on track.</p>
+      <div data-hero-cta class="hero-anim hero-ribbon-cta"><a href="/index.html" class="hero-ribbon-btn">Back to Home <svg width="24" height="10" viewBox="0 0 24 10" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M0 5h23M18.5.5 23 5l-4.5 4.5"/></svg></a><a href="/contact.html" class="hero-ribbon-link">Contact Us</a></div>
+      <div class="hero-anim page-solo-links"><a href="/services.html">Services</a><a href="/work.html">Our Work</a><a href="/about.html">About</a><a href="/services/websites.html">Websites</a></div>
     </div>
   </section>
+  </main>
 
-  <footer class="border-t border-neutral-900 py-10">
-    <div class="max-w-6xl mx-auto px-6 text-center text-sm text-neutral-500">
-      &copy; <span data-year>2026</span> Sutera Sites. ABN 74 177 391 469.
+  <footer class="foot">
+    <svg class="ribbon-edge ribbon-edge--flip" viewBox="0 0 1600 200" preserveAspectRatio="none" aria-hidden="true"><path class="ribbon-edge-band" d="M0 190 C 520 178, 1120 120, 1600 20 L1600 246 L0 246 Z" transform="translate(0 -52)"/><g class="ribbon-edge-lines"><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 0)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -13)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -26)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -39)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -52)"/></g><path class="ribbon-edge-fill" d="M0 190 C 520 178, 1120 120, 1600 20 L1600 200 L0 200 Z"/></svg>
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a href="/index.html" aria-label="Sutera Sites home"><img class="foot-logo" src="/images/logos/sutera-sites.png" alt="Sutera Sites" width="368" height="125" loading="lazy"></a>
+        <p class="foot-line">Web design, Google Ads and branding for Melbourne local service businesses.</p>
+      </div>
+      <div>
+        <h3 class="foot-head">Services</h3>
+        <ul class="foot-list">
+          <li><a href="/services/websites.html">Websites</a></li>
+          <li><a href="/services/google-ads.html">Google Ads</a></li>
+          <li><a href="/services/google-business-profile.html">Google Business Profile</a></li>
+          <li><a href="/services/design.html">Design &amp; Print</a></li>
+          <li><a href="/services/social-media.html">Social Media</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="foot-head">Company</h3>
+        <ul class="foot-list">
+          <li><a href="/work.html">Our Work</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="https://portal.suterasites.com.au" target="_blank" rel="noopener">Client Login</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="foot-head">Get in touch</h3>
+        <ul class="foot-list">
+          <li><a href="tel:0434542005">0434 542 005</a></li>
+          <li><a href="mailto:james@suterasites.com.au">james@suterasites.com.au</a></li>
+          <li>Melbourne, VIC</li>
+          <li><a href="https://www.instagram.com/suterasites" target="_blank" rel="noopener">@suterasites</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-base">
+      <div>&copy; <span data-year>2026</span> Sutera Sites. ABN 74 177 391 469.</div>
+      <nav aria-label="Legal">
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms.html">Terms</a>
+      </nav>
     </div>
   </footer>
 

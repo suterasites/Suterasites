@@ -2,8 +2,72 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // --- Nav scroll state (blur + hide on scroll down) ---
+  // --- Mega menu (desktop) ---
   const nav = document.querySelector('[data-nav]');
+  const megaTriggers = document.querySelectorAll('[data-mega-trigger]');
+  const megaPanels = document.querySelectorAll('[data-mega-panel]');
+  let megaHoverTimer = null;
+  let hoverOpened = null;
+
+  const closeAllMegaMenus = () => {
+    megaPanels.forEach(p => p.classList.remove('open'));
+    megaTriggers.forEach(t => t.setAttribute('aria-expanded', 'false'));
+    hoverOpened = null;
+  };
+
+  const openMegaMenu = (key) => {
+    megaPanels.forEach(p => p.classList.toggle('open', p.dataset.megaPanel === key));
+    megaTriggers.forEach(t => t.setAttribute('aria-expanded', String(t.dataset.megaTrigger === key)));
+  };
+
+  megaTriggers.forEach(trigger => {
+    const key = trigger.dataset.megaTrigger;
+
+    // Mouse only: a tap fires this too, and the click after it would close the panel it just opened
+    trigger.addEventListener('pointerenter', (e) => {
+      if (e.pointerType !== 'mouse') return;
+      clearTimeout(megaHoverTimer);
+      hoverOpened = key;
+      openMegaMenu(key);
+    });
+
+    trigger.addEventListener('click', () => {
+      // Hover already opened it, so this click keeps it open rather than closing it
+      if (hoverOpened === key) {
+        hoverOpened = null;
+        return;
+      }
+      if (trigger.getAttribute('aria-expanded') === 'true') closeAllMegaMenus();
+      else openMegaMenu(key);
+    });
+  });
+
+  megaPanels.forEach(panel => {
+    panel.addEventListener('mouseenter', () => clearTimeout(megaHoverTimer));
+    panel.addEventListener('mouseleave', () => {
+      megaHoverTimer = setTimeout(closeAllMegaMenus, 150);
+    });
+    panel.addEventListener('click', (e) => {
+      if (e.target.closest('a')) closeAllMegaMenus();
+    });
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('[data-mega-trigger]') && !e.target.closest('[data-mega-panel]')) {
+      closeAllMegaMenus();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape') return;
+    const open = document.querySelector('[data-mega-trigger][aria-expanded="true"]');
+    if (open) {
+      closeAllMegaMenus();
+      open.focus();
+    }
+  });
+
+  // --- Nav scroll state (floating bar + hide on scroll down) ---
   if (nav) {
     let lastY = window.scrollY;
     const SCROLL_THRESHOLD = 10;
@@ -12,9 +76,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const setNavState = () => {
       const y = window.scrollY;
 
-      // Blur background once scrolled past 20px
-      if (y > 20) nav.classList.add('nav-blur');
-      else nav.classList.remove('nav-blur');
+      // Join the links and button into the floating bar once scrolled past 20px
+      if (y > 20) nav.classList.add('nav-scrolled');
+      else nav.classList.remove('nav-scrolled');
 
       // Hide on scroll down, show on scroll up
       const delta = y - lastY;
@@ -28,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Scrolling down
         nav.classList.add('nav-hidden');
         // Also close any open mega menu
-        document.querySelectorAll('[data-mega-panel].open').forEach(p => p.classList.remove('open'));
+        closeAllMegaMenus();
       } else {
         // Scrolling up
         nav.classList.remove('nav-hidden');
@@ -39,91 +103,57 @@ document.addEventListener('DOMContentLoaded', () => {
 
     setNavState();
     window.addEventListener('scroll', setNavState, { passive: true });
-  }
 
-  // --- Mega menu (desktop) ---
-  const megaTriggers = document.querySelectorAll('[data-mega-trigger]');
-  const megaPanels = document.querySelectorAll('[data-mega-panel]');
-  const navEl = document.querySelector('[data-nav]');
-
-  const closeAllMegaMenus = () => {
-    megaPanels.forEach(p => p.classList.remove('open'));
-  };
-
-  const openMegaMenu = (key) => {
-    megaPanels.forEach(p => {
-      if (p.dataset.megaPanel === key) p.classList.add('open');
-      else p.classList.remove('open');
-    });
-  };
-
-  let megaHoverTimer = null;
-
-  megaTriggers.forEach(trigger => {
-    const key = trigger.dataset.megaTrigger;
-
-    trigger.addEventListener('mouseenter', () => {
-      clearTimeout(megaHoverTimer);
-      openMegaMenu(key);
-    });
-
-    trigger.addEventListener('click', (e) => {
-      e.preventDefault();
-      const panel = document.querySelector(`[data-mega-panel="${key}"]`);
-      if (panel && panel.classList.contains('open')) {
-        closeAllMegaMenus();
-      } else {
-        openMegaMenu(key);
-      }
-    });
-  });
-
-  megaPanels.forEach(panel => {
-    panel.addEventListener('mouseenter', () => clearTimeout(megaHoverTimer));
-    panel.addEventListener('mouseleave', () => {
+    nav.addEventListener('mouseleave', () => {
       megaHoverTimer = setTimeout(closeAllMegaMenus, 150);
     });
-  });
 
-  if (navEl) {
-    navEl.addEventListener('mouseleave', () => {
-      megaHoverTimer = setTimeout(closeAllMegaMenus, 150);
+    // Tabbing out of an open menu closes it
+    nav.addEventListener('focusout', (e) => {
+      const to = e.relatedTarget;
+      const open = nav.querySelector('[data-mega-panel].open');
+      if (!to || !open) return;
+      if (!open.contains(to) && !to.closest(`[data-mega-trigger="${open.dataset.megaPanel}"]`)) closeAllMegaMenus();
     });
   }
-
-  document.addEventListener('click', (e) => {
-    if (!e.target.closest('[data-mega-trigger]') && !e.target.closest('[data-mega-panel]')) {
-      closeAllMegaMenus();
-    }
-  });
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeAllMegaMenus();
-  });
 
   // --- Mobile nav toggle ---
   const mobileToggle = document.querySelector('[data-mobile-toggle]');
   const mobileClose = document.querySelector('[data-mobile-close]');
   const mobileNav = document.querySelector('[data-mobile-nav]');
 
-  if (mobileToggle && mobileNav) {
+  if (mobileToggle && mobileClose && mobileNav) {
+    const behindSheet = [...document.body.children].filter(el => el !== mobileNav && el.tagName !== 'SCRIPT');
+
+    const setMobileNav = (open) => {
+      mobileNav.classList.toggle('open', open);
+      mobileToggle.setAttribute('aria-expanded', String(open));
+      document.body.style.overflow = open ? 'hidden' : '';
+      behindSheet.forEach(el => { el.inert = open; });
+    };
+
     mobileToggle.addEventListener('click', () => {
-      mobileNav.classList.add('open');
-      document.body.style.overflow = 'hidden';
+      setMobileNav(true);
+      mobileClose.focus();
     });
-  }
-  if (mobileClose && mobileNav) {
     mobileClose.addEventListener('click', () => {
-      mobileNav.classList.remove('open');
-      document.body.style.overflow = '';
+      setMobileNav(false);
+      mobileToggle.focus();
+    });
+    document.querySelectorAll('[data-mobile-nav] a').forEach(link => {
+      link.addEventListener('click', () => setMobileNav(false));
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mobileNav.classList.contains('open')) {
+        setMobileNav(false);
+        mobileToggle.focus();
+      }
+    });
+    // Turning a tablet sideways past the phone layout must not leave the page locked
+    window.matchMedia('(min-width: 768px)').addEventListener('change', (e) => {
+      if (e.matches) setMobileNav(false);
     });
   }
-  document.querySelectorAll('[data-mobile-nav] a').forEach(link => {
-    link.addEventListener('click', () => {
-      mobileNav.classList.remove('open');
-      document.body.style.overflow = '';
-    });
-  });
 
   // --- GSAP animations ---
   if (typeof gsap !== 'undefined') {
@@ -223,16 +253,4 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- Current year in footer ---
   const yearEl = document.querySelector('[data-year]');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
-
-  // --- Feature deep-dive: click to switch active item ---
-  const featureList = document.querySelector('[data-feature-list]');
-  if (featureList) {
-    const items = featureList.querySelectorAll('[data-feature-item]');
-    items.forEach(item => {
-      item.addEventListener('click', () => {
-        items.forEach(i => i.classList.remove('is-active'));
-        item.classList.add('is-active');
-      });
-    });
-  }
 });

@@ -41,10 +41,10 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500&display=swap" rel="stylesheet" />
 
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="css/styles.css?v=20260807" />
+  <link rel="stylesheet" href="css/styles.css?v=20261105l" />
 
   <script type="application/ld+json">
   {
@@ -57,7 +57,7 @@
         "description": "Melbourne-based web design and digital marketing agency for local service businesses.",
         "url": "https://suterasites.com.au",
         "telephone": "+61434542005",
-        "email": "suterasites@gmail.com",
+        "email": "james@suterasites.com.au",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Melbourne",
@@ -88,6 +88,75 @@
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://suterasites.com.au/" }
         ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does it cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Every job is quoted to what you actually need, so there's no price list. Book a free call and we'll give you a straight quote."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is the homepage mockup really free?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Enquire with us and we'll mock up your homepage before you pay anything. If it's not for you, you walk away owing nothing."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does a website take?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Mockups take days. Most sites launch in 1 to 3 weeks. Bigger sites with more pages or custom features can take longer, and we'll give you a clear timeline before you commit."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Am I locked into a contract?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Website subscriptions have a 6-month minimum, then go month to month. One-off builds have no ongoing commitment. Google Ads management is month to month with no lock-in."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I own my website and ad account?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "With a one-off build you get the full code. On a subscription the site stays on our hosting while you're subscribed, and if you cancel after the 6-month minimum we can arrange an export for a one-off fee. Your Google Ads account is set up in your business name and stays with you."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is ad spend included?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. You pay Google directly for the clicks, and our monthly fee covers the management. We'll recommend a budget on the first call, based on your services and service area."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need a website before running Google Ads?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Ads send people somewhere, and that somewhere needs to turn them into enquiries. We build websites too, so we can handle both at once."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you work outside Melbourne?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Most of our clients are in Melbourne, but we also look after businesses in Geelong, Colac and Bairnsdale, and we can work remotely with anyone in Australia."
+            }
+          }
+        ]
       }
     ]
   }
@@ -114,165 +183,123 @@
   <a href="#main" class="skip-link">Skip to content</a>
 
   <!-- Inline SVG filters (used by CSS filter: url(...)) -->
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-    <defs>
-      <!-- Drops pure-black pixels to transparent by remapping alpha to luminance -->
-      <filter id="drop-black" color-interpolation-filters="sRGB">
-        <feColorMatrix type="matrix" values="
-          1 0 0 0 0
-          0 1 0 0 0
-          0 0 1 0 0
-          1 1 1 0 0" />
-      </filter>
-      <!-- Drops pure-white pixels to transparent (inverse luma to alpha) -->
-      <filter id="drop-white" color-interpolation-filters="sRGB">
-        <feColorMatrix type="matrix" values="
-          1 0 0 0 0
-          0 1 0 0 0
-          0 0 1 0 0
-          -1 -1 -1 0 3" />
-      </filter>
-    </defs>
-  </svg>
 
   <!-- ============ NAV ============ -->
-  <header data-nav class="nav-wrap fixed top-0 left-0 right-0 z-50 transition-all">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-      <a href="index.html" class="flex items-center" aria-label="Sutera Sites home">
-        <img src="images/logos/sutera-sites.avif" alt="Sutera Sites" class="brand-logo" style="aspect-ratio:500/500">
-      </a>
+  <!-- Generated by .build/nav.py. Change the nav there, not here. -->
+  <header data-nav class="site-nav">
+    <div class="site-nav-bar">
+      <a href="index.html" class="site-nav-logo" aria-label="Sutera Sites home"><img src="images/logos/sutera-sites.png" alt="Sutera Sites" width="368" height="125"></a>
 
-      <nav class="hidden md:flex items-center gap-8 text-sm text-neutral-300">
-        <button data-mega-trigger="services" class="mega-menu-trigger hover:text-white transition flex items-center gap-1.5">
-          Services
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <button data-mega-trigger="work" class="mega-menu-trigger hover:text-white transition flex items-center gap-1.5">
-          Work
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <a href="about.html" class="hover:text-white transition">About</a>
-        <a href="contact.html" class="hover:text-white transition">Contact</a>
+      <nav class="site-nav-links" aria-label="Main">
+        <button type="button" data-mega-trigger="services" class="site-nav-link" aria-expanded="false" aria-controls="menu-services">Services <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M2 4.25 6 8.25l4-4"/></svg></button>
+        <div data-mega-panel="services" id="menu-services" class="mega">
+          <div class="mega-inner">
+            <div class="mega-list">
+              <a href="services/websites.html" class="mega-row">
+              <span class="mega-num">01</span>
+              <span class="mega-name">Websites</span>
+              <span class="mega-desc">Custom builds and monthly subscriptions for local service businesses.</span>
+              <span class="mega-arrow"><svg width="36" height="12" viewBox="0 0 36 12" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M0 6h35M29.5.5 35 6l-5.5 5.5"/></svg></span>
+            </a>
+            <a href="services/google-ads.html" class="mega-row">
+              <span class="mega-num">02</span>
+              <span class="mega-name">Google Ads</span>
+              <span class="mega-desc">Campaign setup and ongoing management for local service businesses.</span>
+              <span class="mega-arrow"><svg width="36" height="12" viewBox="0 0 36 12" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M0 6h35M29.5.5 35 6l-5.5 5.5"/></svg></span>
+            </a>
+            <a href="services/google-business-profile.html" class="mega-row">
+              <span class="mega-num">03</span>
+              <span class="mega-name">Google Business Profile</span>
+              <span class="mega-desc">Verification, weekly posts and review monitoring for your profile.</span>
+              <span class="mega-arrow"><svg width="36" height="12" viewBox="0 0 36 12" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M0 6h35M29.5.5 35 6l-5.5 5.5"/></svg></span>
+            </a>
+            <a href="services/design.html" class="mega-row">
+              <span class="mega-num">04</span>
+              <span class="mega-name">Design &amp; Print</span>
+              <span class="mega-desc">Capability statements, business cards, signs, flyers, templates.</span>
+              <span class="mega-arrow"><svg width="36" height="12" viewBox="0 0 36 12" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M0 6h35M29.5.5 35 6l-5.5 5.5"/></svg></span>
+            </a>
+            <a href="services/social-media.html" class="mega-row">
+              <span class="mega-num">05</span>
+              <span class="mega-name">Social Media</span>
+              <span class="mega-desc">Instagram and Facebook management for clubs and local businesses.</span>
+              <span class="mega-arrow"><svg width="36" height="12" viewBox="0 0 36 12" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M0 6h35M29.5.5 35 6l-5.5 5.5"/></svg></span>
+            </a>
+            </div>
+            <div class="mega-feature">
+              <svg class="mega-feature-lines" viewBox="0 0 300 180" preserveAspectRatio="none" aria-hidden="true"><path d="M0 180 C 90 172, 210 112, 300 30"/><path d="M0 167 C 90 159, 210 99, 300 17"/><path d="M0 154 C 90 146, 210 86, 300 4"/><path d="M0 141 C 90 133, 210 73, 300 -9"/><path d="M0 128 C 90 120, 210 60, 300 -22"/><path d="M0 115 C 90 107, 210 47, 300 -35"/><path d="M0 102 C 90 94, 210 34, 300 -48"/></svg>
+              <p class="mega-feature-title">Not sure which service fits?</p>
+              <p class="mega-feature-sub">Book a free 15-minute call and we'll work it out together.</p>
+              <a href="contact.html" class="site-nav-cta">Book a Free Call <svg width="24" height="10" viewBox="0 0 24 10" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M0 5h23M18.5.5 23 5l-4.5 4.5"/></svg></a>
+              <a href="services.html" class="mega-feature-link">See all services</a>
+            </div>
+          </div>
+        </div>
+        <button type="button" data-mega-trigger="work" class="site-nav-link" aria-expanded="false" aria-controls="menu-work">Work <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M2 4.25 6 8.25l4-4"/></svg></button>
+        <div data-mega-panel="work" id="menu-work" class="mega">
+          <div class="mega-inner">
+            <div class="mega-list">
+              <a href="work/apollo-earthworks.html" class="mega-row mega-row--work">
+              <span class="mega-tile is-dark"><img src="images/logos/wall/apollo-earthworks.webp" alt="" width="300" height="258" loading="lazy" decoding="async"></span>
+              <span class="mega-text"><span class="mega-name">Apollo Earthworks</span><span class="mega-desc">Website + Google Ads. 2 leads in 8 days, $3,600 job booked.</span></span>
+              <span class="mega-arrow"><svg width="36" height="12" viewBox="0 0 36 12" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M0 6h35M29.5.5 35 6l-5.5 5.5"/></svg></span>
+            </a>
+            <a href="work/select-civil.html" class="mega-row mega-row--work">
+              <span class="mega-tile"><img src="images/logos/wall/select-civil.webp" alt="" width="300" height="300" loading="lazy" decoding="async"></span>
+              <span class="mega-text"><span class="mega-name">Select Civil Group</span><span class="mega-desc">Website + Google Ads. 2 qualified leads in 30 days.</span></span>
+              <span class="mega-arrow"><svg width="36" height="12" viewBox="0 0 36 12" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M0 6h35M29.5.5 35 6l-5.5 5.5"/></svg></span>
+            </a>
+            <a href="work/grout-academy.html" class="mega-row mega-row--work">
+              <span class="mega-tile"><img src="images/logos/wall/grout-academy.webp" alt="" width="300" height="277" loading="lazy" decoding="async"></span>
+              <span class="mega-text"><span class="mega-name">Grout Academy</span><span class="mega-desc">Logo, business cards and website launched in under 2 weeks.</span></span>
+              <span class="mega-arrow"><svg width="36" height="12" viewBox="0 0 36 12" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M0 6h35M29.5.5 35 6l-5.5 5.5"/></svg></span>
+            </a>
+            <a href="work/altona-north-soccer-club.html" class="mega-row mega-row--work">
+              <span class="mega-tile"><img src="images/logos/wall/ansc.webp" alt="" width="194" height="241" loading="lazy" decoding="async"></span>
+              <span class="mega-text"><span class="mega-name">Altona North Soccer Club</span><span class="mega-desc">Full Instagram and Facebook management, match day to sponsor posts.</span></span>
+              <span class="mega-arrow"><svg width="36" height="12" viewBox="0 0 36 12" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M0 6h35M29.5.5 35 6l-5.5 5.5"/></svg></span>
+            </a>
+            </div>
+            <div class="mega-feature">
+              <svg class="mega-feature-lines" viewBox="0 0 300 180" preserveAspectRatio="none" aria-hidden="true"><path d="M0 180 C 90 172, 210 112, 300 30"/><path d="M0 167 C 90 159, 210 99, 300 17"/><path d="M0 154 C 90 146, 210 86, 300 4"/><path d="M0 141 C 90 133, 210 73, 300 -9"/><path d="M0 128 C 90 120, 210 60, 300 -22"/><path d="M0 115 C 90 107, 210 47, 300 -35"/><path d="M0 102 C 90 94, 210 34, 300 -48"/></svg>
+              <p class="mega-feature-title">Want results like this?</p>
+              <p class="mega-feature-sub">Let's chat about your business.</p>
+              <a href="contact.html" class="site-nav-cta">Book a Free Call <svg width="24" height="10" viewBox="0 0 24 10" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M0 5h23M18.5.5 23 5l-4.5 4.5"/></svg></a>
+              <a href="work.html" class="mega-feature-link">See all work</a>
+            </div>
+          </div>
+        </div>
+        <a href="about.html" class="site-nav-link">About</a>
+        <a href="contact.html" class="site-nav-link">Contact</a>
       </nav>
 
-      <div class="hidden md:flex items-center gap-3">
-        <a href="contact.html" class="btn-nav">Book a Free Call</a>
-      </div>
+      <a href="contact.html" class="site-nav-cta">Book a Free Call <svg width="24" height="10" viewBox="0 0 24 10" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M0 5h23M18.5.5 23 5l-4.5 4.5"/></svg></a>
 
-      <button data-mobile-toggle class="md:hidden text-white" aria-label="Open menu">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-      </button>
-    </div>
-
-    <!-- Mega menu: Services -->
-    <div data-mega-panel="services" class="mega-menu hidden md:block">
-      <div class="mega-menu-inner">
-        <div class="mega-menu-grid">
-          <a href="services/websites.html" class="mega-menu-card">
-            <div class="icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-            </div>
-            <h4>Websites</h4>
-            <p>Custom builds and monthly subscriptions for local service businesses.</p>
-          </a>
-          <a href="services/google-ads.html" class="mega-menu-card">
-            <div class="icon icon-img">
-              <img src="images/logos/google-ads.png" alt="Google Ads" width="22" height="22" />
-            </div>
-            <h4>Google Ads</h4>
-            <p>Campaign setup and ongoing management for local service businesses.</p>
-          </a>
-          <a href="services/design.html" class="mega-menu-card">
-            <div class="icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><circle cx="11" cy="11" r="2"/></svg>
-            </div>
-            <h4>Design &amp; Print</h4>
-            <p>Capability statements, business cards, signs, flyers, templates.</p>
-          </a>
-          <a href="services/social-media.html" class="mega-menu-card">
-            <div class="icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
-            </div>
-            <h4>Social Media</h4>
-            <p>Instagram and Facebook management for clubs and local businesses.</p>
-          </a>
-        </div>
-        <div class="mega-menu-footer">
-          <span>Not sure which service fits? Book a free 15-minute call.</span>
-          <a href="services.html" class="link-underline">See all services
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Mega menu: Work -->
-    <div data-mega-panel="work" class="mega-menu hidden md:block">
-      <div class="mega-menu-inner">
-        <div class="mega-menu-grid">
-          <a href="work/apollo-earthworks.html" class="mega-menu-card">
-            <div class="logo-icon">
-              <img src="images/logos/apollo-earthworks.png" alt="Apollo Earthworks" style="aspect-ratio:120/98">
-            </div>
-            <h4>Apollo Earthworks</h4>
-            <p>Website + Google Ads. 2 leads in 8 days, $3,600 job booked.</p>
-          </a>
-          <a href="work/select-civil.html" class="mega-menu-card">
-            <div class="logo-icon">
-              <img src="images/logos/select-civil.png" alt="Select Civil Group" style="aspect-ratio:600/474">
-            </div>
-            <h4>Select Civil Group</h4>
-            <p>Website + Google Ads. 2 qualified leads in 30 days.</p>
-          </a>
-          <a href="work/grout-academy.html" class="mega-menu-card">
-            <div class="logo-icon">
-              <img src="images/logos/grout-academy.png" alt="Grout Academy" style="aspect-ratio:600/600">
-            </div>
-            <h4>Grout Academy</h4>
-            <p>Logo, business cards and website launched in under 2 weeks.</p>
-          </a>
-          <a href="work/altona-north-soccer-club.html" class="mega-menu-card">
-            <div class="logo-icon">
-              <img src="images/logos/ansc.webp" alt="Altona North Soccer Club" style="aspect-ratio:256/256">
-            </div>
-            <h4>Altona North Soccer Club</h4>
-            <p>Full Instagram and Facebook management, match day to sponsor posts.</p>
-          </a>
-        </div>
-        <div class="mega-menu-footer">
-          <span>Want results like this? Let's chat about your business.</span>
-          <a href="work.html" class="link-underline">See all work
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-          </a>
-        </div>
-      </div>
+      <button type="button" data-mobile-toggle class="site-nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 7h16M2 13h16"/></svg></button>
     </div>
   </header>
 
   <!-- ============ MOBILE NAV ============ -->
-  <div data-mobile-nav class="mobile-nav">
-    <div class="flex items-center justify-between mb-12">
-      <a href="index.html" class="flex items-center" aria-label="Sutera Sites home">
-        <img src="images/logos/sutera-sites.avif" alt="Sutera Sites" class="brand-logo" style="aspect-ratio:500/500">
-      </a>
-      <button data-mobile-close class="text-white" aria-label="Close menu">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-      </button>
+  <div data-mobile-nav id="site-menu" class="nav-sheet" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="nav-sheet-top">
+      <a href="index.html" class="site-nav-logo" aria-label="Sutera Sites home"><img src="images/logos/sutera-sites.png" alt="Sutera Sites" width="368" height="125"></a>
+      <button type="button" data-mobile-close class="site-nav-toggle" aria-label="Close menu"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m4 4 12 12M16 4 4 16"/></svg></button>
     </div>
-    <nav class="mobile-nav-links">
-      <details class="mobile-nav-group">
-        <summary>Services <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></summary>
-        <div class="mobile-nav-submenu">
+    <nav class="nav-sheet-links" aria-label="Menu">
+      <details class="nav-sheet-group">
+        <summary>Services <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M10 2v16M2 10h16"/></svg></summary>
+        <div class="nav-sheet-sub">
           <a href="services.html">All Services</a>
           <a href="services/websites.html">Websites</a>
           <a href="services/google-ads.html">Google Ads</a>
+          <a href="services/google-business-profile.html">Google Business Profile</a>
           <a href="services/design.html">Design &amp; Print</a>
           <a href="services/social-media.html">Social Media</a>
         </div>
       </details>
-      <details class="mobile-nav-group">
-        <summary>Work <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></summary>
-        <div class="mobile-nav-submenu">
+      <details class="nav-sheet-group">
+        <summary>Work <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M10 2v16M2 10h16"/></svg></summary>
+        <div class="nav-sheet-sub">
           <a href="work.html">All Work</a>
           <a href="work/apollo-earthworks.html">Apollo Earthworks</a>
           <a href="work/select-civil.html">Select Civil Group</a>
@@ -280,569 +307,553 @@
           <a href="work/altona-north-soccer-club.html">Altona North Soccer Club</a>
         </div>
       </details>
-      <a href="about.html" class="mobile-nav-link">About</a>
-      <a href="contact.html" class="mobile-nav-link">Contact</a>
+      <a href="about.html" class="nav-sheet-link">About</a>
+      <a href="contact.html" class="nav-sheet-link">Contact</a>
     </nav>
-    <div class="mt-auto flex flex-col gap-3">
-      <a href="contact.html" class="btn-primary justify-center">Book a Free Call</a>
+    <div class="nav-sheet-foot">
+      <svg class="ribbon-edge" viewBox="0 0 1600 200" preserveAspectRatio="none" aria-hidden="true"><path class="ribbon-edge-band" d="M0 190 C 520 178, 1120 120, 1600 20 L1600 246 L0 246 Z" transform="translate(0 -52)"/><g class="ribbon-edge-lines"><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 0)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -13)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -26)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -39)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -52)"/></g><path class="ribbon-edge-fill" d="M0 190 C 520 178, 1120 120, 1600 20 L1600 200 L0 200 Z"/></svg>
+      <a href="contact.html" class="site-nav-cta">Book a Free Call <svg width="24" height="10" viewBox="0 0 24 10" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M0 5h23M18.5.5 23 5l-4.5 4.5"/></svg></a>
+      <a href="tel:0434542005" class="nav-sheet-call">Or call 0434 542 005</a>
     </div>
   </div>
 
   <main id="main">
 
   <!-- ============ HERO ============ -->
-  <section class="hero-section relative pt-36 pb-16 md:pt-44 md:pb-24 overflow-hidden">
-    <div class="noise"></div>
-    <div class="absolute inset-0 grid-bg opacity-40"></div>
+  <section class="hero-ribbon">
+    <img class="hero-ribbon-art" src="images/hero/ribbons-1600.webp" srcset="images/hero/ribbons-1200.webp 1200w, images/hero/ribbons-1600.webp 1600w, images/hero/ribbons-2400.webp 2400w" sizes="(max-width: 1023px) 100vh, max(100vw, 160vh)" width="2400" height="1500" alt="" fetchpriority="high" />
 
-    <div class="relative max-w-5xl mx-auto px-6 text-center">
-      <div data-hero-pill class="hero-anim inline-flex mb-8">
-        <span class="accent-pill">Melbourne Web Design &amp; Marketing</span>
-      </div>
-
-      <h1 data-hero-title class="hero-anim hero-headline text-white mb-7">
+    <div class="hero-ribbon-copy">
+      <h1 data-hero-title class="hero-anim hero-ribbon-title">
         Websites &amp;<br />
         Google Ads.
       </h1>
 
-      <p data-hero-subtitle class="hero-anim text-lg md:text-xl text-neutral-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-        Custom sites, ad campaigns and brand collateral for Melbourne local service businesses.<br class="hidden md:block" />
-        Built to generate leads, not just look good.
+      <svg class="hero-anim hero-ribbon-rule" data-hero-subtitle width="12" height="80" viewBox="0 0 12 80" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><path d="M6 0v79M1 74l5 5 5-5"/></svg>
+
+      <p data-hero-subtitle class="hero-anim hero-ribbon-sub">
+        Custom sites, ad campaigns and brand collateral for Melbourne local service businesses. Built to generate leads, not just look good.
       </p>
 
-      <div data-hero-cta class="hero-anim flex flex-col sm:flex-row gap-3 justify-center items-center mb-20 md:mb-24">
-        <a href="contact.html" class="btn-primary">
+      <div data-hero-cta class="hero-anim hero-ribbon-cta">
+        <a href="contact.html" class="hero-ribbon-btn">
           Book a Free Call
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          <svg width="24" height="10" viewBox="0 0 24 10" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M0 5h23M18.5.5 23 5l-4.5 4.5"/></svg>
         </a>
-        <a href="work.html" class="btn-secondary">See Our Work</a>
-      </div>
-
-      <h2 class="sr-only">Why Sutera Sites</h2>
-      <div data-stagger-parent class="hero-features grid sm:grid-cols-3 gap-10 sm:gap-12 pt-12 border-t border-neutral-900 text-left">
-        <div data-stagger-child class="reveal hero-feature">
-          <div class="hero-feature-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-          </div>
-          <h3>Built to Convert</h3>
-          <p>Custom HTML, CSS and JS. No page builders, no template lock-in, no platforms that raise prices on you.</p>
-        </div>
-        <div data-stagger-child class="reveal hero-feature">
-          <div class="hero-feature-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-          </div>
-          <h3>Ads Ready Day One</h3>
-          <p>Google Ads setup, landing pages and ongoing management. Built around your service area and target jobs.</p>
-        </div>
-        <div data-stagger-child class="reveal hero-feature">
-          <div class="hero-feature-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          </div>
-          <h3>Melbourne Local</h3>
-          <p>Direct line to the person building your site. No account managers, no offshore handoffs.</p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <div class="section-divider"></div>
-
-  <!-- ============ LOGOS ============ -->
-  <section class="py-16">
-    <div class="max-w-6xl mx-auto px-6">
-      <p class="reveal text-center text-sm text-neutral-500 uppercase tracking-widest mb-10">Trusted by Melbourne service businesses</p>
-    </div>
-    <div class="reveal logo-marquee">
-      <div class="logo-track">
-        <!-- Set 1 -->
-        <a class="logo-item" href="https://selectcivilgroup.com.au" target="_blank" rel="noopener" aria-label="Select Civil Group website"><img src="images/logos/select-civil.png" alt="Select Civil Group" loading="lazy" style="aspect-ratio:600/474"></a>
-        <a class="logo-item" href="https://apolloearthworks.com.au" target="_blank" rel="noopener" aria-label="Apollo Earthworks website"><img src="images/logos/apollo-earthworks.png" alt="Apollo Earthworks" loading="lazy" style="aspect-ratio:120/98"></a>
-        <a class="logo-item" href="https://groutacademy.com.au" target="_blank" rel="noopener" aria-label="Grout Academy website"><img src="images/logos/grout-academy.png" alt="Grout Academy" loading="lazy" style="aspect-ratio:600/600"></a>
-        <a class="logo-item" href="https://charmexcavation.com.au" target="_blank" rel="noopener" aria-label="Charm Excavation website"><img src="images/logos/charm-excavation.png" alt="Charm Excavation" loading="lazy" style="aspect-ratio:600/374"></a>
-        <a class="logo-item" href="https://www.totalpilingandexcavations.com.au" target="_blank" rel="noopener" aria-label="Total Piling & Excavations website"><img src="images/logos/total-piling.avif" alt="Total Piling & Excavations" loading="lazy" style="aspect-ratio:337/101"></a>
-        <a class="logo-item bg-invert" href="https://mhbreblocking.com" target="_blank" rel="noopener" aria-label="Maribyrnong & Hobsons Bay Reblocking website"><img src="images/logos/mhb-reblocking.png" alt="Maribyrnong & Hobsons Bay Reblocking" loading="lazy" style="aspect-ratio:403/125"></a>
-        <a class="logo-item bg-drop" href="https://npdbuildingsolutions.com.au" target="_blank" rel="noopener" aria-label="NPD Building Solutions website"><img src="images/logos/npd-building.webp" alt="NPD Building Solutions" loading="lazy" style="aspect-ratio:400/194"></a>
-        <a class="logo-item" href="https://tjmdetailing.com.au" target="_blank" rel="noopener" aria-label="TJM Detailing website"><img src="images/logos/tjm-detailing.png" alt="TJM Detailing" loading="lazy" style="aspect-ratio:600/441"></a>
-        <a class="logo-item bg-invert" href="https://freskocleaning.com.au" target="_blank" rel="noopener" aria-label="Fresko Cleaning website"><img src="images/logos/fresko-cleaning.png" alt="Fresko Cleaning" loading="lazy" style="aspect-ratio:239/90"></a>
-        <a class="logo-item" href="https://altonanorthsc.com.au" target="_blank" rel="noopener" aria-label="Altona North Soccer Club website"><img src="images/logos/ansc.webp" alt="Altona North Soccer Club" loading="lazy" style="aspect-ratio:256/256"></a>
-        <a class="logo-item" href="https://accelerateperformancefootball.com.au" target="_blank" rel="noopener" aria-label="Accelerate Performance Football website"><img src="images/logos/apf.png" alt="Accelerate Performance Football" loading="lazy" style="aspect-ratio:500/500"></a>
-        <a class="logo-item" href="https://neilsutera.com" target="_blank" rel="noopener" aria-label="Neil Sutera website"><img src="images/logos/neil-sutera.svg" alt="Neil Sutera" loading="lazy" style="aspect-ratio:400/120"></a>
-        <a class="logo-item" href="https://anks.com.au" target="_blank" rel="noopener" aria-label="ANKS Construction and Landscaping website"><img src="images/logos/anks.png" alt="ANKS Construction and Landscaping" loading="lazy" style="aspect-ratio:250/250"></a>
-        <a class="logo-item" href="https://accesspromowing.com.au" target="_blank" rel="noopener" aria-label="Access Pro Mowing website"><img src="images/logos/access-pro-mowing.svg" alt="Access Pro Mowing" loading="lazy" style="aspect-ratio:1954/879"></a>
-        <a class="logo-item" href="https://nicheautomotive.com.au" target="_blank" rel="noopener" aria-label="Niche Automotive website"><img src="images/logos/niche-automotive.png" alt="Niche Automotive" loading="lazy" style="aspect-ratio:900/278"></a>
-        <a class="logo-item bg-dropwhite" href="https://hoaddrainage.com.au" target="_blank" rel="noopener" aria-label="Hoad Drainage and Excavations website"><img src="images/logos/hoad-drainage.jpg" alt="Hoad Drainage and Excavations" loading="lazy" style="aspect-ratio:150/150"></a>
-        <a class="logo-item" href="https://timbrbuilt.com.au" target="_blank" rel="noopener" aria-label="Timbr Built website"><img src="images/logos/timbr-built.png" alt="Timbr Built" loading="lazy" style="aspect-ratio:400/225"></a>
-        <a class="logo-item bg-drop" href="https://radiantridesautocare.com.au" target="_blank" rel="noopener" aria-label="Radiant Rides AutoCare website"><img src="images/logos/radiant-rides.png" alt="Radiant Rides AutoCare" loading="lazy" style="aspect-ratio:400/276"></a>
-        <!-- Set 2 (duplicate for seamless loop) -->
-        <a class="logo-item" href="https://selectcivilgroup.com.au" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="images/logos/select-civil.png" alt="" aria-hidden="true" loading="lazy" style="aspect-ratio:600/474"></a>
-        <a class="logo-item" href="https://apolloearthworks.com.au" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="images/logos/apollo-earthworks.png" alt="" aria-hidden="true" loading="lazy" style="aspect-ratio:120/98"></a>
-        <a class="logo-item" href="https://groutacademy.com.au" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="images/logos/grout-academy.png" alt="" aria-hidden="true" loading="lazy" style="aspect-ratio:600/600"></a>
-        <a class="logo-item" href="https://charmexcavation.com.au" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="images/logos/charm-excavation.png" alt="" aria-hidden="true" loading="lazy" style="aspect-ratio:600/374"></a>
-        <a class="logo-item" href="https://www.totalpilingandexcavations.com.au" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="images/logos/total-piling.avif" alt="" aria-hidden="true" loading="lazy" style="aspect-ratio:337/101"></a>
-        <a class="logo-item bg-invert" href="https://mhbreblocking.com" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="images/logos/mhb-reblocking.png" alt="" aria-hidden="true" loading="lazy" style="aspect-ratio:403/125"></a>
-        <a class="logo-item bg-drop" href="https://npdbuildingsolutions.com.au" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="images/logos/npd-building.webp" alt="" aria-hidden="true" loading="lazy" style="aspect-ratio:400/194"></a>
-        <a class="logo-item" href="https://tjmdetailing.com.au" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="images/logos/tjm-detailing.png" alt="" aria-hidden="true" loading="lazy" style="aspect-ratio:600/441"></a>
-        <a class="logo-item bg-invert" href="https://freskocleaning.com.au" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="images/logos/fresko-cleaning.png" alt="" aria-hidden="true" loading="lazy" style="aspect-ratio:239/90"></a>
-        <a class="logo-item" href="https://altonanorthsc.com.au" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="images/logos/ansc.webp" alt="" aria-hidden="true" loading="lazy" style="aspect-ratio:256/256"></a>
-        <a class="logo-item" href="https://accelerateperformancefootball.com.au" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="images/logos/apf.png" alt="" aria-hidden="true" loading="lazy" style="aspect-ratio:500/500"></a>
-        <a class="logo-item" href="https://neilsutera.com" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="images/logos/neil-sutera.svg" alt="" aria-hidden="true" loading="lazy" style="aspect-ratio:400/120"></a>
-        <a class="logo-item" href="https://anks.com.au" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="images/logos/anks.png" alt="" aria-hidden="true" loading="lazy" style="aspect-ratio:250/250"></a>
-        <a class="logo-item" href="https://accesspromowing.com.au" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="images/logos/access-pro-mowing.svg" alt="" aria-hidden="true" loading="lazy" style="aspect-ratio:1954/879"></a>
-        <a class="logo-item" href="https://nicheautomotive.com.au" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="images/logos/niche-automotive.png" alt="" aria-hidden="true" loading="lazy" style="aspect-ratio:900/278"></a>
-        <a class="logo-item bg-dropwhite" href="https://hoaddrainage.com.au" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="images/logos/hoad-drainage.jpg" alt="" aria-hidden="true" loading="lazy" style="aspect-ratio:150/150"></a>
-        <a class="logo-item" href="https://timbrbuilt.com.au" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="images/logos/timbr-built.png" alt="" aria-hidden="true" loading="lazy" style="aspect-ratio:400/225"></a>
-        <a class="logo-item bg-drop" href="https://radiantridesautocare.com.au" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="images/logos/radiant-rides.png" alt="" aria-hidden="true" loading="lazy" style="aspect-ratio:400/276"></a>
+        <a href="work.html" class="hero-ribbon-link">See Our Work</a>
       </div>
     </div>
   </section>
 
-  <div class="section-divider"></div>
+  <!-- ============ CLIENT PROOF ============ -->
+  <section class="proof">
+    <svg class="ribbon-edge" viewBox="0 0 1600 200" preserveAspectRatio="none" aria-hidden="true">
+      <path class="ribbon-edge-band" d="M0 190 C 520 178, 1120 120, 1600 20 L1600 246 L0 246 Z" transform="translate(0 -52)"/>
+      <g class="ribbon-edge-lines"><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 0)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -13)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -26)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -39)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -52)"/></g>
+      <path class="ribbon-edge-fill" d="M0 190 C 520 178, 1120 120, 1600 20 L1600 200 L0 200 Z"/>
+    </svg>
+
+    <svg class="proof-folds" viewBox="0 0 1600 800" preserveAspectRatio="xMidYMin slice" aria-hidden="true">
+      <defs>
+        <linearGradient id="proof-fold-lit" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d63b0c"/><stop offset=".5" stop-color="#e3450f"/><stop offset="1" stop-color="#d33a0b"/></linearGradient>
+        <linearGradient id="proof-fold-low" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c63708"/><stop offset="1" stop-color="#a92d06"/></linearGradient>
+      </defs>
+      <path fill="url(#proof-fold-lit)" d="M0 0 H610 C640 150, 470 330, 0 420 Z"/>
+      <path fill="url(#proof-fold-low)" d="M1600 300 C1200 420, 700 470, 0 760 V800 H1600 Z"/>
+      <path class="proof-folds-rim" d="M610 0 C640 150, 470 330, 0 420"/>
+      <path class="proof-folds-rim" d="M1600 300 C1200 420, 700 470, 0 760"/>
+    </svg>
+
+    <div class="proof-top">
+      <h2 class="reveal proof-title">Trusted by local businesses across Victoria.</h2>
+
+      <div data-stagger-parent class="proof-facts">
+        <div data-stagger-child class="reveal proof-fact">
+          <p class="proof-num" data-count="21">21</p>
+          <p class="proof-label">client websites live</p>
+        </div>
+        <div data-stagger-child class="reveal proof-fact">
+          <p class="proof-num" data-count="350" data-suffix="+">350+</p>
+          <p class="proof-label">real enquiries through those sites this year</p>
+        </div>
+        <div data-stagger-child class="reveal proof-fact">
+          <p class="proof-num">Free</p>
+          <p class="proof-label">homepage mockup before you pay</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal proof-wall">
+      <a class="proof-logo is-dark is-wide" href="https://nicheautomotive.com.au" target="_blank" rel="noopener" aria-label="Niche Automotive website"><img src="images/logos/wall/niche-automotive.webp" alt="Niche Automotive" width="300" height="92" loading="lazy" decoding="async"></a>
+      <a class="proof-logo" href="https://selectcivilgroup.com.au" target="_blank" rel="noopener" aria-label="Select Civil Group website"><img src="images/logos/wall/select-civil.webp" alt="Select Civil Group" width="300" height="300" loading="lazy" decoding="async"></a>
+      <a class="proof-logo is-dark" href="https://apolloearthworks.com.au" target="_blank" rel="noopener" aria-label="Apollo Earthworks website"><img src="images/logos/wall/apollo-earthworks.webp" alt="Apollo Earthworks" width="300" height="258" loading="lazy" decoding="async"></a>
+      <a class="proof-logo" href="https://altonanorthsc.com.au" target="_blank" rel="noopener" aria-label="Altona North Soccer Club website"><img src="images/logos/wall/ansc.webp" alt="Altona North Soccer Club" width="194" height="241" loading="lazy" decoding="async"></a>
+      <a class="proof-logo is-dark is-wide" href="https://charmexcavation.com.au" target="_blank" rel="noopener" aria-label="Charm Excavation website"><img src="images/logos/wall/charm-excavation.webp" alt="Charm Excavation" width="300" height="124" loading="lazy" decoding="async"></a>
+      <a class="proof-logo is-wide" href="https://mhbreblocking.com" target="_blank" rel="noopener" aria-label="Maribyrnong &amp; Hobsons Bay Reblocking website"><img src="images/logos/wall/mhb-reblocking.webp" alt="Maribyrnong &amp; Hobsons Bay Reblocking" width="300" height="81" loading="lazy" decoding="async"></a>
+      <a class="proof-logo is-wide" href="https://freskocleaning.com.au" target="_blank" rel="noopener" aria-label="Fresko Cleaning website"><img src="images/logos/wall/fresko-cleaning.webp" alt="Fresko Cleaning" width="225" height="77" loading="lazy" decoding="async"></a>
+      <a class="proof-logo" href="https://hoaddrainage.com.au" target="_blank" rel="noopener" aria-label="Hoad Drainage and Excavations website"><img src="images/logos/wall/hoad-drainage.webp" alt="Hoad Drainage and Excavations" width="150" height="150" loading="lazy" decoding="async"></a>
+      <a class="proof-logo" href="https://www.zentos.com.au" target="_blank" rel="noopener" aria-label="Zentos Constructions website"><img src="images/logos/wall/zentos.webp" alt="Zentos Constructions" width="109" height="106" loading="lazy" decoding="async"></a>
+      <a class="proof-logo" href="https://timbrbuilt.com.au" target="_blank" rel="noopener" aria-label="Timbr Built website"><img src="images/logos/wall/timbr-built.webp" alt="Timbr Built" width="300" height="283" loading="lazy" decoding="async"></a>
+      <a class="proof-logo is-dark is-wide" href="https://www.defiantmotorculture.com.au" target="_blank" rel="noopener" aria-label="Defiant Motor Culture website"><img src="images/logos/wall/defiant.webp" alt="Defiant Motor Culture" width="300" height="110" loading="lazy" decoding="async"></a>
+      <a class="proof-logo" href="https://groutacademy.com.au" target="_blank" rel="noopener" aria-label="Grout Academy website"><img src="images/logos/wall/grout-academy.webp" alt="Grout Academy" width="300" height="277" loading="lazy" decoding="async"></a>
+      <a class="proof-logo is-dark is-wide" href="https://npdbuildingsolutions.com.au" target="_blank" rel="noopener" aria-label="NPD Building Solutions website"><img src="images/logos/wall/npd-building.webp" alt="NPD Building Solutions" width="300" height="131" loading="lazy" decoding="async"></a>
+      <a class="proof-logo is-wide" href="https://colacdairies.com.au" target="_blank" rel="noopener" aria-label="Colac Dairies website"><img src="images/logos/wall/colac-dairies.webp" alt="Colac Dairies" width="300" height="54" loading="lazy" decoding="async"></a>
+      <a class="proof-logo is-dark" href="https://accelerateperformancefootball.com.au" target="_blank" rel="noopener" aria-label="Accelerate Performance Football website"><img src="images/logos/wall/apf.webp" alt="Accelerate Performance Football" width="209" height="213" loading="lazy" decoding="async"></a>
+      <a class="proof-logo" href="https://tjmdetailing.com.au" target="_blank" rel="noopener" aria-label="TJM Detailing website"><img src="images/logos/wall/tjm-detailing.webp" alt="TJM Detailing" width="300" height="197" loading="lazy" decoding="async"></a>
+      <a class="proof-logo is-wide" href="https://neilsutera.com" target="_blank" rel="noopener" aria-label="Neil Sutera website"><img src="images/logos/wall/neil-sutera.webp" alt="Neil Sutera" width="300" height="107" loading="lazy" decoding="async"></a>
+      <a class="proof-logo" href="https://radiantridesautocare.com.au" target="_blank" rel="noopener" aria-label="Radiant Rides AutoCare website"><img src="images/logos/wall/radiant-rides.webp" alt="Radiant Rides AutoCare" width="300" height="207" loading="lazy" decoding="async"></a>
+      <a class="proof-logo is-dark is-wide" href="https://www.totalpilingandexcavations.com.au" target="_blank" rel="noopener" aria-label="Total Piling &amp; Excavations website"><img src="images/logos/wall/total-piling.webp" alt="Total Piling &amp; Excavations" width="299" height="70" loading="lazy" decoding="async"></a>
+      <a class="proof-logo is-wide" href="https://jbparttime.com.au" target="_blank" rel="noopener" aria-label="JB Parttime website"><img src="images/logos/wall/jb-parttime.webp" alt="JB Parttime" width="300" height="56" loading="lazy" decoding="async"></a>
+      <a class="proof-logo is-dark" href="https://anks.com.au" target="_blank" rel="noopener" aria-label="ANKS Construction and Landscaping website"><img src="images/logos/wall/anks.webp" alt="ANKS Construction and Landscaping" width="172" height="170" loading="lazy" decoding="async"></a>
+    </div>
+  </section>
 
   <!-- ============ SERVICES ============ -->
-  <section class="py-24 md:py-32">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="max-w-3xl mb-16">
-        <p class="reveal accent-pill mb-6 inline-flex">Services</p>
-        <h2 class="reveal headline text-4xl md:text-5xl text-white mb-5">Everything a local business needs to show up online and win work.</h2>
-        <p class="reveal text-lg text-neutral-400">We work with trades, clubs and small service businesses across Melbourne. Most clients run a mix of services with us because that's where the compounding happens - the site converts the traffic the ads bring in, and the collateral closes the jobs.</p>
+  <section class="svc">
+    <svg class="ribbon-edge ribbon-edge--flip" viewBox="0 0 1600 200" preserveAspectRatio="none" aria-hidden="true">
+      <path class="ribbon-edge-band" d="M0 190 C 520 178, 1120 120, 1600 20 L1600 246 L0 246 Z" transform="translate(0 -52)"/>
+      <g class="ribbon-edge-lines"><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 0)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -13)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -26)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -39)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -52)"/></g>
+      <path class="ribbon-edge-fill" d="M0 190 C 520 178, 1120 120, 1600 20 L1600 200 L0 200 Z"/>
+    </svg>
+
+    <div class="svc-head">
+      <h2 class="reveal svc-title">Everything a local business needs to show up online and win work.</h2>
+      <p class="reveal svc-intro">We work with trades, clubs and small service businesses across Melbourne. Most clients run a mix of services with us because that's where the compounding happens - the site converts the traffic the ads bring in, and the collateral closes the jobs.</p>
+    </div>
+
+    <div data-stagger-parent class="svc-list">
+      <a data-stagger-child class="reveal svc-row" href="services/websites.html">
+        <span class="svc-num">01</span>
+        <h3 class="svc-name">Websites</h3>
+        <p class="svc-desc">Custom websites built to convert, not just look pretty. Monthly subscriptions or one-off builds - no page builders, no templates.</p>
+        <span class="svc-arrow"><svg width="36" height="12" viewBox="0 0 36 12" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M0 6h35M29.5.5 35 6l-5.5 5.5"/></svg></span>
+      </a>
+      <a data-stagger-child class="reveal svc-row" href="services/google-ads.html">
+        <span class="svc-num">02</span>
+        <h3 class="svc-name">Google Ads</h3>
+        <p class="svc-desc">Full-service Google Ads setup and ongoing management. Month-to-month, no lock-in, optimised weekly for real leads.</p>
+        <span class="svc-arrow"><svg width="36" height="12" viewBox="0 0 36 12" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M0 6h35M29.5.5 35 6l-5.5 5.5"/></svg></span>
+      </a>
+      <a data-stagger-child class="reveal svc-row" href="services/google-business-profile.html">
+        <span class="svc-num">03</span>
+        <h3 class="svc-name">Google Business Profile</h3>
+        <p class="svc-desc">Setup, verification and two posts a week, with your reviews watched daily. Show up on the map when locals search your trade.</p>
+        <span class="svc-arrow"><svg width="36" height="12" viewBox="0 0 36 12" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M0 6h35M29.5.5 35 6l-5.5 5.5"/></svg></span>
+      </a>
+      <a data-stagger-child class="reveal svc-row" href="services/design.html">
+        <span class="svc-num">04</span>
+        <h3 class="svc-name">Design &amp; Print</h3>
+        <p class="svc-desc">Capability statements, business cards, corflute signs, flyers, quote and invoice templates. Print-ready, on-brand, built to win jobs.</p>
+        <span class="svc-arrow"><svg width="36" height="12" viewBox="0 0 36 12" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M0 6h35M29.5.5 35 6l-5.5 5.5"/></svg></span>
+      </a>
+      <a data-stagger-child class="reveal svc-row" href="services/social-media.html">
+        <span class="svc-num">05</span>
+        <h3 class="svc-name">Social Media</h3>
+        <p class="svc-desc">Instagram and Facebook management for local clubs and businesses. Match day graphics, sponsor posts, campaigns, the full kit.</p>
+        <span class="svc-arrow"><svg width="36" height="12" viewBox="0 0 36 12" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M0 6h35M29.5.5 35 6l-5.5 5.5"/></svg></span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ RECENT WORK ============ -->
+  <section class="work">
+    <svg class="ribbon-edge" viewBox="0 0 1600 200" preserveAspectRatio="none" aria-hidden="true">
+      <path class="ribbon-edge-band" d="M0 190 C 520 178, 1120 120, 1600 20 L1600 246 L0 246 Z" transform="translate(0 -52)"/>
+      <g class="ribbon-edge-lines"><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 0)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -13)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -26)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -39)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -52)"/></g>
+      <path class="ribbon-edge-fill" d="M0 190 C 520 178, 1120 120, 1600 20 L1600 200 L0 200 Z"/>
+    </svg>
+    <img class="work-art" src="images/hero/ribbons-1600.webp" srcset="images/hero/ribbons-1200.webp 1200w, images/hero/ribbons-1600.webp 1600w, images/hero/ribbons-2400.webp 2400w" sizes="max(100vw, 176vh)" width="2400" height="1500" alt="" loading="lazy" decoding="async" />
+
+    <div class="work-head">
+      <h2 class="reveal work-title">Real businesses.<br />Real results.</h2>
+      <p class="reveal work-intro">Every site here is live and paid for. Open any of them and have a look.</p>
+      <a href="work.html" class="reveal hero-ribbon-btn">See All Work <svg width="24" height="10" viewBox="0 0 24 10" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M0 5h23M18.5.5 23 5l-4.5 4.5"/></svg></a>
+    </div>
+
+    <div data-stagger-parent class="work-grid">
+        <a data-stagger-child class="reveal work-card" href="https://charmexcavation.com.au" target="_blank" rel="noopener">
+          <div class="work-shot"><img src="images/work/home/charm-excavation-800.webp" srcset="images/work/home/charm-excavation-800.webp 800w, images/work/home/charm-excavation-1400.webp 1400w" sizes="(max-width: 767px) 100vw, 50vw" alt="Charm Excavation website homepage" width="1400" height="875" loading="lazy" decoding="async"></div>
+          <div class="work-body">
+            <h3 class="work-name">Charm Excavation</h3>
+            <p class="work-desc">Excavation and earthmoving in Keysborough. Full website, kept up to date as new jobs come in.</p>
+            <span class="work-link">View live site <svg width="24" height="10" viewBox="0 0 24 10" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M0 5h23M18.5.5 23 5l-4.5 4.5"/></svg></span>
+          </div>
+        </a>
+        <a data-stagger-child class="reveal work-card" href="work/grout-academy.html">
+          <div class="work-shot"><img src="images/work/home/grout-academy-800.webp" srcset="images/work/home/grout-academy-800.webp 800w, images/work/home/grout-academy-1400.webp 1400w" sizes="(max-width: 767px) 100vw, 50vw" alt="Grout Academy website homepage" width="1400" height="875" loading="lazy" decoding="async"></div>
+          <div class="work-body">
+            <h3 class="work-name">Grout Academy</h3>
+            <p class="work-desc">Tile and regrouting specialist in Geelong. Logo, business cards, website and Google Ads, with the site live in under two weeks.</p>
+            <span class="work-link">Read case study <svg width="24" height="10" viewBox="0 0 24 10" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M0 5h23M18.5.5 23 5l-4.5 4.5"/></svg></span>
+          </div>
+        </a>
+        <a data-stagger-child class="reveal work-card" href="https://www.zentos.com.au" target="_blank" rel="noopener">
+          <div class="work-shot"><img src="images/work/home/zentos-800.webp" srcset="images/work/home/zentos-800.webp 800w, images/work/home/zentos-1400.webp 1400w" sizes="(max-width: 767px) 100vw, 50vw" alt="Zentos Constructions website homepage" width="1400" height="875" loading="lazy" decoding="async"></div>
+          <div class="work-body">
+            <h3 class="work-name">Zentos Constructions</h3>
+            <p class="work-desc">Boutique residential builder in Docklands. Multi-page site with project videos and a product showroom.</p>
+            <span class="work-link">View live site <svg width="24" height="10" viewBox="0 0 24 10" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M0 5h23M18.5.5 23 5l-4.5 4.5"/></svg></span>
+          </div>
+        </a>
+        <a data-stagger-child class="reveal work-card" href="https://nicheautomotive.com.au" target="_blank" rel="noopener">
+          <div class="work-shot"><img src="images/work/home/niche-automotive-800.webp" srcset="images/work/home/niche-automotive-800.webp 800w, images/work/home/niche-automotive-1400.webp 1400w" sizes="(max-width: 767px) 100vw, 50vw" alt="Niche Automotive website homepage" width="1400" height="875" loading="lazy" decoding="async"></div>
+          <div class="work-body">
+            <h3 class="work-name">Niche Automotive</h3>
+            <p class="work-desc">Mechanic and used parts in Sunshine West. Online store, workshop service pages and Google Business Profile.</p>
+            <span class="work-link">View live site <svg width="24" height="10" viewBox="0 0 24 10" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M0 5h23M18.5.5 23 5l-4.5 4.5"/></svg></span>
+          </div>
+        </a>
+    </div>
+
+    <div data-stagger-parent class="work-results">
+        <a data-stagger-child class="reveal work-result" href="work/apollo-earthworks.html">
+          <div class="work-result-head">
+            <div>
+              <h3 class="work-result-name">Apollo Earthworks</h3>
+              <p class="work-result-meta">First Google Ads campaign, April 2026</p>
+            </div>
+            <span class="work-link">Read case study <svg width="24" height="10" viewBox="0 0 24 10" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M0 5h23M18.5.5 23 5l-4.5 4.5"/></svg></span>
+          </div>
+          <div class="work-stats"><div class="work-stat"><p class="work-stat-num">42</p><p class="work-stat-label">hours to first lead</p></div><div class="work-stat"><p class="work-stat-num">$45</p><p class="work-stat-label">cost per lead</p></div><div class="work-stat"><p class="work-stat-num">$3,600</p><p class="work-stat-label">first job booked</p></div></div>
+        </a>
+        <a data-stagger-child class="reveal work-result" href="work/select-civil.html">
+          <div class="work-result-head">
+            <div>
+              <h3 class="work-result-name">Select Civil Group</h3>
+              <p class="work-result-meta">First Google Ads campaign, March 2026</p>
+            </div>
+            <span class="work-link">Read case study <svg width="24" height="10" viewBox="0 0 24 10" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M0 5h23M18.5.5 23 5l-4.5 4.5"/></svg></span>
+          </div>
+          <div class="work-stats"><div class="work-stat"><p class="work-stat-num">2</p><p class="work-stat-label">qualified leads</p></div><div class="work-stat"><p class="work-stat-num">30</p><p class="work-stat-label">days</p></div><div class="work-stat"><p class="work-stat-num">$10-15k</p><p class="work-stat-label">typical job size</p></div></div>
+        </a>
+    </div>
+  </section>
+
+  <!-- ============ WHAT YOU GET ============ -->
+  <section class="get">
+    <svg class="ribbon-edge ribbon-edge--flip" viewBox="0 0 1600 200" preserveAspectRatio="none" aria-hidden="true">
+      <path class="ribbon-edge-band" d="M0 190 C 520 178, 1120 120, 1600 20 L1600 246 L0 246 Z" transform="translate(0 -52)"/>
+      <g class="ribbon-edge-lines"><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 0)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -13)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -26)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -39)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -52)"/></g>
+      <path class="ribbon-edge-fill" d="M0 190 C 520 178, 1120 120, 1600 20 L1600 200 L0 200 Z"/>
+    </svg>
+
+    <div class="get-head">
+      <h2 class="reveal get-title">What you actually get.</h2>
+      <p class="reveal get-intro">Most businesses come to us for a website that wins work, ads that find it, or both. Here's what's in each.</p>
+    </div>
+
+    <div class="get-row">
+      <a class="reveal get-visual get-shot" href="https://www.radiantridesautocare.com.au" target="_blank" rel="noopener">
+        <img src="images/work/home/radiant-rides-800.webp" srcset="images/work/home/radiant-rides-800.webp 800w, images/work/home/radiant-rides-1400.webp 1400w" sizes="(max-width: 1023px) 100vw, 50vw" alt="Radiant Rides AutoCare website homepage" width="1400" height="875" loading="lazy" decoding="async">
+        <span class="get-shot-cap">Radiant Rides AutoCare <span class="home-link">View live site <svg width="24" height="10" viewBox="0 0 24 10" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M0 5h23M18.5.5 23 5l-4.5 4.5"/></svg></span></span>
+      </a>
+      <div class="get-body">
+        <h3 class="reveal get-name">Websites</h3>
+        <p class="reveal get-line">Built like a sales tool, not a brochure.</p>
+        <ul data-stagger-parent class="get-list">
+          <li data-stagger-child class="reveal"><h4>Custom code, no templates</h4><p>Hand-coded and fast to load, with no platform that can raise its prices on you.</p></li>
+          <li data-stagger-child class="reveal"><h4>Built to bring in enquiries</h4><p>Click-to-call, lead forms and conversion tracking, set up from day one.</p></li>
+          <li data-stagger-child class="reveal"><h4>Set up for Google</h4><p>Titles, descriptions, schema and a sitemap done properly, so Google knows what you do and where.</p></li>
+          <li data-stagger-child class="reveal"><h4>Looked after</h4><p>On a subscription, hosting, updates and changes are covered. Send us the new photos and we do the rest.</p></li>
+        </ul>
+        <a class="reveal home-link" href="services/websites.html">Explore websites <svg width="24" height="10" viewBox="0 0 24 10" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M0 5h23M18.5.5 23 5l-4.5 4.5"/></svg></a>
       </div>
+    </div>
 
-      <div data-stagger-parent class="grid md:grid-cols-2 gap-6">
-        <a data-stagger-child class="reveal service-card block" href="services/websites.html">
-          <div class="flex items-center gap-3 mb-5">
-            <div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background: var(--accent-dim); color: var(--accent-hover);">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-            </div>
-            <span class="text-xs text-neutral-500 uppercase tracking-wider">01</span>
-          </div>
-          <h3 class="text-2xl font-bold text-white mb-3">Websites</h3>
-          <p class="text-neutral-400 mb-5">Custom websites built to convert, not just look pretty. Monthly subscriptions or one-off builds - no page builders, no templates.</p>
-          <span class="link-underline">Explore websites
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-          </span>
-        </a>
-
-        <a data-stagger-child class="reveal service-card block" href="services/google-ads.html">
-          <div class="flex items-center gap-3 mb-5">
-            <div class="w-10 h-10 rounded-lg flex items-center justify-center bg-white">
-              <img src="images/logos/google-ads.png" alt="Google Ads" width="22" height="22" />
-            </div>
-            <span class="text-xs text-neutral-500 uppercase tracking-wider">02</span>
-          </div>
-          <h3 class="text-2xl font-bold text-white mb-3">Google Ads</h3>
-          <p class="text-neutral-400 mb-5">Full-service Google Ads setup and ongoing management. Month-to-month, no lock-in, optimised weekly for real leads.</p>
-          <span class="link-underline">Explore Google Ads
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-          </span>
-        </a>
-
-        <a data-stagger-child class="reveal service-card block" href="services/design.html">
-          <div class="flex items-center gap-3 mb-5">
-            <div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background: var(--accent-dim); color: var(--accent-hover);">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3zM18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5zM2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
-            </div>
-            <span class="text-xs text-neutral-500 uppercase tracking-wider">03</span>
-          </div>
-          <h3 class="text-2xl font-bold text-white mb-3">Design &amp; Print</h3>
-          <p class="text-neutral-400 mb-5">Capability statements, business cards, corflute signs, flyers, quote and invoice templates. Print-ready, on-brand, built to win jobs.</p>
-          <span class="link-underline">Explore design
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-          </span>
-        </a>
-
-        <a data-stagger-child class="reveal service-card block" href="services/social-media.html">
-          <div class="flex items-center gap-3 mb-5">
-            <div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background: var(--accent-dim); color: var(--accent-hover);">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
-            </div>
-            <span class="text-xs text-neutral-500 uppercase tracking-wider">04</span>
-          </div>
-          <h3 class="text-2xl font-bold text-white mb-3">Social Media</h3>
-          <p class="text-neutral-400 mb-5">Instagram and Facebook management for local clubs and businesses. Match day graphics, sponsor posts, campaigns, the full kit.</p>
-          <span class="link-underline">Explore social
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-          </span>
-        </a>
+    <div class="get-row get-row--flip">
+      <div class="reveal get-visual get-path">
+        <svg class="get-path-lines" viewBox="0 0 600 360" preserveAspectRatio="none" aria-hidden="true"><path d="M0 360 C 180 346, 420 250, 600 90"/><path d="M0 344 C 180 330, 420 234, 600 74"/><path d="M0 328 C 180 314, 420 218, 600 58"/><path d="M0 312 C 180 298, 420 202, 600 42"/><path d="M0 296 C 180 282, 420 186, 600 26"/><path d="M0 280 C 180 266, 420 170, 600 10"/><path d="M0 264 C 180 250, 420 154, 600 -6"/><path d="M0 248 C 180 234, 420 138, 600 -22"/><path d="M0 232 C 180 218, 420 122, 600 -38"/></svg>
+        <p class="get-path-search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>excavation near me</p>
+        <svg class="get-path-rule" width="12" height="44" viewBox="0 0 12 44" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><path d="M6 0v43M1 38l5 5 5-5"/></svg>
+        <p class="get-path-step">Your ad shows to people searching in your area.</p>
+        <svg class="get-path-rule" width="12" height="44" viewBox="0 0 12 44" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><path d="M6 0v43M1 38l5 5 5-5"/></svg>
+        <p class="get-path-step">They land on a page that matches the job.</p>
+        <svg class="get-path-rule" width="12" height="44" viewBox="0 0 12 44" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><path d="M6 0v43M1 38l5 5 5-5"/></svg>
+        <p class="get-path-step">They call or send a form, and it's tracked back to the ad.</p>
+      </div>
+      <div class="get-body">
+        <h3 class="reveal get-name">Google Ads</h3>
+        <p class="reveal get-line">Leads, not just clicks.</p>
+        <ul data-stagger-parent class="get-list">
+          <li data-stagger-child class="reveal"><h4>Built around the jobs you want</h4><p>Keyword research for the searches that turn into real work, in the areas you actually service.</p></li>
+          <li data-stagger-child class="reveal"><h4>Every enquiry tracked</h4><p>Calls and form fills tracked, so you can see what's working and what each lead cost.</p></li>
+          <li data-stagger-child class="reveal"><h4>Worked on every week</h4><p>Search terms, bids and ads reviewed weekly. Reports in plain English.</p></li>
+          <li data-stagger-child class="reveal"><h4>Your account, no lock-in</h4><p>Management runs month to month. The account sits in your business name and stays with you.</p></li>
+        </ul>
+        <a class="reveal home-link" href="services/google-ads.html">Explore Google Ads <svg width="24" height="10" viewBox="0 0 24 10" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M0 5h23M18.5.5 23 5l-4.5 4.5"/></svg></a>
       </div>
     </div>
   </section>
 
-  <div class="section-divider"></div>
-
-  <!-- ============ FEATURE DEEP-DIVE ============ -->
-  <section class="py-24 md:py-32">
-    <div class="max-w-6xl mx-auto px-6">
-
-      <div class="grid lg:grid-cols-2 gap-12 mb-16 md:mb-20">
-        <div class="max-w-xl">
-          <p class="reveal eyebrow mb-6">Websites</p>
-          <h2 class="reveal headline text-4xl md:text-5xl text-white mb-5">Built like a sales tool, not a brochure.</h2>
-          <p class="reveal text-lg text-neutral-400 mb-8">Custom-coded, conversion-focused websites for Melbourne service businesses. Fast turnaround, fixed monthly subscription, and a direct line to the person actually building it.</p>
-          <a href="services/websites.html" class="reveal btn-primary inline-flex">
-            Explore websites
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-          </a>
-        </div>
-        <div class="reveal hidden lg:flex items-start justify-end">
-          <div class="feature-callout">
-            <p class="feature-callout-eyebrow">Live right now</p>
-            <p class="feature-callout-number">18</p>
-            <p class="feature-callout-label">Client sites live and<br />winning work.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="grid lg:grid-cols-5 gap-8 lg:gap-12 items-stretch">
-
-        <div class="reveal lg:col-span-3">
-          <a href="https://radiantridesautocare.com.au" target="_blank" rel="noopener" class="browser-mockup" aria-label="Visit Radiant Rides AutoCare">
-            <div class="browser-chrome">
-              <div class="browser-dots" aria-hidden="true">
-                <span></span><span></span><span></span>
-              </div>
-              <div class="browser-url">radiantridesautocare.com.au</div>
-            </div>
-            <div class="browser-body browser-body--image">
-              <img src="images/work/radiant-rides.jpg" alt="Radiant Rides AutoCare website - professional car detailing in Cranbourne North" loading="lazy" style="aspect-ratio:1400/909">
-            </div>
-          </a>
-        </div>
-
-        <h3 class="sr-only">What's included</h3>
-        <div data-feature-list class="lg:col-span-2 feature-list">
-          <button data-feature-item type="button" class="reveal feature-item is-active">
-            <div class="feature-bullet" aria-hidden="true"></div>
-            <div>
-              <h4>Custom code, no templates</h4>
-              <p>Hand-coded HTML, CSS and JS. Fast load times, full flexibility, no platform lock-in or surprise price hikes.</p>
-            </div>
-          </button>
-          <button data-feature-item type="button" class="reveal feature-item">
-            <div class="feature-bullet" aria-hidden="true"></div>
-            <div>
-              <h4>Built for lead-gen</h4>
-              <p>Click-to-call, conversion-tracked forms and Google Ads landing pages baked in from day one.</p>
-            </div>
-          </button>
-          <button data-feature-item type="button" class="reveal feature-item">
-            <div class="feature-bullet" aria-hidden="true"></div>
-            <div>
-              <h4>Subscription support</h4>
-              <p>Monthly plan covers hosting, updates and changes. Direct line to the person who built your site.</p>
-            </div>
-          </button>
-        </div>
-
+  <!-- ============ MID-PAGE CTA ============ -->
+  <section class="cta">
+    <svg class="ribbon-edge" viewBox="0 0 1600 200" preserveAspectRatio="none" aria-hidden="true">
+      <path class="ribbon-edge-band" d="M0 190 C 520 178, 1120 120, 1600 20 L1600 246 L0 246 Z" transform="translate(0 -52)"/>
+      <g class="ribbon-edge-lines"><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 0)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -13)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -26)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -39)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -52)"/></g>
+      <path class="ribbon-edge-fill" d="M0 190 C 520 178, 1120 120, 1600 20 L1600 200 L0 200 Z"/>
+    </svg>
+    <svg class="cta-lines" viewBox="0 0 1600 640" preserveAspectRatio="none" aria-hidden="true"><path d="M560 700 C 900 620, 1240 430, 1660 130"/><path d="M594 700 C 926 620, 1254 422, 1660 114"/><path d="M628 700 C 952 620, 1268 414, 1660 98"/><path d="M662 700 C 978 620, 1282 406, 1660 82"/><path d="M696 700 C 1004 620, 1296 398, 1660 66"/><path d="M730 700 C 1030 620, 1310 390, 1660 50"/><path d="M764 700 C 1056 620, 1324 382, 1660 34"/><path d="M798 700 C 1082 620, 1338 374, 1660 18"/><path d="M832 700 C 1108 620, 1352 366, 1660 2"/><path d="M866 700 C 1134 620, 1366 358, 1660 -14"/><path d="M900 700 C 1160 620, 1380 350, 1660 -30"/><path d="M934 700 C 1186 620, 1394 342, 1660 -46"/></svg>
+    <div class="cta-inner">
+      <h2 class="reveal cta-title">See your new homepage before you pay a cent.</h2>
+      <p class="reveal cta-sub">Enquire and we'll mock up your homepage for free. If you like it, we'll quote the rest. If you don't, you owe us nothing.</p>
+      <div class="reveal cta-actions">
+        <a href="#contact" class="hero-ribbon-btn">Get My Free Mockup <svg width="24" height="10" viewBox="0 0 24 10" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M0 5h23M18.5.5 23 5l-4.5 4.5"/></svg></a>
+        <a href="tel:0434542005" class="cta-phone">Or call 0434 542 005</a>
       </div>
     </div>
   </section>
 
-  <div class="section-divider"></div>
-
-  <!-- ============ CASE STUDIES ============ -->
-  <section class="py-24 md:py-32">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="flex items-end justify-between mb-16 flex-wrap gap-6">
-        <div class="max-w-2xl">
-          <p class="reveal accent-pill mb-6 inline-flex">Recent work</p>
-          <h2 class="reveal headline text-4xl md:text-5xl text-white mb-5">Real businesses. Real results.</h2>
-          <p class="reveal text-lg text-neutral-400">Every project here is live, paid for, and being used to win jobs right now.</p>
+  <!-- ============ PROCESS ============ -->
+  <section class="how">
+    <svg class="ribbon-edge ribbon-edge--flip" viewBox="0 0 1600 200" preserveAspectRatio="none" aria-hidden="true">
+      <path class="ribbon-edge-band" d="M0 190 C 520 178, 1120 120, 1600 20 L1600 246 L0 246 Z" transform="translate(0 -52)"/>
+      <g class="ribbon-edge-lines"><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 0)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -13)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -26)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -39)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -52)"/></g>
+      <path class="ribbon-edge-fill" d="M0 190 C 520 178, 1120 120, 1600 20 L1600 200 L0 200 Z"/>
+    </svg>
+    <div class="how-head">
+      <h2 class="reveal how-title">Four steps.<br />The first two are free.</h2>
+    </div>
+    <div data-stagger-parent class="how-steps">
+      <svg class="how-curve" viewBox="0 0 1600 200" preserveAspectRatio="none" aria-hidden="true"><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 0)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -13)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -26)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -39)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -52)"/></svg>
+        <div data-stagger-child class="reveal how-step">
+          <div class="how-top"><span class="how-num">1</span><span class="how-free">Free</span></div>
+          <h3 class="how-name">Tell us about your business</h3>
+          <p class="how-desc">A free 15-minute call. What you do, where you work and the jobs you want more of.</p>
         </div>
-        <a href="work.html" class="reveal link-underline">See all work
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-        </a>
-      </div>
-
-      <div data-stagger-parent class="grid md:grid-cols-2 gap-6">
-        <a data-stagger-child class="reveal case-card block p-8" href="work/apollo-earthworks.html">
-          <div class="flex items-center justify-between mb-6">
-            <span class="text-xs text-neutral-500 uppercase tracking-wider">Website + Google Ads</span>
-            <span class="accent-pill text-xs">Live</span>
-          </div>
-          <h3 class="text-2xl font-bold text-white mb-3">Apollo Earthworks</h3>
-          <p class="text-neutral-400 mb-6">Melbourne earthworks and excavation business. Custom site built for lead-gen with a Google Ads campaign running from day one.</p>
-          <div class="grid grid-cols-3 gap-3 pt-6 border-t border-neutral-900">
-            <div>
-              <div class="text-xl font-bold text-white">2</div>
-              <div class="text-xs text-neutral-500">Leads in 8 days</div>
-            </div>
-            <div>
-              <div class="text-xl font-bold text-white">$45</div>
-              <div class="text-xs text-neutral-500">Cost per lead</div>
-            </div>
-            <div>
-              <div class="text-xl font-bold text-white">$3,600</div>
-              <div class="text-xs text-neutral-500">First job booked</div>
-            </div>
-          </div>
-        </a>
-
-        <a data-stagger-child class="reveal case-card block p-8" href="work/select-civil.html">
-          <div class="flex items-center justify-between mb-6">
-            <span class="text-xs text-neutral-500 uppercase tracking-wider">Website + Google Ads</span>
-            <span class="accent-pill text-xs">Live</span>
-          </div>
-          <h3 class="text-2xl font-bold text-white mb-3">Select Civil Group</h3>
-          <p class="text-neutral-400 mb-6">Geelong-based civil contractor. Full website rebuild plus two dedicated landing pages for a Google Ads campaign.</p>
-          <div class="grid grid-cols-3 gap-3 pt-6 border-t border-neutral-900">
-            <div>
-              <div class="text-xl font-bold text-white">2</div>
-              <div class="text-xs text-neutral-500">Qualified leads</div>
-            </div>
-            <div>
-              <div class="text-xl font-bold text-white">30</div>
-              <div class="text-xs text-neutral-500">Days</div>
-            </div>
-            <div>
-              <div class="text-xl font-bold text-white">$10-15k</div>
-              <div class="text-xs text-neutral-500">Per job value</div>
-            </div>
-          </div>
-        </a>
-
-        <a data-stagger-child class="reveal case-card block p-8" href="work/grout-academy.html">
-          <div class="flex items-center justify-between mb-6">
-            <span class="text-xs text-neutral-500 uppercase tracking-wider">Website + Branding</span>
-            <span class="accent-pill text-xs">Live</span>
-          </div>
-          <h3 class="text-2xl font-bold text-white mb-3">Grout Academy</h3>
-          <p class="text-neutral-400 mb-6">Geelong tile and regrouting specialist. Logo design, business cards, and a custom website, built and launched in under two weeks.</p>
-          <div class="grid grid-cols-3 gap-3 pt-6 border-t border-neutral-900">
-            <div>
-              <div class="text-xl font-bold text-white">14</div>
-              <div class="text-xs text-neutral-500">Days to launch</div>
-            </div>
-            <div>
-              <div class="text-xl font-bold text-white">3</div>
-              <div class="text-xs text-neutral-500">Deliverables</div>
-            </div>
-            <div>
-              <div class="text-xl font-bold text-white">AU</div>
-              <div class="text-xs text-neutral-500">Expansion-ready</div>
-            </div>
-          </div>
-        </a>
-
-        <a data-stagger-child class="reveal case-card block p-8" href="work/altona-north-soccer-club.html">
-          <div class="flex items-center justify-between mb-6">
-            <span class="text-xs text-neutral-500 uppercase tracking-wider">Social Media</span>
-            <span class="accent-pill text-xs">Live</span>
-          </div>
-          <h3 class="text-2xl font-bold text-white mb-3">Altona North Soccer Club</h3>
-          <p class="text-neutral-400 mb-6">Full Instagram and Facebook management. Match day graphics, sponsor announcements, full time cards, gameday posts - all consistent and on brand.</p>
-          <div class="grid grid-cols-3 gap-3 pt-6 border-t border-neutral-900">
-            <div>
-              <div class="text-xl font-bold text-white">2</div>
-              <div class="text-xs text-neutral-500">Platforms</div>
-            </div>
-            <div>
-              <div class="text-xl font-bold text-white">6+</div>
-              <div class="text-xs text-neutral-500">Posts per week</div>
-            </div>
-            <div>
-              <div class="text-xl font-bold text-white">1</div>
-              <div class="text-xs text-neutral-500">Brand system</div>
-            </div>
-          </div>
-        </a>
-      </div>
+        <div data-stagger-child class="reveal how-step">
+          <div class="how-top"><span class="how-num">2</span><span class="how-free">Free</span></div>
+          <h3 class="how-name">See your homepage first</h3>
+          <p class="how-desc">We mock up your homepage for free, usually within days. You see it before you pay anything.</p>
+        </div>
+        <div data-stagger-child class="reveal how-step">
+          <div class="how-top"><span class="how-num">3</span></div>
+          <h3 class="how-name">We build it and go live</h3>
+          <p class="how-desc">Happy with it? We build the rest. Most sites launch in 1 to 3 weeks, with a clear timeline up front.</p>
+        </div>
+        <div data-stagger-child class="reveal how-step">
+          <div class="how-top"><span class="how-num">4</span></div>
+          <h3 class="how-name">We keep it working</h3>
+          <p class="how-desc">On a subscription we handle the updates and changes. Add Google Ads and we manage those too.</p>
+        </div>
     </div>
   </section>
-
-  <div class="section-divider"></div>
 
   <!-- ============ WHY SUTERA ============ -->
-  <section class="py-24 md:py-32">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="max-w-3xl mb-16">
-        <p class="reveal accent-pill mb-6 inline-flex">Why Sutera Sites</p>
-        <h2 class="reveal headline text-4xl md:text-5xl text-white mb-5">Built for local businesses. Run by someone who actually answers the phone.</h2>
+  <section class="why">
+    <svg class="ribbon-edge" viewBox="0 0 1600 200" preserveAspectRatio="none" aria-hidden="true">
+      <path class="ribbon-edge-band" d="M0 190 C 520 178, 1120 120, 1600 20 L1600 246 L0 246 Z" transform="translate(0 -52)"/>
+      <g class="ribbon-edge-lines"><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 0)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -13)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -26)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -39)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -52)"/></g>
+      <path class="ribbon-edge-fill" d="M0 190 C 520 178, 1120 120, 1600 20 L1600 200 L0 200 Z"/>
+    </svg>
+    <h2 class="reveal why-title">Built for local businesses. Run by someone who actually answers the phone.</h2>
+    <div data-stagger-parent class="why-grid">
+      <div data-stagger-child class="reveal why-item">
+        <h3 class="why-name">You deal with the person doing the work</h3>
+        <p class="why-desc">No account managers, no ticketing system and no offshore handoffs. Call the number on the site and you get the person who built it.</p>
       </div>
+      <div data-stagger-child class="reveal why-item">
+        <h3 class="why-name">No page builders, no platform rent</h3>
+        <p class="why-desc">Every site is hand-coded. It loads fast, and nobody can raise a platform fee on you.</p>
+      </div>
+      <div data-stagger-child class="reveal why-item">
+        <h3 class="why-name">Everything in one place</h3>
+        <p class="why-desc">Website, ads, Google profile, print and social. Your brand stays consistent and you're not chasing three different agencies.</p>
+      </div>
+      <div data-stagger-child class="reveal why-item">
+        <h3 class="why-name">Melbourne local</h3>
+        <p class="why-desc">Based in Melbourne, working with local businesses. Site visits, face-to-face meetings and content shoots are all on the table when they help.</p>
+      </div>
+    </div>
+    <div class="reveal why-portal">
+      <div>
+        <h3 class="why-portal-name">See how it's going, any time.</h3>
+        <p class="why-portal-desc">We've started rolling out a client portal. Log in and your enquiries, search results, ads and site health are all in one place, in plain English. Clients are coming on in stages, so ask us where you'd fit.</p>
+        <a class="home-link" href="https://portal.suterasites.com.au" target="_blank" rel="noopener">Client login <svg width="24" height="10" viewBox="0 0 24 10" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M0 5h23M18.5.5 23 5l-4.5 4.5"/></svg></a>
+      </div>
+      <ul data-stagger-parent class="why-tiles">
+          <li data-stagger-child class="reveal why-tile"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Your enquiries</li>
+          <li data-stagger-child class="reveal why-tile"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>Google search</li>
+          <li data-stagger-child class="reveal why-tile"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Business Profile</li>
+          <li data-stagger-child class="reveal why-tile"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>Google Ads</li>
+          <li data-stagger-child class="reveal why-tile"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>Site health</li>
+          <li data-stagger-child class="reveal why-tile"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Work done</li>
+      </ul>
+    </div>
+  </section>
 
-      <div data-stagger-parent class="grid md:grid-cols-3 gap-6">
-        <div data-stagger-child class="reveal">
-          <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-5" style="background: var(--accent-dim); color: var(--accent-hover);">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-          </div>
-          <h3 class="text-xl font-bold text-white mb-3">No page builders</h3>
-          <p class="text-neutral-400">Every site is custom HTML, CSS and JS. Fast, flexible, and not locked into any platform that can raise its prices on you.</p>
+  <!-- ============ REVIEWS ============ -->
+  <section class="rev">
+    <svg class="ribbon-edge ribbon-edge--flip" viewBox="0 0 1600 200" preserveAspectRatio="none" aria-hidden="true">
+      <path class="ribbon-edge-band" d="M0 190 C 520 178, 1120 120, 1600 20 L1600 246 L0 246 Z" transform="translate(0 -52)"/>
+      <g class="ribbon-edge-lines"><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 0)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -13)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -26)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -39)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -52)"/></g>
+      <path class="ribbon-edge-fill" d="M0 190 C 520 178, 1120 120, 1600 20 L1600 200 L0 200 Z"/>
+    </svg>
+    <h2 class="reveal rev-label">What clients say</h2>
+    <blockquote class="reveal rev-quote">&ldquo;James was super easy to deal with and nailed the brief instantly. Thank you for making this a seamless process and for giving us a solid brand presence.&rdquo;</blockquote>
+    <div class="reveal rev-by">
+      <div class="rev-who">
+        <img class="rev-crest" src="images/logos/wall/ansc.webp" alt="" width="194" height="241" loading="lazy">
+        <div>
+          <p class="rev-name">Ric Conte</p>
+          <p class="rev-club">Altona North Soccer Club</p>
         </div>
+      </div>
+      <a class="home-link" href="work/altona-north-soccer-club.html">Read the case study <svg width="24" height="10" viewBox="0 0 24 10" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M0 5h23M18.5.5 23 5l-4.5 4.5"/></svg></a>
+    </div>
+  </section>
 
-        <div data-stagger-child class="reveal">
-          <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-5" style="background: var(--accent-dim); color: var(--accent-hover);">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          </div>
-          <h3 class="text-xl font-bold text-white mb-3">Fast turnaround</h3>
-          <p class="text-neutral-400">Mockup in days, not weeks. When a brief is tight we have put three sites live inside a fortnight. When you're ready to move, we're ready to ship.</p>
-        </div>
-
-        <div data-stagger-child class="reveal">
-          <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-5" style="background: var(--accent-dim); color: var(--accent-hover);">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-          </div>
-          <h3 class="text-xl font-bold text-white mb-3">Full service, one point of contact</h3>
-          <p class="text-neutral-400">Website, ads, print, social. Everything in one place means your brand stays consistent and you're not chasing three different agencies.</p>
-        </div>
-
-        <div data-stagger-child class="reveal">
-          <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-5" style="background: var(--accent-dim); color: var(--accent-hover);">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          </div>
-          <h3 class="text-xl font-bold text-white mb-3">Melbourne local</h3>
-          <p class="text-neutral-400">Based in Melbourne, working with Melbourne businesses. Site visits, face-to-face meetings, content shoots - all on the table when it helps.</p>
-        </div>
-
-        <div data-stagger-child class="reveal">
-          <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-5" style="background: var(--accent-dim); color: var(--accent-hover);">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-          </div>
-          <h3 class="text-xl font-bold text-white mb-3">Flexible pricing</h3>
-          <p class="text-neutral-400">Monthly subscription or one-off build. Month-to-month Google Ads management with no lock-in. We'd rather earn the work than trap you into it.</p>
-        </div>
-
-        <div data-stagger-child class="reveal">
-          <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-5" style="background: var(--accent-dim); color: var(--accent-hover);">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-          </div>
-          <h3 class="text-xl font-bold text-white mb-3">Built to convert</h3>
-          <p class="text-neutral-400">Every page has a job to do. Click-to-call, lead forms, Google Ads conversion tracking, SEO fundamentals. Leads are the point, not aesthetics.</p>
-        </div>
+  <!-- ============ WHO WE WORK WITH ============ -->
+  <section class="who">
+    <svg class="ribbon-edge" viewBox="0 0 1600 200" preserveAspectRatio="none" aria-hidden="true">
+      <path class="ribbon-edge-band" d="M0 190 C 520 178, 1120 120, 1600 20 L1600 246 L0 246 Z" transform="translate(0 -52)"/>
+      <g class="ribbon-edge-lines"><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 0)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -13)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -26)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -39)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -52)"/></g>
+      <path class="ribbon-edge-fill" d="M0 190 C 520 178, 1120 120, 1600 20 L1600 200 L0 200 Z"/>
+    </svg>
+    <div class="who-grid">
+      <div>
+        <h2 class="reveal who-title">If you serve locally, we can help.</h2>
+        <p class="reveal who-trades">Earthmoving, excavation, civil, piling, drainage, reblocking, builders, carpenters, landscapers, tilers, mechanics, detailers, car wraps, cleaners, clubs and coaches.</p>
+        <p class="reveal who-areas">Most of our clients are in Melbourne's west, north and south east, with more on the Mornington Peninsula and in Geelong, Colac and Bairnsdale, and one over the border in Wagga Wagga.</p>
+      </div>
+      <div class="reveal who-map">
+        <!-- One dot per live client site, the same 21 as the logo wall. Rounded to about 5km. To add one: x = (lon - 140.96) * 110.87, y = (-33.98 - lat) * 139 -->
+        <svg viewBox="-6 -6 1011 728" role="img" aria-label="Map of Victoria with a dot for each business we've built a live website for, clustered around Melbourne and reaching Geelong, Colac, Bairnsdale and Wagga Wagga">
+          <defs><clipPath id="who-clip"><path d="M0.4 0L2.4 6L5.6 6L4.4 8L6 10L8 7.6L8.8 10.4L6.4 12.4L7.2 14.8L13.6 16.4L10.4 11.2L11.6 9.6L13.6 12.4L14.8 9.6L21.2 14L23.6 12.8L24.8 15.2L27.2 11.2L28.8 12.4L26.8 14L27.6 15.6L35.2 16.4L39.6 18.4L40.8 21.6L44 18L47.2 21.2L49.6 20.4L49.6 22.4L52.4 22.8L54 26L59.2 24L61.6 27.6L61.2 32.8L63.6 32L63.2 29.2L64.8 30.4L71.2 29.2L69.6 27.2L71.2 25.2L68.8 23.6L72.4 24.4L72 22L74 22.4L74.4 19.6L82.8 16L84 18L85.2 15.6L88.8 16L88.8 17.6L90.4 16.8L90.8 19.2L100 21.6L104.4 18L106.4 18.4L107.6 21.2L109.2 19.2L112 21.2L112.8 18.4L117.2 20L116.4 17.2L119.2 16.4L118.4 20L123.6 20.8L122.4 23.6L124.4 26.8L128 26.8L128.4 24.4L131.6 23.2L133.6 24L134 28L140.4 28.8L140.4 31.6L142 32L140.8 38L142.8 40L141.2 44.8L146.8 44L148.4 45.2L146.4 45.6L147.2 48.4L152.4 49.6L156 48L159.2 49.6L157.6 50.8L158.4 53.2L156 54L156.4 56.4L154 57.6L155.2 60L154 61.2L156 63.2L154.4 67.6L157.6 68.4L155.2 71.6L158.8 71.2L156.8 74.4L159.6 75.2L156 76.4L158.4 78.8L160 78L160.8 81.6L162.4 80.8L164.8 83.2L164.8 80.4L167.2 81.2L166 84.4L167.6 86L165.2 90.8L168.8 91.2L168.4 96L171.2 94L172.4 94.8L170.4 96.4L172 98.8L170.8 100L172.8 100.4L170.4 105.2L176.8 110.4L178 109.2L183.2 112L186 111.2L186.8 108.8L184 108L183.6 104L185.6 104.8L188.4 102.8L190.8 105.2L190.4 103.2L192.4 102.8L190.4 96.8L193.6 96L191.6 93.2L193.6 89.6L191.6 88.4L193.2 88L192.8 86L198.8 86L198 82.8L201.2 83.2L200.4 81.6L202.8 78.4L204.8 80.4L202.4 84.4L204.8 84.8L204.8 87.6L206.4 86L208.4 89.6L211.2 89.6L210.4 95.2L213.2 97.2L215.2 93.6L217.6 92.8L220.4 95.6L221.6 94.8L222.8 98.8L224.8 94.8L225.6 96.4L228 96L228 98.4L229.6 97.6L232 99.6L234 97.2L236.4 100L238.4 97.2L240.4 101.2L242.4 102L244 99.6L244.8 102L246 101.2L248.8 104.4L250.4 104L251.2 107.6L252.8 106L254 108L256.4 107.2L254 110L256.8 112.8L260 111.2L264.8 112.8L265.2 122L264 125.2L261.6 126L264 132.4L261.2 134.8L261.2 140.4L263.6 143.2L262 147.2L264.8 150.4L263.6 154.8L266.4 156.4L269.2 161.6L269.2 167.6L275.6 168L278.4 172L283.6 170.8L285.2 172L288.4 169.6L290.4 172L288.4 174.4L288.8 177.6L291.6 180.4L288.4 188.4L292.4 190.4L296.4 196.8L302 192.8L304.8 196L310.8 196L310.4 200.4L316.8 202.4L316 203.6L320.8 205.6L321.6 208.8L329.2 212L333.6 211.2L333.6 215.2L336.4 216L335.6 218.8L338.4 220L341.2 218L344 222L348.4 223.6L354.4 234L361.2 238L360.8 239.6L364.4 242L366.4 246L369.6 244L370 246.4L375.6 248L376.4 251.2L378.8 252L377.6 254L379.6 255.6L378 257.2L379.6 257.6L378 258L378.8 259.6L382.4 261.2L382.4 266.8L390.8 273.6L391.6 276.4L392.4 274.8L394.4 276.4L394 280L399.2 281.6L402 286.4L405.2 284.8L405.2 290.8L406.8 287.2L409.2 288L410 291.2L413.2 289.2L412.8 293.6L416.4 292.4L416.4 296L418.8 295.6L420 297.6L422.4 296.8L423.6 298.4L426.8 294.8L429.6 294.8L432.4 288.8L440 290L442 292L445.6 290.8L443.6 283.2L439.2 278.8L440 276.4L442.8 275.2L442 270.8L444.8 264.8L444 262L447.6 259.6L450 260.8L456 256.4L458.4 257.2L460.4 255.6L462.8 257.6L465.2 257.2L465.2 258.8L468.8 257.6L472 258.8L475.2 256.8L476.8 260L478 259.2L480.4 261.2L483.6 260L488 262L492.8 260L494.4 256.8L496.8 257.6L500.8 253.6L500.8 254.8L505.6 255.2L507.2 253.2L508 256L510 254.4L509.6 256.4L513.6 259.6L512.8 261.2L514.4 263.2L517.2 261.6L516.4 264.4L522.8 270.4L525.2 269.6L524.8 271.6L528 272.4L527.6 274L530 275.6L534 275.2L537.2 279.2L539.6 277.2L542.4 277.6L542.4 274.8L547.6 274L548.4 276.4L553.6 275.2L552.4 278.4L555.6 282.8L564.4 280L565.6 282.8L568.4 283.6L571.2 281.6L572 283.2L573.6 280.8L573.6 283.2L577.6 283.2L579.2 286.4L582 284.4L583.6 285.6L587.2 282.4L588.8 284.4L590 282L590.8 286.4L594.8 286.4L596 284.4L599.6 287.6L601.6 285.6L600.8 282.4L602.8 281.6L605.6 275.6L607.6 277.2L609.6 275.6L610.8 278.8L614 279.2L614 274.8L619.2 279.2L620.8 276L622 278L626.4 276.8L626.8 280L630.8 281.6L631.6 284.4L634 283.6L634.8 285.6L637.6 285.6L639.6 284L642 288.8L643.2 287.6L646.8 289.6L647.6 288.4L650.4 292.8L655.2 290.8L656.4 292.8L659.2 292.4L659.6 295.6L661.6 294L663.2 296.4L664.8 291.6L667.2 293.6L670.4 292.4L673.6 296.8L676.4 290L680.4 287.2L680.4 282L683.2 280L685.6 286L687.6 284.8L692 287.6L701.2 286L704.8 289.2L708.4 284.8L709.2 278.4L712.8 276.4L712.8 273.2L719.2 275.2L720.8 272.8L724.4 272.8L727.6 275.6L727.2 278.8L730.4 281.2L734 278.4L730 277.6L730.4 275.6L736 277.6L741.2 273.2L748 270.8L749.6 273.6L754 275.6L758.8 275.6L760.4 278L763.6 278L763.2 279.2L766.8 280.8L770.4 280L770.4 284.4L772.8 287.2L777.6 286L778.8 288L780.4 287.2L779.6 292L778 292.8L780.4 294.4L779.2 297.2L781.2 298.8L780.4 300L784.4 300.4L782.8 302L784.8 309.2L783.2 311.6L785.2 321.6L784 323.6L786.8 324.8L784.4 334.8L789.2 339.2L790 343.2L794 344.8L793.2 349.6L795.6 353.6L794 356.8L794.8 359.2L797.2 358L798.4 361.2L801.2 360.8L804.4 363.6L802.8 365.6L804.8 366.8L799.6 379.2L794.8 382.8L795.2 384.8L791.2 390L792.4 392L797.6 390.4L800.4 392.4L802 391.2L999.2 490L991.6 495.2L981.2 495.2L976.8 497.2L971.6 503.2L966.4 514.8L960 516.4L957.2 520.4L950 521.6L944.8 527.2L930 527.2L924.4 528.4L921.6 531.2L918 528L867.2 528.8L863.2 530L861.2 532.8L860 531.2L822 530.8L806.4 533.2L776 543.2L755.2 553.2L741.2 562.8L696.8 604.8L668.8 631.2L669.6 632.8L650.8 653.2L644.8 653.2L640.4 655.2L631.6 663.6L625.6 663.6L618.8 668.4L612 666.8L607.2 663.6L605.2 658.8L601.2 658L600.4 654.4L597.6 652.8L595.6 653.2L596.4 654.8L585.6 655.2L584.4 654L580.4 658.4L579.6 661.6L584 670.4L588.8 670.8L588.4 678L590.4 678.8L591.2 684.4L593.6 684.4L597.6 679.2L604 677.6L606.8 667.2L610.4 667.2L610.4 680.4L612.8 685.2L608.8 690L606.8 698.8L611.2 701.2L610 703.6L612 706.8L606.8 706.8L605.6 715.6L600 716.4L594.4 709.6L596.4 706L593.6 704.8L594 703.2L592 702.8L588.8 697.2L586 697.2L588 693.2L579.2 678.4L567.2 671.6L562.8 671.2L558.8 674.8L559.2 680.8L549.6 685.2L546.8 672.8L542.8 665.2L537.6 656.4L529.2 648.4L536.8 650.4L536.4 652.4L540.4 654.8L538.4 648L528.4 646.8L524.4 648.4L522 652L514.8 653.2L510 649.2L506.4 642L500.4 635.2L488.8 633.2L486.4 630.4L485.6 633.6L488 635.2L486.8 637.6L480 629.6L474.4 629.2L472.4 632.4L470 630L460.4 630.8L464 628.8L466 623.2L471.6 620.8L480.8 621.2L482 622.4L480 625.2L481.6 626L481.2 629.2L484 629.2L485.2 627.2L488.4 631.2L494.4 630L495.6 618L494 615.2L504.8 616.4L508.8 609.6L508.4 606L504.8 605.6L505.6 599.6L502.8 596.8L501.6 590.8L496 588.4L493.6 590.4L486 588.4L483.2 592.4L481.2 588.4L476.8 589.6L476.8 592.4L472.4 597.2L473.2 601.2L469.6 602.4L469.6 604.8L472.8 607.2L471.2 609.2L473.6 615.6L462 612.8L452.4 620L451.2 626L448 625.2L435.6 628L435.2 624.8L431.2 620L410.4 602L409.2 600.4L412.4 600.8L418.8 603.6L422.4 608.4L427.2 610L432 610L440.4 606.8L446.4 602.8L446 599.6L450.8 593.2L451.2 588L452.8 588L460.8 578.8L461.6 571.2L458.4 561.6L454.8 557.2L450.8 557.6L446.8 550.8L444.8 540L439.6 536.8L437.2 538L438.8 539.6L437.6 540.8L433.6 539.2L427.2 540.8L425.6 548L419.2 550L409.2 558.8L402 559.6L399.2 564L394.8 566L393.2 571.2L389.6 569.6L385.6 572L380 569.2L376.8 574.4L376.8 578.4L382.8 580L384 576L389.2 581.6L397.2 580.8L406.8 573.6L413.6 575.2L416.8 578.8L414.4 593.2L410 596.8L406 596.8L405.2 599.2L398.8 596.4L393.6 596.4L392.4 599.2L384.4 597.6L374 603.2L373.2 606L365.2 611.6L364.8 613.6L358.8 615.2L357.2 618.4L351.6 618.8L348.4 624L341.2 624.4L334.8 632L334 637.2L328 641.2L326.8 645.6L319.2 654.8L313.2 655.6L302.8 660.4L300.8 662L300 666.8L294.8 668.8L287.6 677.6L282 677.2L274.8 668.8L266 663.6L259.2 662.8L254.8 666L250.4 664.4L238.8 652L229.6 646L219.2 645.6L210 642.8L209.2 640.4L202.8 638L177.6 617.2L170 613.2L167.6 614.8L156.8 607.2L143.2 609.6L142.4 613.6L131.2 612.8L108.8 597.6L85.2 593.6L80 595.2L71.2 602L76.4 613.2L74 613.2L73.6 615.2L72 612.8L68 612.4L64.4 618.8L62.4 617.2L62 612.8L56 608.8L50 609.2L50 613.6L45.6 612L44.4 610.4L48 606L48 603.6L44.8 597.6L28.8 581.6L8.8 569.2L0.4 566.4L0.4 0.4Z M480.8 597.6L486.4 602L498 601.2L503.6 607.6L500.4 609.6L493.6 609.6L491.2 612.8L488.8 616.8L480 613.6L477.6 615.6L480.4 598Z"/></clipPath></defs>
+          <path class="who-land" d="M0.4 0L2.4 6L5.6 6L4.4 8L6 10L8 7.6L8.8 10.4L6.4 12.4L7.2 14.8L13.6 16.4L10.4 11.2L11.6 9.6L13.6 12.4L14.8 9.6L21.2 14L23.6 12.8L24.8 15.2L27.2 11.2L28.8 12.4L26.8 14L27.6 15.6L35.2 16.4L39.6 18.4L40.8 21.6L44 18L47.2 21.2L49.6 20.4L49.6 22.4L52.4 22.8L54 26L59.2 24L61.6 27.6L61.2 32.8L63.6 32L63.2 29.2L64.8 30.4L71.2 29.2L69.6 27.2L71.2 25.2L68.8 23.6L72.4 24.4L72 22L74 22.4L74.4 19.6L82.8 16L84 18L85.2 15.6L88.8 16L88.8 17.6L90.4 16.8L90.8 19.2L100 21.6L104.4 18L106.4 18.4L107.6 21.2L109.2 19.2L112 21.2L112.8 18.4L117.2 20L116.4 17.2L119.2 16.4L118.4 20L123.6 20.8L122.4 23.6L124.4 26.8L128 26.8L128.4 24.4L131.6 23.2L133.6 24L134 28L140.4 28.8L140.4 31.6L142 32L140.8 38L142.8 40L141.2 44.8L146.8 44L148.4 45.2L146.4 45.6L147.2 48.4L152.4 49.6L156 48L159.2 49.6L157.6 50.8L158.4 53.2L156 54L156.4 56.4L154 57.6L155.2 60L154 61.2L156 63.2L154.4 67.6L157.6 68.4L155.2 71.6L158.8 71.2L156.8 74.4L159.6 75.2L156 76.4L158.4 78.8L160 78L160.8 81.6L162.4 80.8L164.8 83.2L164.8 80.4L167.2 81.2L166 84.4L167.6 86L165.2 90.8L168.8 91.2L168.4 96L171.2 94L172.4 94.8L170.4 96.4L172 98.8L170.8 100L172.8 100.4L170.4 105.2L176.8 110.4L178 109.2L183.2 112L186 111.2L186.8 108.8L184 108L183.6 104L185.6 104.8L188.4 102.8L190.8 105.2L190.4 103.2L192.4 102.8L190.4 96.8L193.6 96L191.6 93.2L193.6 89.6L191.6 88.4L193.2 88L192.8 86L198.8 86L198 82.8L201.2 83.2L200.4 81.6L202.8 78.4L204.8 80.4L202.4 84.4L204.8 84.8L204.8 87.6L206.4 86L208.4 89.6L211.2 89.6L210.4 95.2L213.2 97.2L215.2 93.6L217.6 92.8L220.4 95.6L221.6 94.8L222.8 98.8L224.8 94.8L225.6 96.4L228 96L228 98.4L229.6 97.6L232 99.6L234 97.2L236.4 100L238.4 97.2L240.4 101.2L242.4 102L244 99.6L244.8 102L246 101.2L248.8 104.4L250.4 104L251.2 107.6L252.8 106L254 108L256.4 107.2L254 110L256.8 112.8L260 111.2L264.8 112.8L265.2 122L264 125.2L261.6 126L264 132.4L261.2 134.8L261.2 140.4L263.6 143.2L262 147.2L264.8 150.4L263.6 154.8L266.4 156.4L269.2 161.6L269.2 167.6L275.6 168L278.4 172L283.6 170.8L285.2 172L288.4 169.6L290.4 172L288.4 174.4L288.8 177.6L291.6 180.4L288.4 188.4L292.4 190.4L296.4 196.8L302 192.8L304.8 196L310.8 196L310.4 200.4L316.8 202.4L316 203.6L320.8 205.6L321.6 208.8L329.2 212L333.6 211.2L333.6 215.2L336.4 216L335.6 218.8L338.4 220L341.2 218L344 222L348.4 223.6L354.4 234L361.2 238L360.8 239.6L364.4 242L366.4 246L369.6 244L370 246.4L375.6 248L376.4 251.2L378.8 252L377.6 254L379.6 255.6L378 257.2L379.6 257.6L378 258L378.8 259.6L382.4 261.2L382.4 266.8L390.8 273.6L391.6 276.4L392.4 274.8L394.4 276.4L394 280L399.2 281.6L402 286.4L405.2 284.8L405.2 290.8L406.8 287.2L409.2 288L410 291.2L413.2 289.2L412.8 293.6L416.4 292.4L416.4 296L418.8 295.6L420 297.6L422.4 296.8L423.6 298.4L426.8 294.8L429.6 294.8L432.4 288.8L440 290L442 292L445.6 290.8L443.6 283.2L439.2 278.8L440 276.4L442.8 275.2L442 270.8L444.8 264.8L444 262L447.6 259.6L450 260.8L456 256.4L458.4 257.2L460.4 255.6L462.8 257.6L465.2 257.2L465.2 258.8L468.8 257.6L472 258.8L475.2 256.8L476.8 260L478 259.2L480.4 261.2L483.6 260L488 262L492.8 260L494.4 256.8L496.8 257.6L500.8 253.6L500.8 254.8L505.6 255.2L507.2 253.2L508 256L510 254.4L509.6 256.4L513.6 259.6L512.8 261.2L514.4 263.2L517.2 261.6L516.4 264.4L522.8 270.4L525.2 269.6L524.8 271.6L528 272.4L527.6 274L530 275.6L534 275.2L537.2 279.2L539.6 277.2L542.4 277.6L542.4 274.8L547.6 274L548.4 276.4L553.6 275.2L552.4 278.4L555.6 282.8L564.4 280L565.6 282.8L568.4 283.6L571.2 281.6L572 283.2L573.6 280.8L573.6 283.2L577.6 283.2L579.2 286.4L582 284.4L583.6 285.6L587.2 282.4L588.8 284.4L590 282L590.8 286.4L594.8 286.4L596 284.4L599.6 287.6L601.6 285.6L600.8 282.4L602.8 281.6L605.6 275.6L607.6 277.2L609.6 275.6L610.8 278.8L614 279.2L614 274.8L619.2 279.2L620.8 276L622 278L626.4 276.8L626.8 280L630.8 281.6L631.6 284.4L634 283.6L634.8 285.6L637.6 285.6L639.6 284L642 288.8L643.2 287.6L646.8 289.6L647.6 288.4L650.4 292.8L655.2 290.8L656.4 292.8L659.2 292.4L659.6 295.6L661.6 294L663.2 296.4L664.8 291.6L667.2 293.6L670.4 292.4L673.6 296.8L676.4 290L680.4 287.2L680.4 282L683.2 280L685.6 286L687.6 284.8L692 287.6L701.2 286L704.8 289.2L708.4 284.8L709.2 278.4L712.8 276.4L712.8 273.2L719.2 275.2L720.8 272.8L724.4 272.8L727.6 275.6L727.2 278.8L730.4 281.2L734 278.4L730 277.6L730.4 275.6L736 277.6L741.2 273.2L748 270.8L749.6 273.6L754 275.6L758.8 275.6L760.4 278L763.6 278L763.2 279.2L766.8 280.8L770.4 280L770.4 284.4L772.8 287.2L777.6 286L778.8 288L780.4 287.2L779.6 292L778 292.8L780.4 294.4L779.2 297.2L781.2 298.8L780.4 300L784.4 300.4L782.8 302L784.8 309.2L783.2 311.6L785.2 321.6L784 323.6L786.8 324.8L784.4 334.8L789.2 339.2L790 343.2L794 344.8L793.2 349.6L795.6 353.6L794 356.8L794.8 359.2L797.2 358L798.4 361.2L801.2 360.8L804.4 363.6L802.8 365.6L804.8 366.8L799.6 379.2L794.8 382.8L795.2 384.8L791.2 390L792.4 392L797.6 390.4L800.4 392.4L802 391.2L999.2 490L991.6 495.2L981.2 495.2L976.8 497.2L971.6 503.2L966.4 514.8L960 516.4L957.2 520.4L950 521.6L944.8 527.2L930 527.2L924.4 528.4L921.6 531.2L918 528L867.2 528.8L863.2 530L861.2 532.8L860 531.2L822 530.8L806.4 533.2L776 543.2L755.2 553.2L741.2 562.8L696.8 604.8L668.8 631.2L669.6 632.8L650.8 653.2L644.8 653.2L640.4 655.2L631.6 663.6L625.6 663.6L618.8 668.4L612 666.8L607.2 663.6L605.2 658.8L601.2 658L600.4 654.4L597.6 652.8L595.6 653.2L596.4 654.8L585.6 655.2L584.4 654L580.4 658.4L579.6 661.6L584 670.4L588.8 670.8L588.4 678L590.4 678.8L591.2 684.4L593.6 684.4L597.6 679.2L604 677.6L606.8 667.2L610.4 667.2L610.4 680.4L612.8 685.2L608.8 690L606.8 698.8L611.2 701.2L610 703.6L612 706.8L606.8 706.8L605.6 715.6L600 716.4L594.4 709.6L596.4 706L593.6 704.8L594 703.2L592 702.8L588.8 697.2L586 697.2L588 693.2L579.2 678.4L567.2 671.6L562.8 671.2L558.8 674.8L559.2 680.8L549.6 685.2L546.8 672.8L542.8 665.2L537.6 656.4L529.2 648.4L536.8 650.4L536.4 652.4L540.4 654.8L538.4 648L528.4 646.8L524.4 648.4L522 652L514.8 653.2L510 649.2L506.4 642L500.4 635.2L488.8 633.2L486.4 630.4L485.6 633.6L488 635.2L486.8 637.6L480 629.6L474.4 629.2L472.4 632.4L470 630L460.4 630.8L464 628.8L466 623.2L471.6 620.8L480.8 621.2L482 622.4L480 625.2L481.6 626L481.2 629.2L484 629.2L485.2 627.2L488.4 631.2L494.4 630L495.6 618L494 615.2L504.8 616.4L508.8 609.6L508.4 606L504.8 605.6L505.6 599.6L502.8 596.8L501.6 590.8L496 588.4L493.6 590.4L486 588.4L483.2 592.4L481.2 588.4L476.8 589.6L476.8 592.4L472.4 597.2L473.2 601.2L469.6 602.4L469.6 604.8L472.8 607.2L471.2 609.2L473.6 615.6L462 612.8L452.4 620L451.2 626L448 625.2L435.6 628L435.2 624.8L431.2 620L410.4 602L409.2 600.4L412.4 600.8L418.8 603.6L422.4 608.4L427.2 610L432 610L440.4 606.8L446.4 602.8L446 599.6L450.8 593.2L451.2 588L452.8 588L460.8 578.8L461.6 571.2L458.4 561.6L454.8 557.2L450.8 557.6L446.8 550.8L444.8 540L439.6 536.8L437.2 538L438.8 539.6L437.6 540.8L433.6 539.2L427.2 540.8L425.6 548L419.2 550L409.2 558.8L402 559.6L399.2 564L394.8 566L393.2 571.2L389.6 569.6L385.6 572L380 569.2L376.8 574.4L376.8 578.4L382.8 580L384 576L389.2 581.6L397.2 580.8L406.8 573.6L413.6 575.2L416.8 578.8L414.4 593.2L410 596.8L406 596.8L405.2 599.2L398.8 596.4L393.6 596.4L392.4 599.2L384.4 597.6L374 603.2L373.2 606L365.2 611.6L364.8 613.6L358.8 615.2L357.2 618.4L351.6 618.8L348.4 624L341.2 624.4L334.8 632L334 637.2L328 641.2L326.8 645.6L319.2 654.8L313.2 655.6L302.8 660.4L300.8 662L300 666.8L294.8 668.8L287.6 677.6L282 677.2L274.8 668.8L266 663.6L259.2 662.8L254.8 666L250.4 664.4L238.8 652L229.6 646L219.2 645.6L210 642.8L209.2 640.4L202.8 638L177.6 617.2L170 613.2L167.6 614.8L156.8 607.2L143.2 609.6L142.4 613.6L131.2 612.8L108.8 597.6L85.2 593.6L80 595.2L71.2 602L76.4 613.2L74 613.2L73.6 615.2L72 612.8L68 612.4L64.4 618.8L62.4 617.2L62 612.8L56 608.8L50 609.2L50 613.6L45.6 612L44.4 610.4L48 606L48 603.6L44.8 597.6L28.8 581.6L8.8 569.2L0.4 566.4L0.4 0.4Z M480.8 597.6L486.4 602L498 601.2L503.6 607.6L500.4 609.6L493.6 609.6L491.2 612.8L488.8 616.8L480 613.6L477.6 615.6L480.4 598Z"/>
+          <path class="who-lines" clip-path="url(#who-clip)" d="M-40 10c340-10 740-70 1080-150M-40 23c340-10 740-70 1080-150M-40 36c340-10 740-70 1080-150M-40 49c340-10 740-70 1080-150M-40 62c340-10 740-70 1080-150M-40 75c340-10 740-70 1080-150M-40 88c340-10 740-70 1080-150M-40 101c340-10 740-70 1080-150M-40 114c340-10 740-70 1080-150M-40 127c340-10 740-70 1080-150M-40 140c340-10 740-70 1080-150M-40 153c340-10 740-70 1080-150M-40 166c340-10 740-70 1080-150M-40 179c340-10 740-70 1080-150M-40 192c340-10 740-70 1080-150M-40 205c340-10 740-70 1080-150M-40 218c340-10 740-70 1080-150M-40 231c340-10 740-70 1080-150M-40 244c340-10 740-70 1080-150M-40 257c340-10 740-70 1080-150M-40 270c340-10 740-70 1080-150M-40 283c340-10 740-70 1080-150M-40 296c340-10 740-70 1080-150M-40 309c340-10 740-70 1080-150M-40 322c340-10 740-70 1080-150M-40 335c340-10 740-70 1080-150M-40 348c340-10 740-70 1080-150M-40 361c340-10 740-70 1080-150M-40 374c340-10 740-70 1080-150M-40 387c340-10 740-70 1080-150M-40 400c340-10 740-70 1080-150M-40 413c340-10 740-70 1080-150M-40 426c340-10 740-70 1080-150M-40 439c340-10 740-70 1080-150M-40 452c340-10 740-70 1080-150M-40 465c340-10 740-70 1080-150M-40 478c340-10 740-70 1080-150M-40 491c340-10 740-70 1080-150M-40 504c340-10 740-70 1080-150M-40 517c340-10 740-70 1080-150M-40 530c340-10 740-70 1080-150M-40 543c340-10 740-70 1080-150M-40 556c340-10 740-70 1080-150M-40 569c340-10 740-70 1080-150M-40 582c340-10 740-70 1080-150M-40 595c340-10 740-70 1080-150M-40 608c340-10 740-70 1080-150M-40 621c340-10 740-70 1080-150M-40 634c340-10 740-70 1080-150M-40 647c340-10 740-70 1080-150M-40 660c340-10 740-70 1080-150M-40 673c340-10 740-70 1080-150M-40 686c340-10 740-70 1080-150M-40 699c340-10 740-70 1080-150M-40 712c340-10 740-70 1080-150M-40 725c340-10 740-70 1080-150M-40 738c340-10 740-70 1080-150M-40 751c340-10 740-70 1080-150M-40 764c340-10 740-70 1080-150M-40 777c340-10 740-70 1080-150M-40 790c340-10 740-70 1080-150M-40 803c340-10 740-70 1080-150M-40 816c340-10 740-70 1080-150M-40 829c340-10 740-70 1080-150M-40 842c340-10 740-70 1080-150M-40 855c340-10 740-70 1080-150M-40 868c340-10 740-70 1080-150M-40 881c340-10 740-70 1080-150M-40 894c340-10 740-70 1080-150M-40 907c340-10 740-70 1080-150"/>
+          <path class="who-rim" d="M0.4 0L2.4 6L5.6 6L4.4 8L6 10L8 7.6L8.8 10.4L6.4 12.4L7.2 14.8L13.6 16.4L10.4 11.2L11.6 9.6L13.6 12.4L14.8 9.6L21.2 14L23.6 12.8L24.8 15.2L27.2 11.2L28.8 12.4L26.8 14L27.6 15.6L35.2 16.4L39.6 18.4L40.8 21.6L44 18L47.2 21.2L49.6 20.4L49.6 22.4L52.4 22.8L54 26L59.2 24L61.6 27.6L61.2 32.8L63.6 32L63.2 29.2L64.8 30.4L71.2 29.2L69.6 27.2L71.2 25.2L68.8 23.6L72.4 24.4L72 22L74 22.4L74.4 19.6L82.8 16L84 18L85.2 15.6L88.8 16L88.8 17.6L90.4 16.8L90.8 19.2L100 21.6L104.4 18L106.4 18.4L107.6 21.2L109.2 19.2L112 21.2L112.8 18.4L117.2 20L116.4 17.2L119.2 16.4L118.4 20L123.6 20.8L122.4 23.6L124.4 26.8L128 26.8L128.4 24.4L131.6 23.2L133.6 24L134 28L140.4 28.8L140.4 31.6L142 32L140.8 38L142.8 40L141.2 44.8L146.8 44L148.4 45.2L146.4 45.6L147.2 48.4L152.4 49.6L156 48L159.2 49.6L157.6 50.8L158.4 53.2L156 54L156.4 56.4L154 57.6L155.2 60L154 61.2L156 63.2L154.4 67.6L157.6 68.4L155.2 71.6L158.8 71.2L156.8 74.4L159.6 75.2L156 76.4L158.4 78.8L160 78L160.8 81.6L162.4 80.8L164.8 83.2L164.8 80.4L167.2 81.2L166 84.4L167.6 86L165.2 90.8L168.8 91.2L168.4 96L171.2 94L172.4 94.8L170.4 96.4L172 98.8L170.8 100L172.8 100.4L170.4 105.2L176.8 110.4L178 109.2L183.2 112L186 111.2L186.8 108.8L184 108L183.6 104L185.6 104.8L188.4 102.8L190.8 105.2L190.4 103.2L192.4 102.8L190.4 96.8L193.6 96L191.6 93.2L193.6 89.6L191.6 88.4L193.2 88L192.8 86L198.8 86L198 82.8L201.2 83.2L200.4 81.6L202.8 78.4L204.8 80.4L202.4 84.4L204.8 84.8L204.8 87.6L206.4 86L208.4 89.6L211.2 89.6L210.4 95.2L213.2 97.2L215.2 93.6L217.6 92.8L220.4 95.6L221.6 94.8L222.8 98.8L224.8 94.8L225.6 96.4L228 96L228 98.4L229.6 97.6L232 99.6L234 97.2L236.4 100L238.4 97.2L240.4 101.2L242.4 102L244 99.6L244.8 102L246 101.2L248.8 104.4L250.4 104L251.2 107.6L252.8 106L254 108L256.4 107.2L254 110L256.8 112.8L260 111.2L264.8 112.8L265.2 122L264 125.2L261.6 126L264 132.4L261.2 134.8L261.2 140.4L263.6 143.2L262 147.2L264.8 150.4L263.6 154.8L266.4 156.4L269.2 161.6L269.2 167.6L275.6 168L278.4 172L283.6 170.8L285.2 172L288.4 169.6L290.4 172L288.4 174.4L288.8 177.6L291.6 180.4L288.4 188.4L292.4 190.4L296.4 196.8L302 192.8L304.8 196L310.8 196L310.4 200.4L316.8 202.4L316 203.6L320.8 205.6L321.6 208.8L329.2 212L333.6 211.2L333.6 215.2L336.4 216L335.6 218.8L338.4 220L341.2 218L344 222L348.4 223.6L354.4 234L361.2 238L360.8 239.6L364.4 242L366.4 246L369.6 244L370 246.4L375.6 248L376.4 251.2L378.8 252L377.6 254L379.6 255.6L378 257.2L379.6 257.6L378 258L378.8 259.6L382.4 261.2L382.4 266.8L390.8 273.6L391.6 276.4L392.4 274.8L394.4 276.4L394 280L399.2 281.6L402 286.4L405.2 284.8L405.2 290.8L406.8 287.2L409.2 288L410 291.2L413.2 289.2L412.8 293.6L416.4 292.4L416.4 296L418.8 295.6L420 297.6L422.4 296.8L423.6 298.4L426.8 294.8L429.6 294.8L432.4 288.8L440 290L442 292L445.6 290.8L443.6 283.2L439.2 278.8L440 276.4L442.8 275.2L442 270.8L444.8 264.8L444 262L447.6 259.6L450 260.8L456 256.4L458.4 257.2L460.4 255.6L462.8 257.6L465.2 257.2L465.2 258.8L468.8 257.6L472 258.8L475.2 256.8L476.8 260L478 259.2L480.4 261.2L483.6 260L488 262L492.8 260L494.4 256.8L496.8 257.6L500.8 253.6L500.8 254.8L505.6 255.2L507.2 253.2L508 256L510 254.4L509.6 256.4L513.6 259.6L512.8 261.2L514.4 263.2L517.2 261.6L516.4 264.4L522.8 270.4L525.2 269.6L524.8 271.6L528 272.4L527.6 274L530 275.6L534 275.2L537.2 279.2L539.6 277.2L542.4 277.6L542.4 274.8L547.6 274L548.4 276.4L553.6 275.2L552.4 278.4L555.6 282.8L564.4 280L565.6 282.8L568.4 283.6L571.2 281.6L572 283.2L573.6 280.8L573.6 283.2L577.6 283.2L579.2 286.4L582 284.4L583.6 285.6L587.2 282.4L588.8 284.4L590 282L590.8 286.4L594.8 286.4L596 284.4L599.6 287.6L601.6 285.6L600.8 282.4L602.8 281.6L605.6 275.6L607.6 277.2L609.6 275.6L610.8 278.8L614 279.2L614 274.8L619.2 279.2L620.8 276L622 278L626.4 276.8L626.8 280L630.8 281.6L631.6 284.4L634 283.6L634.8 285.6L637.6 285.6L639.6 284L642 288.8L643.2 287.6L646.8 289.6L647.6 288.4L650.4 292.8L655.2 290.8L656.4 292.8L659.2 292.4L659.6 295.6L661.6 294L663.2 296.4L664.8 291.6L667.2 293.6L670.4 292.4L673.6 296.8L676.4 290L680.4 287.2L680.4 282L683.2 280L685.6 286L687.6 284.8L692 287.6L701.2 286L704.8 289.2L708.4 284.8L709.2 278.4L712.8 276.4L712.8 273.2L719.2 275.2L720.8 272.8L724.4 272.8L727.6 275.6L727.2 278.8L730.4 281.2L734 278.4L730 277.6L730.4 275.6L736 277.6L741.2 273.2L748 270.8L749.6 273.6L754 275.6L758.8 275.6L760.4 278L763.6 278L763.2 279.2L766.8 280.8L770.4 280L770.4 284.4L772.8 287.2L777.6 286L778.8 288L780.4 287.2L779.6 292L778 292.8L780.4 294.4L779.2 297.2L781.2 298.8L780.4 300L784.4 300.4L782.8 302L784.8 309.2L783.2 311.6L785.2 321.6L784 323.6L786.8 324.8L784.4 334.8L789.2 339.2L790 343.2L794 344.8L793.2 349.6L795.6 353.6L794 356.8L794.8 359.2L797.2 358L798.4 361.2L801.2 360.8L804.4 363.6L802.8 365.6L804.8 366.8L799.6 379.2L794.8 382.8L795.2 384.8L791.2 390L792.4 392L797.6 390.4L800.4 392.4L802 391.2L999.2 490L991.6 495.2L981.2 495.2L976.8 497.2L971.6 503.2L966.4 514.8L960 516.4L957.2 520.4L950 521.6L944.8 527.2L930 527.2L924.4 528.4L921.6 531.2L918 528L867.2 528.8L863.2 530L861.2 532.8L860 531.2L822 530.8L806.4 533.2L776 543.2L755.2 553.2L741.2 562.8L696.8 604.8L668.8 631.2L669.6 632.8L650.8 653.2L644.8 653.2L640.4 655.2L631.6 663.6L625.6 663.6L618.8 668.4L612 666.8L607.2 663.6L605.2 658.8L601.2 658L600.4 654.4L597.6 652.8L595.6 653.2L596.4 654.8L585.6 655.2L584.4 654L580.4 658.4L579.6 661.6L584 670.4L588.8 670.8L588.4 678L590.4 678.8L591.2 684.4L593.6 684.4L597.6 679.2L604 677.6L606.8 667.2L610.4 667.2L610.4 680.4L612.8 685.2L608.8 690L606.8 698.8L611.2 701.2L610 703.6L612 706.8L606.8 706.8L605.6 715.6L600 716.4L594.4 709.6L596.4 706L593.6 704.8L594 703.2L592 702.8L588.8 697.2L586 697.2L588 693.2L579.2 678.4L567.2 671.6L562.8 671.2L558.8 674.8L559.2 680.8L549.6 685.2L546.8 672.8L542.8 665.2L537.6 656.4L529.2 648.4L536.8 650.4L536.4 652.4L540.4 654.8L538.4 648L528.4 646.8L524.4 648.4L522 652L514.8 653.2L510 649.2L506.4 642L500.4 635.2L488.8 633.2L486.4 630.4L485.6 633.6L488 635.2L486.8 637.6L480 629.6L474.4 629.2L472.4 632.4L470 630L460.4 630.8L464 628.8L466 623.2L471.6 620.8L480.8 621.2L482 622.4L480 625.2L481.6 626L481.2 629.2L484 629.2L485.2 627.2L488.4 631.2L494.4 630L495.6 618L494 615.2L504.8 616.4L508.8 609.6L508.4 606L504.8 605.6L505.6 599.6L502.8 596.8L501.6 590.8L496 588.4L493.6 590.4L486 588.4L483.2 592.4L481.2 588.4L476.8 589.6L476.8 592.4L472.4 597.2L473.2 601.2L469.6 602.4L469.6 604.8L472.8 607.2L471.2 609.2L473.6 615.6L462 612.8L452.4 620L451.2 626L448 625.2L435.6 628L435.2 624.8L431.2 620L410.4 602L409.2 600.4L412.4 600.8L418.8 603.6L422.4 608.4L427.2 610L432 610L440.4 606.8L446.4 602.8L446 599.6L450.8 593.2L451.2 588L452.8 588L460.8 578.8L461.6 571.2L458.4 561.6L454.8 557.2L450.8 557.6L446.8 550.8L444.8 540L439.6 536.8L437.2 538L438.8 539.6L437.6 540.8L433.6 539.2L427.2 540.8L425.6 548L419.2 550L409.2 558.8L402 559.6L399.2 564L394.8 566L393.2 571.2L389.6 569.6L385.6 572L380 569.2L376.8 574.4L376.8 578.4L382.8 580L384 576L389.2 581.6L397.2 580.8L406.8 573.6L413.6 575.2L416.8 578.8L414.4 593.2L410 596.8L406 596.8L405.2 599.2L398.8 596.4L393.6 596.4L392.4 599.2L384.4 597.6L374 603.2L373.2 606L365.2 611.6L364.8 613.6L358.8 615.2L357.2 618.4L351.6 618.8L348.4 624L341.2 624.4L334.8 632L334 637.2L328 641.2L326.8 645.6L319.2 654.8L313.2 655.6L302.8 660.4L300.8 662L300 666.8L294.8 668.8L287.6 677.6L282 677.2L274.8 668.8L266 663.6L259.2 662.8L254.8 666L250.4 664.4L238.8 652L229.6 646L219.2 645.6L210 642.8L209.2 640.4L202.8 638L177.6 617.2L170 613.2L167.6 614.8L156.8 607.2L143.2 609.6L142.4 613.6L131.2 612.8L108.8 597.6L85.2 593.6L80 595.2L71.2 602L76.4 613.2L74 613.2L73.6 615.2L72 612.8L68 612.4L64.4 618.8L62.4 617.2L62 612.8L56 608.8L50 609.2L50 613.6L45.6 612L44.4 610.4L48 606L48 603.6L44.8 597.6L28.8 581.6L8.8 569.2L0.4 566.4L0.4 0.4Z M480.8 597.6L486.4 602L498 601.2L503.6 607.6L500.4 609.6L493.6 609.6L491.2 612.8L488.8 616.8L480 613.6L477.6 615.6L480.4 598Z"/>
+          <circle class="who-dot" cx="293" cy="607" r="8.5"/><circle class="who-dot" cx="376" cy="580" r="8.5"/><circle class="who-dot" cx="409" cy="545" r="8.5"/><circle class="who-dot" cx="415" cy="545" r="8.5"/><circle class="who-dot" cx="420" cy="517" r="8.5"/><circle class="who-dot" cx="426" cy="531" r="8.5"/><circle class="who-dot" cx="426" cy="538" r="8.5"/><circle class="who-dot" cx="431" cy="517" r="8.5"/><circle class="who-dot" cx="431" cy="531" r="8.5"/><circle class="who-dot" cx="437" cy="538" r="8.5"/><circle class="who-dot" cx="442" cy="531" r="8.5"/><circle class="who-dot" cx="453" cy="475" r="8.5"/><circle class="who-dot" cx="459" cy="538" r="8.5"/><circle class="who-dot" cx="465" cy="559" r="8.5"/><circle class="who-dot" cx="470" cy="587" r="8.5"/><circle class="who-dot" cx="481" cy="573" r="8.5"/><circle class="who-dot" cx="708" cy="163" r="8.5"/><circle class="who-dot" cx="742" cy="538" r="8.5"/>
+        </svg>
+        <div aria-hidden="true"><span class="who-tag" style="left:45.6%;top:65.9%;transform:translate(-50%,-145%)">Melbourne</span><span class="who-tag" style="left:37.9%;top:80.4%;transform:translate(-50%,60%)">Geelong</span><span class="who-tag" style="left:29.4%;top:84.1%;transform:translate(-105%,-50%)">Colac</span><span class="who-tag" style="left:73.7%;top:74.2%;transform:translate(-50%,-160%)">Bairnsdale</span><span class="who-tag" style="left:70.7%;top:22.7%;transform:translate(calc(-100% - 10px),-50%)">Wagga Wagga</span></div>
       </div>
     </div>
   </section>
 
-  <div class="section-divider"></div>
-
-  <!-- ============ TESTIMONIAL ============ -->
-  <section class="py-24 md:py-32">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-      <svg class="mx-auto mb-8 reveal" width="40" height="40" viewBox="0 0 24 24" fill="currentColor" style="color: var(--accent); opacity: 0.5;"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h2s2.028-.024 2 2c-.272 1.952-2 2-2 2H4v3c0 .75.25 1 1 1zM15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h2s2.028-.024 2 2c-.272 1.952-2 2-2 2h-2v3c0 .75.25 1 1 1z"/></svg>
-      <blockquote class="reveal text-2xl md:text-3xl font-semibold text-white leading-snug mb-8">
-        "James was super easy to deal with and nailed the brief instantly. Thank you for making this a seamless process and for giving us a solid brand presence."
-      </blockquote>
-      <div class="reveal">
-        <div class="font-semibold text-white">Altona North Soccer Club</div>
+  <!-- ============ FAQ ============ -->
+  <section class="faq">
+    <svg class="ribbon-edge ribbon-edge--flip" viewBox="0 0 1600 200" preserveAspectRatio="none" aria-hidden="true">
+      <path class="ribbon-edge-band" d="M0 190 C 520 178, 1120 120, 1600 20 L1600 246 L0 246 Z" transform="translate(0 -52)"/>
+      <g class="ribbon-edge-lines"><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 0)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -13)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -26)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -39)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -52)"/></g>
+      <path class="ribbon-edge-fill" d="M0 190 C 520 178, 1120 120, 1600 20 L1600 200 L0 200 Z"/>
+    </svg>
+    <div class="faq-grid">
+      <div class="faq-side">
+        <h2 class="reveal faq-title">Straight answers.</h2>
+        <p class="reveal faq-note">Something else? Call <a href="tel:0434542005">0434 542 005</a>.</p>
+      </div>
+      <div class="reveal faq-list">
+          <details class="faq-item">
+            <summary>How much does it cost?<svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M10 2v16M2 10h16"/></svg></summary>
+            <p>Every job is quoted to what you actually need, so there's no price list. Book a free call and we'll give you a straight quote.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is the homepage mockup really free?<svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M10 2v16M2 10h16"/></svg></summary>
+            <p>Yes. Enquire with us and we'll mock up your homepage before you pay anything. If it's not for you, you walk away owing nothing.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How long does a website take?<svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M10 2v16M2 10h16"/></svg></summary>
+            <p>Mockups take days. Most sites launch in 1 to 3 weeks. Bigger sites with more pages or custom features can take longer, and we'll give you a clear timeline before you commit.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Am I locked into a contract?<svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M10 2v16M2 10h16"/></svg></summary>
+            <p>Website subscriptions have a 6-month minimum, then go month to month. One-off builds have no ongoing commitment. Google Ads management is month to month with no lock-in.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Do I own my website and ad account?<svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M10 2v16M2 10h16"/></svg></summary>
+            <p>With a one-off build you get the full code. On a subscription the site stays on our hosting while you're subscribed, and if you cancel after the 6-month minimum we can arrange an export for a one-off fee. Your Google Ads account is set up in your business name and stays with you.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is ad spend included?<svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M10 2v16M2 10h16"/></svg></summary>
+            <p>No. You pay Google directly for the clicks, and our monthly fee covers the management. We'll recommend a budget on the first call, based on your services and service area.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Do I need a website before running Google Ads?<svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M10 2v16M2 10h16"/></svg></summary>
+            <p>Yes. Ads send people somewhere, and that somewhere needs to turn them into enquiries. We build websites too, so we can handle both at once.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Do you work outside Melbourne?<svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M10 2v16M2 10h16"/></svg></summary>
+            <p>Yes. Most of our clients are in Melbourne, but we also look after businesses in Geelong, Colac and Bairnsdale, and we can work remotely with anyone in Australia.</p>
+          </details>
       </div>
     </div>
   </section>
-
-  <div class="section-divider"></div>
 
   <!-- ============ CONTACT ============ -->
-  <section id="contact" class="py-24 md:py-32 relative overflow-hidden">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="grid lg:grid-cols-5 gap-12 lg:gap-16">
+  <section id="contact" class="reach">
+    <svg class="ribbon-edge" viewBox="0 0 1600 200" preserveAspectRatio="none" aria-hidden="true">
+      <path class="ribbon-edge-band" d="M0 190 C 520 178, 1120 120, 1600 20 L1600 246 L0 246 Z" transform="translate(0 -52)"/>
+      <g class="ribbon-edge-lines"><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 0)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -13)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -26)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -39)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -52)"/></g>
+      <path class="ribbon-edge-fill" d="M0 190 C 520 178, 1120 120, 1600 20 L1600 200 L0 200 Z"/>
+    </svg>
+    <img class="reach-art" src="images/hero/ribbons-1600.webp" srcset="images/hero/ribbons-1200.webp 1200w, images/hero/ribbons-1600.webp 1600w, images/hero/ribbons-2400.webp 2400w" sizes="(max-width: 1023px) 200vw, max(100vw, 120vh)" alt="" width="2400" height="1500" loading="lazy" decoding="async">
+    <div class="reach-grid">
+      <div>
+        <h2 class="reveal reach-title">Ready to grow?<br />Let's talk.</h2>
+        <p class="reveal reach-sub">Send us your details and we'll reply within one business day. After a website? Your homepage mockup is on us.</p>
+        <dl class="reveal reach-details">
+          <div class="reach-detail"><dt>Call</dt><dd><a href="tel:0434542005">0434 542 005</a></dd></div>
+          <div class="reach-detail"><dt>Email</dt><dd><a href="mailto:james@suterasites.com.au">james@suterasites.com.au</a></dd></div>
+          <div class="reach-detail"><dt>Based in</dt><dd>Melbourne, VIC</dd></div>
+          <div class="reach-detail"><dt>Response time</dt><dd>Within 1 business day</dd></div>
+        </dl>
+      </div>
 
-        <!-- Left column: copy + contact details -->
-        <div class="lg:col-span-2">
-          <p class="reveal accent-pill mb-6 inline-flex">Get in touch</p>
-          <h2 class="reveal headline text-4xl md:text-5xl text-white mb-5">Ready to grow?<br /><span class="muted-text">Let's talk.</span></h2>
-          <p class="reveal text-lg text-neutral-400 mb-10">Fill in the form and we'll get back within one business day. Prefer to chat? Call or email direct - faster for urgent jobs.</p>
-
-          <div class="space-y-4">
-            <a href="tel:0434542005" class="reveal contact-card">
-              <div class="icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              </div>
-              <div>
-                <div class="label">Call</div>
-                <div class="value">0434 542 005</div>
-              </div>
-            </a>
-            <a href="mailto:suterasites@gmail.com" class="reveal contact-card">
-              <div class="icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              </div>
-              <div>
-                <div class="label">Email</div>
-                <div class="value">suterasites@gmail.com</div>
-              </div>
-            </a>
-            <div class="reveal contact-card">
-              <div class="icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              </div>
-              <div>
-                <div class="label">Based in</div>
-                <div class="value">Melbourne, VIC</div>
-              </div>
+      <div class="reveal reach-card">
+        <form
+          data-contact-form
+          action="https://formspree.io/f/xeevwdog"
+          method="POST"
+          class="space-y-5"
+          novalidate
+        >
+          <div class="form-field-row">
+            <div class="form-field">
+              <label for="name">Your name</label>
+              <input type="text" id="name" name="name" placeholder="James Smith" required autocomplete="name" />
             </div>
-            <div class="reveal contact-card">
-              <div class="icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              </div>
-              <div>
-                <div class="label">Response time</div>
-                <div class="value">Within 1 business day</div>
-              </div>
+            <div class="form-field">
+              <label for="business">Business name</label>
+              <input type="text" id="business" name="business" placeholder="Smith Electrical" required autocomplete="organization" />
             </div>
           </div>
-        </div>
 
-        <!-- Right column: form -->
-        <div class="lg:col-span-3">
-          <div class="reveal" style="background-color: var(--bg-card); border: 1px solid var(--border); border-radius: 1rem; padding: 2rem;">
-            <form
-              data-contact-form
-              action="https://formspree.io/f/xeevwdog"
-              method="POST"
-              class="space-y-5"
-              novalidate
-            >
-              <div class="form-field-row">
-                <div class="form-field">
-                  <label for="name">Your name</label>
-                  <input type="text" id="name" name="name" placeholder="James Smith" required autocomplete="name" />
-                </div>
-                <div class="form-field">
-                  <label for="business">Business name</label>
-                  <input type="text" id="business" name="business" placeholder="Smith Electrical" required autocomplete="organization" />
-                </div>
-              </div>
-
-              <div class="form-field-row">
-                <div class="form-field">
-                  <label for="phone">Phone</label>
-                  <input type="tel" id="phone" name="phone" placeholder="0412 345 678" required autocomplete="tel" />
-                </div>
-                <div class="form-field">
-                  <label for="email">Email</label>
-                  <input type="email" id="email" name="email" placeholder="you@business.com" required autocomplete="email" />
-                </div>
-              </div>
-
-              <div class="form-field">
-                <label for="service">What are you interested in?</label>
-                <select id="service" name="service" required>
-                  <option value="" disabled selected>Select a service</option>
-                  <option value="Website">Website</option>
-                  <option value="Google Ads">Google Ads</option>
-                  <option value="Design &amp; Print">Design &amp; Print</option>
-                  <option value="Social Media">Social Media</option>
-                  <option value="Multiple / Not sure">Multiple / Not sure</option>
-                </select>
-              </div>
-
-              <div class="form-field">
-                <label for="message">Message <span class="text-neutral-600 font-normal">(optional)</span></label>
-                <textarea id="message" name="message" placeholder="Tell us a bit about your business and what you're looking to achieve..."></textarea>
-              </div>
-
-              <!-- Honeypot -->
-              <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
-
-              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-2">
-                <p class="text-xs text-neutral-500">No spam. No lock-ins on the conversation - you're free to walk either way.</p>
-                <button type="submit" class="btn-primary whitespace-nowrap">
-                  Send My Enquiry
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-                </button>
-              </div>
-            </form>
+          <div class="form-field-row">
+            <div class="form-field">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" placeholder="0412 345 678" required autocomplete="tel" />
+            </div>
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@business.com" required autocomplete="email" />
+            </div>
           </div>
-        </div>
 
+          <div class="form-field">
+            <label for="service">What are you interested in?</label>
+            <select id="service" name="service" required>
+              <option value="" disabled selected>Select a service</option>
+              <option value="Website">Website</option>
+              <option value="Google Ads">Google Ads</option>
+              <option value="Google Business Profile">Google Business Profile</option>
+              <option value="Design &amp; Print">Design &amp; Print</option>
+              <option value="Social Media">Social Media</option>
+              <option value="Multiple / Not sure">Multiple / Not sure</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="message">Message <span class="font-normal">(optional)</span></label>
+            <textarea id="message" name="message" placeholder="Tell us a bit about your business and what you're looking to achieve..."></textarea>
+          </div>
+
+          <!-- Honeypot -->
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+
+          <div class="reach-foot">
+            <p class="reach-note">No spam. No obligation.</p>
+            <button type="submit" class="reach-submit">Send My Enquiry <svg width="24" height="10" viewBox="0 0 24 10" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M0 5h23M18.5.5 23 5l-4.5 4.5"/></svg></button>
+          </div>
+        </form>
       </div>
     </div>
   </section>
@@ -850,44 +861,48 @@
   <!-- ============ FOOTER ============ -->
   </main>
 
-  <footer class="border-t border-neutral-900 py-16">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="grid md:grid-cols-4 gap-10 mb-12">
-        <div class="md:col-span-2">
-          <a href="index.html" class="inline-flex items-center mb-4" aria-label="Sutera Sites home">
-            <img src="images/logos/sutera-sites.avif" alt="Sutera Sites" class="brand-logo" style="aspect-ratio:500/500">
-          </a>
-          <p class="text-neutral-400 max-w-sm">Web design, Google Ads and branding for Melbourne local service businesses.</p>
-        </div>
-
-        <div>
-          <div class="text-xs text-neutral-500 uppercase tracking-wider mb-4">Services</div>
-          <ul class="space-y-2 text-neutral-400">
-            <li><a href="services/websites.html" class="hover:text-white transition">Websites</a></li>
-            <li><a href="services/google-ads.html" class="hover:text-white transition">Google Ads</a></li>
-            <li><a href="services/design.html" class="hover:text-white transition">Design &amp; Print</a></li>
-            <li><a href="services/social-media.html" class="hover:text-white transition">Social Media</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <div class="text-xs text-neutral-500 uppercase tracking-wider mb-4">Contact</div>
-          <ul class="space-y-2 text-neutral-400">
-            <li><a href="tel:0434542005" class="hover:text-white transition">0434 542 005</a></li>
-            <li><a href="mailto:suterasites@gmail.com" class="hover:text-white transition">suterasites@gmail.com</a></li>
-            <li>Melbourne, VIC</li>
-            <li><a href="https://www.instagram.com/suterasites" target="_blank" rel="noopener" class="hover:text-white transition inline-flex items-center gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>@suterasites</a></li>
-          </ul>
-        </div>
+  <footer class="foot">
+    <svg class="ribbon-edge ribbon-edge--flip" viewBox="0 0 1600 200" preserveAspectRatio="none" aria-hidden="true"><path class="ribbon-edge-band" d="M0 190 C 520 178, 1120 120, 1600 20 L1600 246 L0 246 Z" transform="translate(0 -52)"/><g class="ribbon-edge-lines"><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 0)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -13)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -26)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -39)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -52)"/></g><path class="ribbon-edge-fill" d="M0 190 C 520 178, 1120 120, 1600 20 L1600 200 L0 200 Z"/></svg>
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a href="index.html" aria-label="Sutera Sites home"><img class="foot-logo" src="images/logos/sutera-sites.png" alt="Sutera Sites" width="368" height="125" loading="lazy"></a>
+        <p class="foot-line">Web design, Google Ads and branding for Melbourne local service businesses.</p>
       </div>
-
-      <div class="pt-8 border-t border-neutral-900 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-sm text-neutral-500">
-        <div>&copy; <span data-year>2026</span> Sutera Sites. ABN 74 177 391 469.</div>
-        <div class="flex gap-6">
-          <a href="privacy.html" class="hover:text-white transition">Privacy</a>
-          <a href="terms.html" class="hover:text-white transition">Terms</a>
-        </div>
+      <div>
+        <h3 class="foot-head">Services</h3>
+        <ul class="foot-list">
+          <li><a href="services/websites.html">Websites</a></li>
+          <li><a href="services/google-ads.html">Google Ads</a></li>
+          <li><a href="services/google-business-profile.html">Google Business Profile</a></li>
+          <li><a href="services/design.html">Design &amp; Print</a></li>
+          <li><a href="services/social-media.html">Social Media</a></li>
+        </ul>
       </div>
+      <div>
+        <h3 class="foot-head">Company</h3>
+        <ul class="foot-list">
+          <li><a href="work.html">Our Work</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://portal.suterasites.com.au" target="_blank" rel="noopener">Client Login</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="foot-head">Get in touch</h3>
+        <ul class="foot-list">
+          <li><a href="tel:0434542005">0434 542 005</a></li>
+          <li><a href="mailto:james@suterasites.com.au">james@suterasites.com.au</a></li>
+          <li>Melbourne, VIC</li>
+          <li><a href="https://www.instagram.com/suterasites" target="_blank" rel="noopener">@suterasites</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-base">
+      <div>&copy; <span data-year>2026</span> Sutera Sites. ABN 74 177 391 469.</div>
+      <nav aria-label="Legal">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </nav>
     </div>
   </footer>
 

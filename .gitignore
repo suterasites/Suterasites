@@ -4,3 +4,7 @@ node_modules/
 *.log
 .env
 .env.local
+
+# Internal notes. Cloudflare Pages publishes everything tracked here, so these stay local.
+CLAUDE.md
+seo/

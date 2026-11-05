@@ -64,7 +64,7 @@ ORG_LD = (
     '{"@context":"https://schema.org","@type":"Organization",'
     '"name":"Sutera Sites","url":"https://suterasites.com.au",'
     '"logo":"https://suterasites.com.au/images/logos/sutera-sites.png",'
-    '"email":"suterasites@gmail.com","telephone":"+61434542005",'
+    '"email":"james@suterasites.com.au","telephone":"+61434542005",'
     '"areaServed":"Melbourne, Victoria, Australia"}\n'
     '</script>\n'
 )

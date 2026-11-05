@@ -21,10 +21,10 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500&display=swap" rel="stylesheet" />
 
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="css/styles.css?v=20260807" />
+  <link rel="stylesheet" href="css/styles.css?v=20261105l" />
 
   <!-- Google Ads conversion tag placeholder - replace with live tag when ready -->
   <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXX"></script>
@@ -55,48 +55,70 @@
 </head>
 <body>
 
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
-    <filter id="drop-black" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  1 1 1 0 0" /></filter>
-    <filter id="drop-white" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  -1 -1 -1 0 3" /></filter>
-  </defs></svg>
-
-  <header class="fixed top-0 left-0 right-0 z-50">
-    <div class="max-w-7xl mx-auto px-6 py-4">
-      <a href="index.html" class="inline-flex items-center" aria-label="Sutera Sites home"><img src="images/logos/sutera-sites.avif" alt="Sutera Sites" class="brand-logo" /></a>
+  <header class="site-nav">
+    <div class="site-nav-bar">
+      <a href="index.html" class="site-nav-logo" aria-label="Sutera Sites home"><img src="images/logos/sutera-sites.png" alt="Sutera Sites" width="368" height="125"></a>
     </div>
   </header>
 
-  <section class="relative min-h-screen flex items-center py-32 overflow-hidden">
-    <div class="noise"></div>
-    <div class="absolute inset-0 grid-bg opacity-40"></div>
-    <div class="relative max-w-3xl mx-auto px-6 text-center">
-      <div class="reveal mx-auto mb-8 w-20 h-20 rounded-full flex items-center justify-center" style="background: var(--accent-dim); color: var(--accent-hover);" style="opacity:1;transform:none;">
-        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-      </div>
-      <h1 class="headline text-5xl md:text-7xl text-white mb-6">Thanks, we've got it.</h1>
-      <p class="text-lg md:text-xl text-neutral-400 max-w-2xl mx-auto mb-10">Your enquiry has landed. We'll reply within one business day. If it's urgent, feel free to call or text directly on 0434 542 005.</p>
-
-      <div class="flex flex-col sm:flex-row gap-3 justify-center mb-16">
-        <a href="index.html" class="btn-primary">Back to Home<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
-        <a href="work.html" class="btn-secondary">See More Work</a>
-      </div>
-
-      <div class="grid md:grid-cols-2 gap-4 max-w-xl mx-auto">
-        <a href="tel:0434542005" class="contact-card">
-          <div class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
-          <div><div class="label">Call</div><div class="value">0434 542 005</div></div>
-        </a>
-        <a href="mailto:suterasites@gmail.com" class="contact-card">
-          <div class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-          <div><div class="label">Email</div><div class="value">suterasites@gmail.com</div></div>
-        </a>
-      </div>
+  <main id="main" class="page">
+  <section class="hero-ribbon page-solo">
+    <img class="hero-ribbon-art" src="images/hero/ribbons-1600.webp" srcset="images/hero/ribbons-1200.webp 1200w, images/hero/ribbons-1600.webp 1600w, images/hero/ribbons-2400.webp 2400w" sizes="(max-width: 1023px) 100vh, max(100vw, 160vh)" alt="" width="2400" height="1500" fetchpriority="high">
+    <div class="hero-ribbon-copy">
+      <h1 data-hero-title class="hero-anim hero-ribbon-title">Thanks,<br />we've got it.</h1>
+      <svg class="hero-anim hero-ribbon-rule" data-hero-subtitle width="12" height="80" viewBox="0 0 12 80" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><path d="M6 0v79M1 74l5 5 5-5"/></svg>
+      <p data-hero-subtitle class="hero-anim hero-ribbon-sub">Your enquiry has landed. We'll reply within one business day. If it's urgent, feel free to call or text directly on 0434 542 005.</p>
+      <div data-hero-cta class="hero-anim hero-ribbon-cta"><a href="index.html" class="hero-ribbon-btn">Back to Home <svg width="24" height="10" viewBox="0 0 24 10" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M0 5h23M18.5.5 23 5l-4.5 4.5"/></svg></a><a href="work.html" class="hero-ribbon-link">See More Work</a></div>
+      <dl class="hero-anim reach-details">
+        <div class="reach-detail"><dt>Call</dt><dd><a href="tel:0434542005">0434 542 005</a></dd></div>
+        <div class="reach-detail"><dt>Email</dt><dd><a href="mailto:james@suterasites.com.au">james@suterasites.com.au</a></dd></div>
+      </dl>
     </div>
   </section>
+  </main>
 
-  <footer class="border-t border-neutral-900 py-10">
-    <div class="max-w-6xl mx-auto px-6 text-center text-sm text-neutral-500">
-      &copy; <span data-year>2026</span> Sutera Sites. ABN 74 177 391 469.
+  <footer class="foot">
+    <svg class="ribbon-edge ribbon-edge--flip" viewBox="0 0 1600 200" preserveAspectRatio="none" aria-hidden="true"><path class="ribbon-edge-band" d="M0 190 C 520 178, 1120 120, 1600 20 L1600 246 L0 246 Z" transform="translate(0 -52)"/><g class="ribbon-edge-lines"><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 0)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -13)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -26)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -39)"/><path d="M0 190 C 520 178, 1120 120, 1600 20" transform="translate(0 -52)"/></g><path class="ribbon-edge-fill" d="M0 190 C 520 178, 1120 120, 1600 20 L1600 200 L0 200 Z"/></svg>
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a href="index.html" aria-label="Sutera Sites home"><img class="foot-logo" src="images/logos/sutera-sites.png" alt="Sutera Sites" width="368" height="125" loading="lazy"></a>
+        <p class="foot-line">Web design, Google Ads and branding for Melbourne local service businesses.</p>
+      </div>
+      <div>
+        <h3 class="foot-head">Services</h3>
+        <ul class="foot-list">
+          <li><a href="services/websites.html">Websites</a></li>
+          <li><a href="services/google-ads.html">Google Ads</a></li>
+          <li><a href="services/google-business-profile.html">Google Business Profile</a></li>
+          <li><a href="services/design.html">Design &amp; Print</a></li>
+          <li><a href="services/social-media.html">Social Media</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="foot-head">Company</h3>
+        <ul class="foot-list">
+          <li><a href="work.html">Our Work</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://portal.suterasites.com.au" target="_blank" rel="noopener">Client Login</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="foot-head">Get in touch</h3>
+        <ul class="foot-list">
+          <li><a href="tel:0434542005">0434 542 005</a></li>
+          <li><a href="mailto:james@suterasites.com.au">james@suterasites.com.au</a></li>
+          <li>Melbourne, VIC</li>
+          <li><a href="https://www.instagram.com/suterasites" target="_blank" rel="noopener">@suterasites</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-base">
+      <div>&copy; <span data-year>2026</span> Sutera Sites. ABN 74 177 391 469.</div>
+      <nav aria-label="Legal">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </nav>
     </div>
   </footer>
 
