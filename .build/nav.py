@@ -22,9 +22,10 @@ SERVICES = [
 # (page, name, line, wall logo, width, height, white logo so it needs the dark tile)
 WORK = [
     ('work/apollo-earthworks.html', 'Apollo Earthworks', 'Website + Google Ads. 2 leads in 8 days, $3,600 job booked.', 'apollo-earthworks.webp', 300, 258, True),
-    ('work/select-civil.html', 'Select Civil Group', 'Website + Google Ads. 2 qualified leads in 30 days.', 'select-civil.webp', 300, 300, False),
-    ('work/grout-academy.html', 'Grout Academy', 'Logo, business cards and website launched in under 2 weeks.', 'grout-academy.webp', 300, 277, False),
-    ('work/altona-north-soccer-club.html', 'Altona North Soccer Club', 'Full Instagram and Facebook management, match day to sponsor posts.', 'ansc.webp', 194, 241, False),
+    ('work/mhb-reblocking.html', 'MHB Reblocking', 'Website + Google Ads. 98 form enquiries in under six months.', 'mhb-reblocking.webp', 300, 81, False),
+    ('work/radiant-rides.html', 'Radiant Rides AutoCare', 'Website + SEO. 41 form enquiries without Google Ads.', 'radiant-rides.webp', 300, 207, False),
+    ('work/grout-academy.html', 'Grout Academy', 'New brand in 14 days, then 107 form enquiries.', 'grout-academy.webp', 300, 277, False),
+    ('work/altona-north-soccer-club.html', 'Altona North Soccer Club', 'Club website plus full Instagram and Facebook management.', 'ansc.webp', 194, 241, False),
 ]
 
 CTA = ('Book a Free Call', 'contact.html')

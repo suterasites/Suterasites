@@ -1220,6 +1220,10 @@ h2.work-title {
   margin-top: clamp(0.875rem, 1.4vw, 1.25rem);
 }
 
+.work-result:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+
 .work-card {
   display: block;
   padding: 0.625rem;
@@ -2875,7 +2879,7 @@ h2.page-proof-title {
 }
 
 .client-next {
-  grid-column: span 2;
+  grid-column: 1 / -1;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -3143,7 +3147,7 @@ h1.reach-title {
   color: #200e06;
 }
 
-@media (min-width: 1024px) and (max-width: 1399px) {
+@media (min-width: 1024px) and (max-width: 1599px) {
   .page-hero-art {
     -webkit-mask-image: linear-gradient(to right, transparent 25%, #000 62%);
     mask-image: linear-gradient(to right, transparent 25%, #000 62%);
@@ -3206,10 +3210,6 @@ h1.reach-title {
 
   h1.reach-title {
     font-size: clamp(3rem, 9vw, 5.5rem);
-  }
-
-  .client-next {
-    grid-column: 1 / -1;
   }
 }
 
