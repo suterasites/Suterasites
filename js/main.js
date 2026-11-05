@@ -236,7 +236,7 @@ document.addEventListener('DOMContentLoaded', () => {
           headers: { 'Accept': 'application/json' }
         });
         if (res.ok) {
-          window.location.href = '/thank-you.html';
+          window.location.href = '/thank-you';
         } else {
           btn.textContent = originalText;
           btn.disabled = false;

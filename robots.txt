@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
-Disallow: /thank-you.html
+Disallow: /thank-you
 Disallow: /salesrep
 Disallow: /salesrep.html
 
